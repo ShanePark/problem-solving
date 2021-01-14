@@ -1,7 +1,8 @@
 package lv1;
-/* 후기 
- *  해당 스테이지에 도달한 사람이 없었을때 실패율이 계산이 안되는 문제가 있었고, 해결 후에는 바로 통과가 가능했음.
- 	Comparable 활용으로 비교 및, toString 메서드 구현으로 쉬운 테스트가 가능한게 도움이 크게 되었다.	*/
+/* Review
+ * I had trouble in calculating failureRate when there was no one reached the stage
+ * to solve that problem, i just added conditional state to check 'usersTriedStage' and then passed  
+*/
 import java.util.Arrays;
 
 public class FailureRate {
