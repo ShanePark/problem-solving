@@ -2,7 +2,7 @@ package lv2;
 
 import java.util.Arrays;
 
-public class StockPrice {
+public class B_StockPrice {
 
 	public static void main(String[] args) {
 		System.out.println(Arrays.toString(solution((new int[]{1, 2, 3, 2, 3}))));

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class Printer {
+public class A_Printer {
 
 	public static void main(String[] args) {
 		System.out.println(solution(new int[] {2,1,3,2},2));
