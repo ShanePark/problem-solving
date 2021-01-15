@@ -2,6 +2,7 @@ package lv1;
 /* Review
  * I had trouble in calculating failureRate when there was no one reached the stage
  * to solve that problem, i just added conditional state to check 'usersTriedStage' and then passed  
+ * When I tried to sort array with "return (int)(failureRate-o.failureRate)" I had trouble as it only return 0
 */
 import java.util.Arrays;
 
