@@ -15,20 +15,21 @@ public class H_index {
 		System.out.println(solution(new int[] {0, 1}) +" : 1");		
 		System.out.println(solution(new int[] {10, 9, 4, 1, 1}) +" : 3");		
 		System.out.println(solution(new int[] {12,11,10,9,8,1}) +" : 5");		
-		System.out.println(solution(new int[] {6,6,6,6,6,1}) +" : 5");		
+		System.out.println(solution(new int[] {1,6,6,6,6,6}) +" : 5");		
 		System.out.println(solution(new int[] {20,21,22,23}) +" : 4");		
 		System.out.println(solution(new int[] {0, 1, 3, 5, 5, 5, 5, 5, 5, 6}) +" : 5");		
-		System.out.println(solution(new int[] {0, 1, 1, 1, 1, 3, 3, 4}) +" : 1");		
+		System.out.println(solution(new int[] {0, 1, 1, 1, 1, 3, 3, 4}) +" : 3");		
 	}
 
 	static public int solution(int[] citations) {
 		Arrays.sort(citations);
 		final int SIZE = citations.length;
-		for(int i=0; i<SIZE; i++) {
-			if(citations[SIZE-1-i] <= i+1)
-				return i+1;
+		for(int number=1; number<=SIZE; number++) {
+			if(citations[SIZE-number]<number )
+				return number-1;
 		}
-		return 0;
+		return SIZE;
+		
 	}
 
 }
