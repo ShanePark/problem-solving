@@ -73,13 +73,13 @@ public class F_Spicier_Binary_Tree_Failed {
 				root= insertKey(root,value,root);
 			}
 
-			public void inOrder(Tree root) {
-				if(root != null) {
-					inOrder(root.leftChild);
-					System.out.print(root.value + " ");
-					inOrder(root.rightChild);
-				}
-			}
+//			public void inOrder(Tree root) {
+//				if(root != null) {
+//					inOrder(root.leftChild);
+//					System.out.print(root.value + " ");
+//					inOrder(root.rightChild);
+//				}
+//			}
 
 			public Tree searchMin(Tree root) {
 				if(root.leftChild != null) {
