@@ -98,13 +98,6 @@ public class F_NewsClustring {
     	return list;
     }
     
-    public static List<String> intersection(List<String>list1, List<String>list2){
-    	List<String> intersection = new ArrayList<>();
-    	intersection.add("hi");
-    	return intersection;
-    }
-	
-	
 }
 
 
