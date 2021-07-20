@@ -1,4 +1,4 @@
-package shane.programmers.lv2b;
+package shane.programmers.lv3;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -28,7 +28,7 @@ import java.util.Set;
 합계: 30.8 / 100.0
  *
  */
-public class N_Network {
+public class A_Network {
 	
 	public static void main(String[] args) {
 		System.out.println(solution(3, new int[][] {{1, 1, 0}, {1, 1, 0}, {0, 0, 1}}));
