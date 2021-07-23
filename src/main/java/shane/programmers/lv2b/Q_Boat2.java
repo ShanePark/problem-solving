@@ -25,14 +25,10 @@ public class Q_Boat2 {
         	int size = list.size();
         	int lastWeight = list.remove(size-1);
         	answer++;
-        	while(list.size() > 0) {
-        		int firstWeight = list.get(0);
-        		if(lastWeight + firstWeight <= limit) {
-        			lastWeight += list.remove(0);
-        		}else {
-        			break;
-        		}
-        	}
+        	
+    		if(size>1 && lastWeight + list.get(0) <= limit) {
+    			list.remove(0);
+    		}
         }
         return answer;
     }
