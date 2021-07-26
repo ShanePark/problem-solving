@@ -38,7 +38,7 @@ import java.util.Map;
 정확성: 28.6
 합계: 28.6 / 100.0
  */
-public class W_CamouflageFailed {
+public class W_Camouflage1Failed {
 
 	public static void main(String[] args) {
 		System.out.println(solution(new String[][] {{"yellowhat", "headgear"}, {"bluesunglasses", "eyewear"}, {"green_turban", "headgear"}}));
