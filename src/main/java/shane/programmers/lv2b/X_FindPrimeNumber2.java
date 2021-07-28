@@ -6,8 +6,8 @@ import java.util.Set;
 public class X_FindPrimeNumber2 {
 
 	public static void main(String[] args) {
-		System.out.println(solution("25"));
-		System.out.println(solution("011"));
+		System.out.println(solution("17"));
+//		System.out.println(solution("011"));
 	}
 	
     public static int solution(String numbers) {
@@ -57,9 +57,11 @@ public class X_FindPrimeNumber2 {
     }
     
     static public boolean isPrime(int number) {
-    	if(number<2)
+    	if(number == 2)
+    		return true;
+    	if(number<2 || number%2==0)
     		return false;
-    	for(int i=2; i<=Math.sqrt(number); i++) {
+    	for(int i=3; i<=Math.sqrt(number); i+=2) {
     		if(number % i == 0) {
     			return false;
     		}
