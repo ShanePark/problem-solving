@@ -16,7 +16,7 @@ public class TriangleSnail {
     		array[i] = arr;
     	}
     	
-    	int summaryUntilN = summaryUntilN(n);
+    	int summaryUntilN = n * (n+1) /2;
     	
     	int y=0, x=0;
     	for(int i=1; i<=summaryUntilN; i++) {
@@ -51,8 +51,4 @@ public class TriangleSnail {
         return answer;
     }
     
-    static int summaryUntilN(int n) {
-    	return (int) ((Math.pow(n, 2) + n)/2);
-    }
-
 }
