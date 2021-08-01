@@ -21,7 +21,7 @@ public class FindBiggestSquare3 {
         	}
         }
         
-        System.out.println(Arrays.deepToString(board));
+//        System.out.println(Arrays.deepToString(board));
         
         int max = 0;
         for(int j=0; j<height; j++) {
