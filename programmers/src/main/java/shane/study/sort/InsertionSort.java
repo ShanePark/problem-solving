@@ -2,7 +2,7 @@ package shane.study.sort;
 
 import shane.study.sort.SortController.Sorter;
 
-public class MergeSort implements Sorter {
+public class InsertionSort implements Sorter {
 
 	@Override
 	public void sort(int[] arr) {

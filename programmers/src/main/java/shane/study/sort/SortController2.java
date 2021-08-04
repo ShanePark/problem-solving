@@ -12,7 +12,7 @@ public class SortController2 {
 		final int SIZE = 20000;
 		
 		// 정렬 알고리즘 선택
-		Sorter sorter = new MergeSort();
+		Sorter sorter = new InsertionSort();
 		
 		// 각각 다른 방식으로 정렬할 두개의 배열 만들기
 		int[] arr = new int[SIZE];
