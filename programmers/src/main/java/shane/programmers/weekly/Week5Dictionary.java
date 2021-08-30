@@ -9,85 +9,33 @@ public class Week5Dictionary {
     }
 
     public static int solution(String word) {
-        word = String.format("%-5s", word);
+        int cnt = 1;
+        StringBuffer sb = new StringBuffer("A");
 
-        int answer = 0;
-        char c4 = word.charAt(4);
-        char c3 = word.charAt(3);
-        char c2 = word.charAt(2);
-        char c1 = word.charAt(1);
-        char c0 = word.charAt(0);
-
-        if (c4 == 'A') {
-            answer += 1;
-        } else if (c4 == 'E') {
-            answer += 2;
-        } else if (c4 == 'I') {
-            answer += 3;
-        } else if (c4 == 'O') {
-            answer += 4;
-        } else if (c4 == 'U') {
-            answer += 5;
-        }else{
-
+        while(!word.equals(sb.toString())){
+            sb = next(sb);
+            cnt++;
         }
 
-        if (c3 == 'A') {
-            answer += 1;
-        } else if (c3 == 'E') {
-            answer += (2 + 5 * (2-1) );
-        } else if (c3 == 'I'){
-            answer += (3 + 5 * (3-1));
-        } else if (c3 == 'O'){
-            answer += ( 4 + 5 * (4-1));
-        } else if (c3 == 'U'){
-            answer += ( 5 + 5 * (5-1));
+        return cnt;
+    }
+
+    private static StringBuffer next(StringBuffer sb) {
+        if(sb.length() < 5){
+            sb.append("A");
         }else{
+            char c=sb.charAt(sb.length()-1);
+            if(c == 'U'){
+                while(c == 'U'){
+                    sb.deleteCharAt(sb.length()-1);
+                    c = sb.charAt(sb.length()-1);
+                }
+            }
 
+            c = c=='A'? 'E' : c=='E'? 'I' : c=='I'? 'O' : 'U';
+            sb.deleteCharAt(sb.length()-1);
+            sb.append(c);
         }
-
-        if (c2 == 'A' ){
-            answer += 1;
-        } else if (c2 == 'E'){
-            answer += (2 + 5*5 * (2-1));
-        } else if (c2 == 'I'){
-            answer += (3 + 5*5 * (3-1));
-        } else if (c2 == 'O'){
-            answer += (4 + 5*5 * (4-1));
-        } else if (c2 == 'U') {
-            answer += (5 + 5*5 * (5 - 1));
-        }else{
-
-        }
-
-        if (c1 == 'A' ){
-            answer += 1;
-        } else if (c1 == 'E'){
-            answer += (2 + 5*5*5 * (2-1));
-        } else if (c1 == 'I'){
-            answer += (3 + 5*5*5 * (3-1));
-        } else if (c1 == 'O'){
-            answer += (4 + 5*5*5 * (4-1));
-        } else if (c1 == 'U') {
-            answer += (5 + 5*5*5 * (5-1));
-        }else{
-
-        }
-
-        if (c0 == 'A' ){
-            answer += 1;
-        } else if (c0 == 'E'){
-            answer += (2 + 5*5*5*5 * (2-1));
-        } else if (c0 == 'I'){
-            answer += (3 + 5*5*5*5 * (3-1));
-        } else if (c0 == 'O'){
-            answer += (4 + 5*5*5*5 * (4-1));
-        } else if (c0 == 'U') {
-            answer += (5 + 5*5*5*5 * (5-1));
-        }else{
-
-        }
-
-        return answer;
+        return sb;
     }
 }
