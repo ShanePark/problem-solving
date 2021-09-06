@@ -5,9 +5,9 @@ import java.util.*;
 public class ArrangeBoxer {
 
     public static void main(String[] args) {
-//        System.out.println(Arrays.toString(solution(new int[]{50,82,75,120}, new String[]{"NLWL","WNLL","LWNW","WWLN"})));  // 3,4,1,2
-//        System.out.println(Arrays.toString(solution(new int[]{145,92,86}, new String[]{"NLW","WNL","LWN"})));  // 2,3,1
-        System.out.println(Arrays.toString(solution(new int[]{60,70,60}, new String[]{"NNN","NNN","NNN"})));  // 2,3,1
+        System.out.println(Arrays.toString(solution(new int[]{50,82,75,120}, new String[]{"NLWL","WNLL","LWNW","WWLN"})));  // 3,4,1,2
+        System.out.println(Arrays.toString(solution(new int[]{145,92,86}, new String[]{"NLW","WNL","LWN"})));  // 2,3,1
+        System.out.println(Arrays.toString(solution(new int[]{60,70,60}, new String[]{"NNN","NNN","NNN"})));  // 2,1,3
     }
 
     static class Boxer{
@@ -65,11 +65,7 @@ public class ArrangeBoxer {
         });
 
         // 정렬된 list를 순회하며 번호 담은 Array 만들어 출력. 끝.
-        int[] answer = new int[list.size()];
-        for(int i=0; i<answer.length; i++){
-            answer[i] = list.get(i).number;
-        }
+        return list.stream().mapToInt(b -> b.number).toArray();
 
-        return answer;
     }
 }
