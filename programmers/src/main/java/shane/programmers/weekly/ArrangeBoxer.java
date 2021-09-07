@@ -11,18 +11,13 @@ public class ArrangeBoxer {
     }
 
     static class Boxer{
-        int number;
-        int weight;
-        int heavierKillingCnt;
-        int win;
-        int lose;
+        int number, weight, heavierKillingCnt;
         double winRate;
-        public Boxer(int number, int weight){
+        public Boxer(int number, int weight, String history, int[] weights){
             this.number = number;
             this.weight = weight;
-        }
-        public void calcHistory(String history, int[] weights){
             char[] arr = history.toCharArray();
+            int win=0, lose=0;
             for(int i=0; i<arr.length; i++){
                 char c = arr[i];
                 if(c=='W'){
@@ -37,35 +32,16 @@ public class ArrangeBoxer {
             if(win+lose > 0)
                 this.winRate = (win) / (double)(win+lose);
         }
-
     }
 
     public static int[] solution(int[] weights, String[] head2head) {
         List<Boxer> list = new ArrayList<>();
         for(int i=0; i<weights.length; i++){
-            Boxer boxer = new Boxer(i+1, weights[i]);
-            boxer.calcHistory(head2head[i], weights);
-            list.add(boxer);
+            list.add(new Boxer(i+1, weights[i], head2head[i], weights));
         }
 
-        // 기준에 맞게 list를 정렬
-        list.sort(new Comparator<Boxer>() {
-            @Override
-            public int compare(Boxer o1, Boxer o2) {
-                if(o1.winRate != o2.winRate){
-                    return o2.winRate > o1.winRate ? 1 : -1;
-                }else if(o1.heavierKillingCnt != o2.heavierKillingCnt){
-                    return o2.heavierKillingCnt - o1.heavierKillingCnt;
-                } else if (o1.weight != o2.weight) {
-                    return o2.weight - o1.weight;
-                }else{
-                    return o1.number - o2.number;
-                }
-            }
-        });
-
-        // 정렬된 list를 순회하며 번호 담은 Array 만들어 출력. 끝.
-        return list.stream().mapToInt(b -> b.number).toArray();
-
+        return list.stream()
+                .sorted((b1,b2) -> b1.winRate!=b2.winRate ? (b2.winRate>b1.winRate?1:-1) : b1.heavierKillingCnt!=b2.heavierKillingCnt ? b2.heavierKillingCnt-b1.heavierKillingCnt : b1.weight!=b2.weight? b2.weight-b1.weight : b1.number-b2.number)
+                .mapToInt(b -> b.number).toArray();
     }
 }
