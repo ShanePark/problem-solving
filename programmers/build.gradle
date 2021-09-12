@@ -10,12 +10,14 @@ sourceCompatibility = '8'
 
 repositories {
 	mavenCentral()
+	maven { url 'https://jitpack.io' }
 }
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation 'com.github.Shane-Park:shaneutils:f1e2f92941'
 }
 
 test {
