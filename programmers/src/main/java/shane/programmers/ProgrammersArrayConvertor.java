@@ -4,7 +4,7 @@ public class ProgrammersArrayConvertor {
 
 	public static void main(String[] args) {
 		String input = 
-				"[[3, 6], [4, 3], [3, 2], [1, 3], [1, 2], [2, 4], [5, 2]]";
+				"[[60, 50], [30, 70], [60, 30], [80, 40]]";
 		
 		System.out.println(arrayConverter(input));
 	}
