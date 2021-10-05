@@ -2,7 +2,7 @@ package shane.programmers.weekly;
 
 import java.util.*;
 
-public class ArrangeBoxer {
+public class Week6ArrangeBoxer {
 
     public static void main(String[] args) {
         System.out.println(Arrays.toString(solution(new int[]{50,82,75,120}, new String[]{"NLWL","WNLL","LWNW","WWLN"})));  // 3,4,1,2

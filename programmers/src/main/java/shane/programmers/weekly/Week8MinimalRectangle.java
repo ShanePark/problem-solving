@@ -1,6 +1,6 @@
 package shane.programmers.weekly;
 
-public class MinimalRectangle {
+public class Week8MinimalRectangle {
     public static void main(String[] args) {
         System.out.println(solution(new int[][]{{60, 50}, {30, 70}, {60, 30}, {80, 40}}));
     }
