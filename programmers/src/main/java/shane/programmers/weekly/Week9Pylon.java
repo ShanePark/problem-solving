@@ -1,9 +1,6 @@
 package shane.programmers.weekly;
 
 import com.tistory.shanepark.STool;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
 
 import java.util.*;
 
@@ -11,6 +8,8 @@ public class Week9Pylon {
 
     public static void main(String[] args) {
         System.out.println(solution(9, STool.convertToIntArray("[[1,3],[2,3],[3,4],[4,5],[4,6],[4,7],[7,8],[7,9]]")));
+        System.out.println(solution(4, STool.convertToIntArray("[[1,2],[2,3],[3,4]]")));
+        System.out.println(solution(7, STool.convertToIntArray("[[1,2],[2,7],[3,7],[3,4],[4,5],[6,7]]")));
     }
 
     static class Pylon {
@@ -37,7 +36,7 @@ public class Week9Pylon {
         public String printPylons() {
             StringBuffer sb = new StringBuffer("[");
             for (Pylon pylon : pylons) {
-                sb.append(String.format("%d ",pylon.number));
+                sb.append(String.format("%d ", pylon.number));
             }
             sb.append("]");
             return sb.toString();
@@ -45,32 +44,58 @@ public class Week9Pylon {
     }
 
     public static int solution(int n, int[][] wires) {
-
-        Map<Integer, Pylon> map = new HashMap<>();
-
-        for (int[] wire : wires) {
-            int host = wire[0];
-            int remote = wire[1];
-            Pylon pylon = map.get(host);
-            if (pylon == null) {
-                pylon = new Pylon(host);
-                map.put(host, pylon);
-            }
-            Pylon pylon2 = map.get(remote);
-            if (pylon2 == null) {
-                pylon2 = new Pylon(remote);
+        int result = 100;
+        for (int j = 0; j < wires.length; j++) {
+            Map<Integer, Pylon> map = new HashMap<>();
+            for (int i = 0; i < wires.length; i++) {
+                if (i == j) continue;
+                int[] wire = wires[i];
+                int host = wire[0];
+                int remote = wire[1];
+                Pylon pylon = map.get(host);
+                if (pylon == null) {
+                    pylon = new Pylon(host);
+                    map.put(host, pylon);
+                }
+                Pylon pylon2 = map.get(remote);
+                if (pylon2 == null) {
+                    pylon2 = new Pylon(remote);
+                    map.put(remote, pylon2);
+                }
                 map.put(remote, pylon2);
+                pylon.add(pylon2);
+                pylon2.add(pylon);
+
             }
-            map.put(remote, pylon2);
-            pylon.add(pylon2);
-            pylon2.add(pylon);
+            int size1 = calcSize(map, wires[j][0]);
+            int size2 = calcSize(map, wires[j][1]);
+            int diff = Math.abs(size1 - size2);
+            result = Math.min(result, diff);
         }
 
-        System.out.println(map);
+        return result;
+    }
 
+    public static int calcSize(Map<Integer, Pylon> map, int number) {
+        Pylon pylon = map.get(number);
+        if (pylon == null)
+            return 1;
+        int size = 1;
+        Set<Integer> set = new HashSet<>();
+        set.add(number);
+        travel(pylon, set);
 
-        int answer = -1;
-        return answer;
+        return set.size();
+    }
+
+    public static void travel(Pylon pylon, Set set) {
+        List<Pylon> list = pylon.pylons;
+        for (Pylon p : list) {
+            if (!set.contains(p.number)) {
+                set.add(p.number);
+                travel(p, set);
+            }
+        }
     }
 
 }
