@@ -25,14 +25,6 @@ public class Week10Star3 {
         }
 
         @Override
-        public String toString() {
-            return "Point{" +
-                    "x=" + x +
-                    ", y=" + y +
-                    '}';
-        }
-
-        @Override
         public boolean equals(Object o) {
             if (this == o) return true;
             if (o == null || getClass() != o.getClass()) return false;
@@ -61,10 +53,7 @@ public class Week10Star3 {
                 }
                 long x = (b * f - e * d) / (a * d - b * c);
                 long y = (e * c - a * f) / (a * d - b * c);
-                if (((x % 1) == 0) && ((y % 1) == 0)) {
-                    set.add(new Point((int) x, (int) y));
-                }
-
+                set.add(new Point((int) x, (int) y));
             }
         }
 
