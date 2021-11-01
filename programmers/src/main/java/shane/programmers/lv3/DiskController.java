@@ -3,7 +3,6 @@ package shane.programmers.lv3;
 import com.tistory.shanepark.STool;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.PriorityQueue;
 
@@ -13,7 +12,11 @@ public class DiskController {
     }
 
     public static int solution(int[][] jobs) {
-        Arrays.sort(jobs, (o1, o2) -> o1[0] - o2[0]);
+        List<Job> list = new ArrayList<>();
+        for (int[] job : jobs) {
+            list.add(new Job(job));
+        }
+        list.sort((o1, o2) -> o1.start - o2.start);
 
         PriorityQueue<Job> q = new PriorityQueue<>((o1, o2) -> Integer.compare(o1.size, o2.size));
         int time = 0;
@@ -22,7 +25,7 @@ public class DiskController {
         int sum = 0;
         while (complete < jobs.length) {
             for (int i = index; i < jobs.length; i++) {
-                Job job = new Job(jobs[i]);
+                Job job = list.get(i);
                 if (job.start <= time) {
                     q.add(job);
                     index++;
@@ -50,10 +53,6 @@ public class DiskController {
         Job(int[] arr) {
             this.start = arr[0];
             this.size = arr[1];
-        }
-
-        public void work() {
-            this.size--;
         }
 
     }
