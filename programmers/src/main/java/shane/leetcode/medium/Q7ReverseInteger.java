@@ -1,6 +1,6 @@
-package shane.leetcode.easy;
+package shane.leetcode.medium;
 
-public class ReverseInteger7 {
+public class Q7ReverseInteger {
     public static void main(String[] args) {
         System.out.println(reverse(1234567899));
     }
