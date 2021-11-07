@@ -28,24 +28,18 @@ public class HanoiTower {
         }
         int temp = temp(from, to);
         hanoi(from, temp, n - 1, list);
-        hanoi(from, to, 1, list);
+        list.add(new int[]{from, to});
         hanoi(temp, to, n - 1, list);
     }
 
-    public static int temp(int from, int to) {
-        for (int i = 1; i <= 3; i++) {
-            if (i != from && i != to)
-                return i;
-        }
-        return -1;
-    }
-
-    public static int leftShift(int n) {
-        return n - 1 > 0 ? n - 1 : n + 2;
-    }
-
-    public static int rightShift(int n) {
-        return n + 1 <= 3 ? n + 1 : n - 2;
+    public static int temp(Integer from, Integer to) {
+        List<Integer> list = new ArrayList<>();
+        list.add(1);
+        list.add(2);
+        list.add(3);
+        list.remove(from);
+        list.remove(to);
+        return list.get(0);
     }
 
 }
