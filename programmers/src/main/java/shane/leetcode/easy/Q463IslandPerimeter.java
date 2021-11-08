@@ -4,7 +4,7 @@ import com.tistory.shanepark.STool;
 
 import java.util.Arrays;
 
-public class IslandPerimeter463 {
+public class Q463IslandPerimeter {
     public static void main(String[] args) {
         System.out.println(islandPerimeter(STool.convertToIntArray("[[0,1,0,0],[1,1,1,0],[0,1,0,0],[1,1,0,0]]")));
         System.out.println(islandPerimeter(STool.convertToIntArray("[[1]]")));

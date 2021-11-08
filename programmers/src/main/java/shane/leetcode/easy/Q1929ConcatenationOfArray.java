@@ -2,7 +2,7 @@ package shane.leetcode.easy;
 
 import com.tistory.shanepark.STool;
 
-public class ConcatenationOfArray1929 {
+public class Q1929ConcatenationOfArray {
     public static void main(String[] args) {
         STool.printArray(getConcatenation(new int[]{1, 2, 1}));
     }
