@@ -25,19 +25,19 @@ public class Q337HouseRobberlll {
         Result right = robHouse(root.right);
 
         return new Result(
-                Math.max(left.ans1, left.ans2) + Math.max(right.ans1, right.ans2)
-                , root.val + left.ans1 + right.ans1);
+                Math.max(left.sumWithoutSelf, left.SumWithSelf) + Math.max(right.sumWithoutSelf, right.SumWithSelf)
+                , root.val + left.sumWithoutSelf + right.sumWithoutSelf);
     }
 
     static class Result {
-        int ans1;
-        int ans2;
+        int sumWithoutSelf;
+        int SumWithSelf;
         int max;
 
-        Result(int ans1, int ans2) {
-            this.ans1 = ans1;
-            this.ans2 = ans2;
-            this.max = Math.max(ans1, ans2);
+        Result(int sumWithoutSelf, int SumWithSelf) {
+            this.sumWithoutSelf = sumWithoutSelf;
+            this.SumWithSelf = SumWithSelf;
+            this.max = Math.max(sumWithoutSelf, SumWithSelf);
         }
     }
 
