@@ -1,11 +1,11 @@
 package shane.leetcode.easy;
 
-import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 
 public class Q2011FinalValueOfVariableAfterPerformingOperations {
 
     public static void main(String[] args) {
-        Assert.assertEquals(3, finalValueAfterOperations(new String[]{"++X", "++X", "X++"}));
+        Assertions.assertEquals(3, finalValueAfterOperations(new String[]{"++X", "++X", "X++"}));
     }
 
     public static int finalValueAfterOperations(String[] operations) {

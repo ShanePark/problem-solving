@@ -1,18 +1,18 @@
 package shane.leetcode.medium;
 
 import com.tistory.shanepark.STool;
-import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 
 public class Q1476SubrectangleQueries {
     public static void main(String[] args) {
         SubrectangleQueries q = new SubrectangleQueries(STool.convertToIntArray("[[[1,2,1],[4,3,4],[3,2,1],[1,1,1]]]"));
-        Assert.assertEquals(1, q.getValue(0, 2));
+        Assertions.assertEquals(1, q.getValue(0, 2));
         q.updateSubrectangle(0, 0, 3, 2, 5);
-        Assert.assertEquals(5, q.getValue(0, 2));
-        Assert.assertEquals(5, q.getValue(3, 1));
+        Assertions.assertEquals(5, q.getValue(0, 2));
+        Assertions.assertEquals(5, q.getValue(3, 1));
         q.updateSubrectangle(3, 0, 3, 2, 10);
-        Assert.assertEquals(10, q.getValue(3, 1));
-        Assert.assertEquals(5, q.getValue(0, 2));
+        Assertions.assertEquals(10, q.getValue(3, 1));
+        Assertions.assertEquals(5, q.getValue(0, 2));
     }
 
     static class SubrectangleQueries {

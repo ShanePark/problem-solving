@@ -1,6 +1,6 @@
 package shane.leetcode.medium;
 
-import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,9 +8,9 @@ import java.util.List;
 public class Q337HouseRobberlll {
     public static void main(String[] args) {
         TreeNode t = new TreeNode(new Integer[]{3, 2, 3, null, 3, null, 1});
-        Assert.assertEquals(7, rob(t));
+        Assertions.assertEquals(7, rob(t));
         TreeNode t2 = new TreeNode(new Integer[]{4, 1, null, 2, null, 3});
-        Assert.assertEquals(7, rob(t2));
+        Assertions.assertEquals(7, rob(t2));
     }
 
     public static int rob(TreeNode root) {
