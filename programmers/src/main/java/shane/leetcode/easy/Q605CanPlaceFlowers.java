@@ -1,6 +1,5 @@
 package shane.leetcode.easy;
 
-import com.sun.corba.se.impl.resolver.SplitLocalResolverImpl;
 import org.junit.jupiter.api.Assertions;
 
 public class Q605CanPlaceFlowers {
