@@ -2,9 +2,6 @@ package shane.leetcode.easy;
 
 import org.junit.jupiter.api.Assertions;
 
-import java.util.HashSet;
-import java.util.Set;
-
 public class Q136SingleNumber {
     public static void main(String[] args) {
         Assertions.assertEquals(singleNumber(new int[]{2, 2, 1}), 1);
@@ -13,15 +10,10 @@ public class Q136SingleNumber {
     }
 
     public static int singleNumber(int[] nums) {
-        Set<Integer> set = new HashSet<>();
+        int answer = 0;
         for (int num : nums) {
-            if (!set.add(num)) {
-                set.remove(num);
-            }
+            answer = answer ^ num;
         }
-        for (Integer integer : set) {
-            return integer;
-        }
-        return -1;
+        return answer;
     }
 }
