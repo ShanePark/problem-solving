@@ -9,16 +9,21 @@ public class Q938RangeSumofBST {
     @Test
     void test() {
         Assertions.assertThat(rangeSumBST(TreeNode.makeTree(new Integer[]{10, 5, 15, 3, 7, null, 18}), 7, 15)).isEqualTo(32);
+        Assertions.assertThat(rangeSumBST(TreeNode.makeTree(new Integer[]{10, 5, 15, 3, 7, 13, 18, 1, null, 6}), 6, 10)).isEqualTo(23);
     }
 
     public int rangeSumBST(TreeNode root, int low, int high) {
-        return 0;
-    }
+        if (root == null)
+            return 0;
+        int sum = (low <= root.val && root.val <= high) ? root.val : 0;
 
-    public static void main(String[] args) {
-//        TreeNode root = TreeNode.makeTree(new Integer[]{10, 5, 15, null, null, null, 18});
-        TreeNode root = TreeNode.makeTree(new Integer[]{10, 5, 15, 3, 7, null, 18});
-        root.printTree();
+        if (root.val > low) {
+            sum += rangeSumBST(root.left, low, high);
+        }
+        if (root.val < high) {
+            sum += rangeSumBST(root.right, low, high);
+        }
+        return sum;
     }
 
 

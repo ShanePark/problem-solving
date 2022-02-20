@@ -1,5 +1,7 @@
 package shane.leetcode.problems.easy;
 
+import com.tistory.shanepark.leetcode.TreeNode;
+
 public class Q104MaximumDepthOfBinaryTree {
 
     public int maxDepth(TreeNode root) {
@@ -15,25 +17,6 @@ public class Q104MaximumDepthOfBinaryTree {
             return Math.max(max(root.left, depth + 1), max(root.right, depth + 1));
     }
 
-    static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode() {
-        }
-
-        TreeNode(int val) {
-            this.val = val;
-        }
-
-        TreeNode(int val, TreeNode left, TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
-
-    }
 }
 
 

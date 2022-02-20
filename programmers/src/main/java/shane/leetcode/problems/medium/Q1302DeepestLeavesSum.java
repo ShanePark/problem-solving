@@ -1,5 +1,6 @@
 package shane.leetcode.problems.medium;
 
+import com.tistory.shanepark.leetcode.TreeNode;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -50,25 +51,6 @@ public class Q1302DeepestLeavesSum {
             travel(node.left, map, depth + 1);
         if (node.right != null)
             travel(node.right, map, depth + 1);
-    }
-
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode() {
-        }
-
-        TreeNode(int val) {
-            this.val = val;
-        }
-
-        TreeNode(int val, TreeNode left, TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
     }
 
 }

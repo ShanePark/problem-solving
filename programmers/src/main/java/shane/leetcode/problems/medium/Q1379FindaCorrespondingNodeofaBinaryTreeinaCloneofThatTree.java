@@ -1,5 +1,6 @@
 package shane.leetcode.problems.medium;
 
+import com.tistory.shanepark.leetcode.TreeNode;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -66,16 +67,6 @@ public class Q1379FindaCorrespondingNodeofaBinaryTreeinaCloneofThatTree {
 
         TreeNode left = getTargetCopy(original.left, cloned.left, target);
         return left == null ? getTargetCopy(original.right, cloned.right, target) : left;
-    }
-
-    public static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
     }
 
 }

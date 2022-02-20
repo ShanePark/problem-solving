@@ -1,5 +1,6 @@
 package shane.leetcode.problems.medium;
 
+import com.tistory.shanepark.leetcode.TreeNode;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -50,25 +51,6 @@ public class Q1305AllElementsInTwoBinarySearchTrees2 {
         add(tree.left, list);
         list.add(tree.val);
         add(tree.right, list);
-    }
-
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode() {
-        }
-
-        TreeNode(int val) {
-            this.val = val;
-        }
-
-        TreeNode(int val, TreeNode left, TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
     }
 
 }
