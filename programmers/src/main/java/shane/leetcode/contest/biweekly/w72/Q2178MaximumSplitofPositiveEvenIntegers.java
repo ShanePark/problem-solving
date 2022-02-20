@@ -49,7 +49,7 @@ import java.util.List;
  *
  * TLE
  */
-public class Q5998MaximumSplitofPositiveEvenIntegers {
+public class Q2178MaximumSplitofPositiveEvenIntegers {
 
     @Test
     void test() {

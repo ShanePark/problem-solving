@@ -35,7 +35,7 @@ import org.junit.jupiter.api.Test;
  * 1 <= nums.length <= 100
  * 1 <= nums[i], k <= 100
  */
-public class Q5996CountEqualandDivisiblePairsinanArray {
+public class Q2176CountEqualandDivisiblePairsinanArray {
 
     @Test
     void test() {

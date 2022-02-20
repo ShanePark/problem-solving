@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Q5998MaximumSplitofPositiveEvenIntegers2 {
+public class Q2178MaximumSplitofPositiveEvenIntegers2 {
 
     @Test
     void test() {

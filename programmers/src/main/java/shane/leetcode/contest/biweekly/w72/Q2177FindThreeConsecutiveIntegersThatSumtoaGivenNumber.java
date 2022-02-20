@@ -3,7 +3,7 @@ package shane.leetcode.contest.biweekly72;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class Q5997FindThreeConsecutiveIntegersThatSumtoaGivenNumber {
+public class Q2177FindThreeConsecutiveIntegersThatSumtoaGivenNumber {
 
     @Test
     void test() {
