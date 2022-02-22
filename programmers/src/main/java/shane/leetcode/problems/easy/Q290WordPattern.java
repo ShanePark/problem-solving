@@ -7,7 +7,7 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-public interface Q290WordPattern {
+public class Q290WordPattern {
     public static void main(String[] args) {
         Assertions.assertEquals(true, wordPattern("abba", "dog cat cat dog"));
         Assertions.assertEquals(false, wordPattern("abba", "dog cat cat fish"));
