@@ -1,5 +1,6 @@
 package shane.leetcode.contest.weekly.w281;
 
+import com.tistory.shanepark.leetcode.ListNode;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -44,23 +45,6 @@ public class Q2181MergeNodesinBetweenZeros {
         }
         if (head.next != null) {
             traverse(head.next, list, sum + head.val);
-        }
-    }
-
-    public class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode() {
-        }
-
-        ListNode(int val) {
-            this.val = val;
-        }
-
-        ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
         }
     }
 

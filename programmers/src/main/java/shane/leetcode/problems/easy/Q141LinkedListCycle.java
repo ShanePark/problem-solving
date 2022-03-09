@@ -1,5 +1,6 @@
 package shane.leetcode.problems.easy;
 
+import com.tistory.shanepark.leetcode.ListNode;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -27,14 +28,4 @@ public class Q141LinkedListCycle {
         return false;
     }
 
-    class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-            next = null;
-        }
-
-    }
 }

@@ -1,5 +1,6 @@
 package shane.leetcode.problems.medium;
 
+import com.tistory.shanepark.leetcode.ListNode;
 import org.assertj.core.api.Assertions;
 
 import java.util.HashSet;
@@ -31,21 +32,4 @@ public class Q142LinkedListCycleII {
         return null;
     }
 
-    static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-            next = null;
-        }
-
-        @Override
-        public String toString() {
-            return "ListNode{" +
-                    "val=" + val +
-                    ", next=" + next.val +
-                    '}';
-        }
-    }
 }

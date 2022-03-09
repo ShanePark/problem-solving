@@ -1,5 +1,6 @@
 package shane.leetcode.problems.medium;
 
+import com.tistory.shanepark.leetcode.ListNode;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -35,31 +36,6 @@ public class Q24SwapNodesinPairs {
         head.next = next.next;
         cur.next = next;
         cur.next.next = head;
-    }
-
-    public class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode() {
-        }
-
-        ListNode(int val) {
-            this.val = val;
-        }
-
-        ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
-
-        @Override
-        public String toString() {
-            return "ListNode{" +
-                    "val=" + val +
-                    ", next=" + next +
-                    '}';
-        }
     }
 
 }

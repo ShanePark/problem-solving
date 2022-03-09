@@ -1,5 +1,7 @@
 package shane.leetcode.problems.easy;
 
+import com.tistory.shanepark.leetcode.ListNode;
+
 public class Q21MergeTwoSortedLists {
 
     public static void main(String[] args) {
@@ -11,7 +13,7 @@ public class Q21MergeTwoSortedLists {
         list2.next.next = new ListNode(4);
 
         ListNode result = mergeTwoLists(list1, list2);
-        printNode(result);
+        result.print();
     }
 
 
@@ -42,39 +44,6 @@ public class Q21MergeTwoSortedLists {
         }
 
         return head.next;
-    }
-
-    // Definition for singly-linked list.
-    public static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode() {
-        }
-
-        ListNode(int val) {
-            this.val = val;
-        }
-
-        ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
-
-        public void printNode() {
-            ListNode head = this;
-            while (head != null) {
-                System.out.println(head.val);
-                head = head.next;
-            }
-        }
-    }
-
-    private static void printNode(ListNode result) {
-        while (result != null) {
-            System.out.println(result.val);
-            result = result.next;
-        }
     }
 
 }

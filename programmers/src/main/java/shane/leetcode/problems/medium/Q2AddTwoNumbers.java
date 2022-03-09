@@ -1,5 +1,7 @@
 package shane.leetcode.problems.medium;
 
+import com.tistory.shanepark.leetcode.ListNode;
+
 public class Q2AddTwoNumbers {
 
     public static void main(String[] args) {
@@ -31,31 +33,6 @@ public class Q2AddTwoNumbers {
             curr.next = new ListNode(save);
 
         return result.next;
-    }
-
-    static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode() {
-        }
-
-        ListNode(int val) {
-            this.val = val;
-        }
-
-        ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
-
-        void print() {
-            ListNode node = this;
-            while (node != null) {
-                System.out.println(node.val);
-                node = node.next;
-            }
-        }
     }
 
 }

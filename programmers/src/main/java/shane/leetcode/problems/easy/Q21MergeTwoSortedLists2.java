@@ -1,6 +1,7 @@
 package shane.leetcode.problems.easy;
 
 
+import com.tistory.shanepark.leetcode.ListNode;
 import org.assertj.core.api.Assertions;
 
 @SuppressWarnings("DuplicatedCode")
@@ -53,48 +54,6 @@ public class Q21MergeTwoSortedLists2 {
         tail.next = list1 == null ? list2 : list1;
 
         return head.next;
-    }
-
-    // Definition for singly-linked list.
-    public static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode() {
-        }
-
-        ListNode(int val) {
-            this.val = val;
-        }
-
-        ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
-
-        public void printNode() {
-            ListNode head = this;
-            System.out.println("PRINT NODE START");
-            while (head != null) {
-                System.out.println(head.val);
-                head = head.next;
-            }
-            System.out.println("PRINT NODE END");
-        }
-
-        @Override
-        public String toString() {
-            return "ListNode{" +
-                    "val=" + val +
-                    '}';
-        }
-    }
-
-    private static void printNode(ListNode result) {
-        while (result != null) {
-            System.out.println(result.val);
-            result = result.next;
-        }
     }
 
 }
