@@ -28,6 +28,6 @@ public class Q1557MinimumNumberOfVerticesToReachAllNodes2 {
     public List<Integer> findSmallestSetOfVertices(int n, List<List<Integer>> edges) {
         boolean[] checked = new boolean[n];
         edges.stream().forEach(e -> checked[e.get(1)]=true);
-        return IntStream.range(0, n).filter(i -> !checked[i]).boxed().collect(Collectors.toList());f
+        return IntStream.range(0, n).filter(i -> !checked[i]).boxed().collect(Collectors.toList());
     }
 }
