@@ -5,9 +5,9 @@ import org.junit.jupiter.api.Assertions;
 
 public class Q337HouseRobberlll {
     public static void main(String[] args) {
-        TreeNode t = new TreeNode(new Integer[]{3, 2, 3, null, 3, null, 1});
+        TreeNode t = TreeNode.of(new Integer[]{3, 2, 3, null, 3, null, 1});
         Assertions.assertEquals(7, rob(t));
-        TreeNode t2 = new TreeNode(new Integer[]{3, 4, 5, 1, 3, null, 1});
+        TreeNode t2 = TreeNode.of(new Integer[]{3, 4, 5, 1, 3, null, 1});
         Assertions.assertEquals(9, rob(t2));
     }
 

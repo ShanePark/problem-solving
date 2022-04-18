@@ -7,7 +7,7 @@ public class Q1038BinarySearchTreeToGreaterSumTree2 {
 
     @Test
     void test() {
-        TreeNode root = new TreeNode(new Integer[]{4, 1, 6, 0, 2, 5, 7, null, null, null, 3, null, null, null, 8});
+        TreeNode root = TreeNode.of(new Integer[]{4, 1, 6, 0, 2, 5, 7, null, null, null, 3, null, null, null, 8});
         bstToGst(root).printTree();
 
     }

@@ -11,14 +11,7 @@ public class Q617MergeTwoBinaryTrees {
     public void test() {
         TreeNode root1 = TreeNode.of(new Integer[]{1, 3, 2, 5});
         TreeNode root2 = TreeNode.of(new Integer[]{2, 1, 3, null, 4, null, 7});
-        TreeNode merge = mergeTrees(root1, root2);
-        assertThat(merge.val).isEqualTo(3);
-        assertThat(merge.left.val).isEqualTo(4);
-        assertThat(merge.left.left.val).isEqualTo(5);
-        assertThat(merge.left.right.val).isEqualTo(4);
-        assertThat(merge.right.val).isEqualTo(5);
-        assertThat(merge.right.left).isNull();
-        assertThat(merge.right.right.val).isEqualTo(7);
+        assertThat(mergeTrees(root1, root2)).isEqualTo(TreeNode.of(3, 4, 5, 5, 4, null, 7));
     }
 
     public TreeNode mergeTrees(TreeNode root1, TreeNode root2) {
