@@ -1,7 +1,8 @@
 package shane.leetcode.problems.xhard;
 
-import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Assertions;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,8 +10,8 @@ import java.util.List;
 /**
  * Wrong Answer
  */
-@Slf4j
 public class Q312BurstBallons {
+    static Logger log = LoggerFactory.getLogger(Q312BurstBallons.class);
     public static void main(String[] args) {
 //        Assertions.assertEquals(167, maxCoins(new int[]{3, 1, 5, 8}));
         Assertions.assertEquals(1086136, maxCoins(new int[]{9, 76, 64, 21, 97, 60}));
