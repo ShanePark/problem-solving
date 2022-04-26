@@ -18,10 +18,50 @@ public class Q1584MinCostToConnectAllPoints {
     }
 
     public int minCostConnectPoints(int[][] points) {
-        Pair<Integer,Integer> d;
-        int "d;";
-        return 0;
 
+        PriorityQueue<Pair> pq = new PriorityQueue<>();
+        boolean[] included = new boolean[points.length];
+
+        pq.add(new Pair(0, 0));
+        int total = 0;
+        int connects = 0;
+
+        while (connects < points.length) {
+            Pair poll = pq.poll();
+            int cur = poll.value;
+
+            if (included[cur]) {
+                continue;
+            }
+            included[cur] = true;
+
+            total += poll.key;
+            connects++;
+
+            for (int next = 0; next < points.length; next++) {
+                if (!included[next]) {
+                    int nextWeight = Math.abs(points[cur][0] - points[next][0]) + Math.abs(points[cur][1] - points[next][1]);
+                    pq.add(new Pair(nextWeight, next));
+                }
+            }
+        }
+
+        return total;
+    }
+
+    class Pair implements Comparable {
+        int key;
+        int value;
+
+        public Pair(int key, int value) {
+            this.key = key;
+            this.value = value;
+        }
+
+        @Override
+        public int compareTo(Object o) {
+            return Integer.compare(key, ((Pair) o).key);
+        }
     }
 
 }
