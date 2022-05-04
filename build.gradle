@@ -19,7 +19,7 @@ dependencies {
 	implementation('org.springframework.boot:spring-boot-starter-aop:')
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	implementation 'org.springframework.boot:spring-boot-starter-test'
-	implementation 'com.github.Shane-Park:shaneutils:2a55b078da'
+	implementation 'com.github.Shane-Park:shaneutils:43400ba7c5'
 }
 
 test {
