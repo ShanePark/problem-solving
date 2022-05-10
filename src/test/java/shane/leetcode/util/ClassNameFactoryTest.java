@@ -9,6 +9,7 @@ import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.StringSelection;
 import java.util.regex.Pattern;
 
+import static org.assertj.core.api.Assertions.*;
 import static org.assertj.core.api.Assertions.assertThat;
 import static shane.leetcode.util.ClassNameFactory.getClassName;
 
@@ -28,7 +29,7 @@ public class ClassNameFactoryTest {
         final String[] args = "1315. Sum of Nodes with Even-Valued Grandparent".split(" ");
 
         String className = getClassName(args);
-        Assertions.assertThat(className).isEqualTo("Q1315SumOfNodesWithEvenValuedGrandparent");
+        assertThat(className).isEqualTo("Q1315SumOfNodesWithEvenValuedGrandparent");
         System.out.println("Class name : " + className);
         System.out.println("class name has been copied to your Clipboard!");
 
@@ -40,6 +41,12 @@ public class ClassNameFactoryTest {
         System.out.println("stopWatch = " + stopWatch.getTotalTimeMillis() + "ms");
 
         return;
+    }
+
+    @Test
+    public void forbiddenWords() {
+        assertThat(getClassName("2124. Check if All A's Appears Before All B's".split(" ")))
+                .isEqualTo("Q2124CheckIfAllAsAppearsBeforeAllBs");
     }
 
 }

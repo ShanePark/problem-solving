@@ -10,7 +10,7 @@ import java.util.Set;
 
 public class ClassNameFactory {
 
-    public static final Set<Character> INVALID_CHARACTERS = new HashSet<>(Arrays.asList('-', '.')); // INVALID_CHARACTERS HAS TO BE SORTED ALL THE TIME
+    public static final Set<Character> INVALID_CHARACTERS = new HashSet<>(Arrays.asList('-', '.', '\''));
     public static final String LEETCODE_TITLE_REGEX = "[0-9]+\\..*";
     public static final Scanner SCANNER = new Scanner(System.in);
 
