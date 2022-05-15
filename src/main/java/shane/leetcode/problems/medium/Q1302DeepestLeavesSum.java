@@ -5,9 +5,7 @@ import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class Q1302DeepestLeavesSum {
 
@@ -28,29 +26,27 @@ public class Q1302DeepestLeavesSum {
 
     public int deepestLeavesSum(TreeNode root) {
 
-        Map<Integer, List<Integer>> map = new HashMap<>();
-
-        travel(root, map, 0);
-        List<Integer> list = map.get(maxDepth);
-        return list.stream().mapToInt(Integer::intValue).sum();
-
+        List<Integer> deepestList = new ArrayList<>();
+        travel(root, deepestList, 0);
+        return deepestList.stream().mapToInt(Integer::valueOf).sum();
     }
 
-    private void travel(TreeNode node, Map<Integer, List<Integer>> map, int depth) {
+    private void travel(TreeNode node, List<Integer> list, int depth) {
         if (node.left == null && node.right == null) {
-            if (depth >= maxDepth) {
-                maxDepth = Math.max(maxDepth, depth);
-                List<Integer> list = map.getOrDefault(depth, new ArrayList<>());
-                list.add(node.val);
-                map.put(depth, list);
+            if (depth < maxDepth)
+                return;
+            if (depth > maxDepth) {
+                list.clear();
+                maxDepth = depth;
             }
+            list.add(node.val);
             return;
         }
 
         if (node.left != null)
-            travel(node.left, map, depth + 1);
+            travel(node.left, list, depth + 1);
         if (node.right != null)
-            travel(node.right, map, depth + 1);
+            travel(node.right, list, depth + 1);
     }
 
 }
