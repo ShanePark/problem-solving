@@ -13,7 +13,7 @@ public class Q1284MinimumNumberOfFlipsToConvertBinaryMatrixToZeroMatrix2 {
 
     @Test
     public void test() {
-        // TLE : 1 sec 779ms  play++ = 512
+        // TLE : 55ms  play++ = 512
         assertThat(minFlips(STool.convertToIntArray("[[1,0,1],[0,1,0],[1,0,1]]"))).isEqualTo(9);
         assertThat(minFlips(STool.convertToIntArray("[[0]]"))).isEqualTo(0);
         assertThat(minFlips(STool.convertToIntArray("[[0,0],[0,1]]"))).isEqualTo(3);
