@@ -7,6 +7,10 @@ import java.util.Map;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+/**
+ * Runtime: 9 ms, faster than 5.77% of Java online submissions for Two Sum II - Input Array Is Sorted.
+ * Memory Usage: 52.4 MB, less than 5.94% of Java online submissions for Two Sum II - Input Array Is Sorted.
+ */
 public class Q167TwoSumIIInputArrayIsSorted {
 
     @Test
