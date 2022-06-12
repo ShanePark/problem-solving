@@ -2,7 +2,6 @@ package shane.leetcode.problems.medium;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -43,11 +42,9 @@ public class Q1658MinimumOperationsToReduceXToZero3 {
 
         for (int i = LENGTH; i >= 0 && rights[i] <= x; i--) {
             Integer leftIndex = map.get(rights[i]);
-            if (leftIndex != null) {
-                if (leftIndex <= i) {
-                    int size = leftIndex + LENGTH - i;
-                    min = min < 0 ? size : Math.min(min, size);
-                }
+            if (leftIndex != null && leftIndex <= i) {
+                int size = leftIndex + LENGTH - i;
+                min = min < 0 ? size : Math.min(min, size);
             }
         }
 
