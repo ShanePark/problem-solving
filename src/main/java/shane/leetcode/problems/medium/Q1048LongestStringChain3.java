@@ -40,7 +40,6 @@ public class Q1048LongestStringChain3 {
             listMap.put(length, list);
         }
 
-
         for (int i = 1; i <= 16; i++) {
             List<String> strings = listMap.get(i);
             if (strings == null)
