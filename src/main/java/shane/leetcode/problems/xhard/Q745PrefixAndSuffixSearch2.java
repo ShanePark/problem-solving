@@ -47,33 +47,33 @@ public class Q745PrefixAndSuffixSearch2 {
 
     class WordFilter {
 
-        Map<String, Set<Integer>> pref = new HashMap<>();
-        Map<String, Set<Integer>> suf = new HashMap<>();
-        Set<String> set = new HashSet<>();
+        Map<String, Set<Integer>> prefixMap = new HashMap<>();
+        Map<String, Set<Integer>> suffixMap = new HashMap<>();
+        Set<String> avoidDuplicate = new HashSet<>();
 
         public WordFilter(String[] words) {
             for (int i = words.length - 1; i >= 0; i--) {
                 String word = words[i];
-                if (set.add(word)) {
+                if (avoidDuplicate.add(word)) {
                     int length = word.length();
                     for (int j = 0; j < length; j++) {
                         String start = word.substring(0, j + 1);
-                        Set<Integer> preSet = pref.getOrDefault(start, new HashSet<>());
+                        Set<Integer> preSet = prefixMap.getOrDefault(start, new HashSet<>());
                         preSet.add(i);
-                        pref.put(start, preSet);
+                        prefixMap.put(start, preSet);
 
                         String end = word.substring(length - 1 - j);
-                        Set<Integer> endSet = suf.getOrDefault(end, new HashSet<>());
+                        Set<Integer> endSet = suffixMap.getOrDefault(end, new HashSet<>());
                         endSet.add(i);
-                        suf.put(end, endSet);
+                        suffixMap.put(end, endSet);
                     }
                 }
             }
         }
 
         public int f(String prefix, String suffix) {
-            Set<Integer> preSet = pref.get(prefix);
-            Set<Integer> endSet = suf.get(suffix);
+            Set<Integer> preSet = prefixMap.get(prefix);
+            Set<Integer> endSet = suffixMap.get(suffix);
             if (preSet == null || endSet == null)
                 return -1;
 
