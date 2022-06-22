@@ -48,11 +48,11 @@ public class Q31NextPermutation {
         if (isSortedReverse(nums, from + 1, to)) {
             // put next number on the from index
             int nextNumber = Integer.MAX_VALUE;
-            int indexdNumber = nums[from];
+            int indexedNumber = nums[from];
             List<Integer> list = new ArrayList<>();
-            list.add(indexdNumber);
+            list.add(indexedNumber);
             for (int i = from + 1; i <= to; i++) {
-                if (nums[i] > indexdNumber) {
+                if (nums[i] > indexedNumber) {
                     nextNumber = Math.min(nums[i], nextNumber);
                 }
                 list.add(nums[i]);
