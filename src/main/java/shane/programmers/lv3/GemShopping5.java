@@ -11,6 +11,7 @@ public class GemShopping5 {
 
     @Test
     public void test() {
+        assertThat(solution(new String[]{"A", "A", "B"})).containsExactly(2, 3);
         assertThat(solution(new String[]{"DIA", "RUBY", "RUBY", "DIA", "DIA", "EMERALD", "SAPPHIRE", "DIA"})).containsExactly(3, 7);
         assertThat(solution(new String[]{"XYZ", "XYZ", "XYZ"})).containsExactly(1, 1);
         assertThat(solution(new String[]{"AA", "AB", "AC", "AA", "AC"})).containsExactly(1, 3);
@@ -38,7 +39,7 @@ public class GemShopping5 {
             }
 
             if (set.size() == count && right - left < min) {
-                min = right - left - 1;
+                min = right - left;
                 answer = new int[]{left + 1, right + 1};
             }
 
