@@ -4,11 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-/**
- * Runtime: 1 ms, faster than 97.53% of Java online submissions for Non-decreasing Array.
- * Memory Usage: 54.5 MB, less than 12.01% of Java online submissions for Non-decreasing Array.
- */
-public class Q665NondecreasingArray {
+public class Q665NondecreasingArray2 {
 
     @Test
     public void test() {
@@ -20,23 +16,18 @@ public class Q665NondecreasingArray {
     }
 
     public boolean checkPossibility(int[] nums) {
-        int before2 = Integer.MIN_VALUE;
-        int before = nums[0];
-        boolean flag = false;
+        boolean changed = false;
         for (int i = 1; i < nums.length; i++) {
-            int cur = nums[i];
-            if (before > cur) {
-                if (flag)
+            if (nums[i - 1] > nums[i]) {
+                if (changed)
                     return false;
-                if (before2 > cur) {
-                    cur = before;
+                if (i < 2 || nums[i - 2] <= nums[i]) {
+                    nums[i - 1] = nums[i];
                 } else {
-                    before = before2;
+                    nums[i] = nums[i - 1];
                 }
-                flag = true;
+                changed = true;
             }
-            before2 = before;
-            before = cur;
         }
         return true;
     }
