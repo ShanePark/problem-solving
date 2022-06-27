@@ -1,10 +1,9 @@
-package shane.leetcode.problems.easy
+package shane.leetkode.problems.easy
 
-import org.assertj.core.api.Assertions
 import org.assertj.core.api.Assertions.*
 import org.junit.jupiter.api.Test
 
-class Q258AddDigitsK {
+class Q258AddDigits {
 
     @Test
     fun test() {

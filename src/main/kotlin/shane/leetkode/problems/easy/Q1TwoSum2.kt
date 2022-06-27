@@ -1,9 +1,9 @@
-package shane.leetcode.problems.easy
+package shane.leetkode.problems.easy
 
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 
-class Q1TwoSum2K {
+class Q1TwoSum2 {
 
     @Test
     fun test() {

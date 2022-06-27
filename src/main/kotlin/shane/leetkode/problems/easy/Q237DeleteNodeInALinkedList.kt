@@ -1,10 +1,10 @@
-package shane.leetcode.problems.easy
+package shane.leetkode.problems.easy
 
 import com.tistory.shanepark.leetcode.ListNode
 import org.assertj.core.api.Assertions
 import org.junit.jupiter.api.Test
 
-class Q237DeleteNodeInALinkedListK {
+class Q237DeleteNodeInALinkedList {
 
     @Test
     fun test() {
