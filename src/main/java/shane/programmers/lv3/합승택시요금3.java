@@ -5,9 +5,6 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-/**
- * TLE
- */
 @SuppressWarnings("ALL")
 public class 합승택시요금3 {
 
