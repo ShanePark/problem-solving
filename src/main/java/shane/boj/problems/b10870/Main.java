@@ -1,4 +1,4 @@
-package shane.boj;
+package shane.boj.problems.b10870;
 /**
  * don't forget to Copy from import to the EOF
  * * * * * * * * * * * * * * * * *
@@ -12,15 +12,17 @@ public class Main {
     void main() throws IOException {
         //input
         String line = br.readLine();
-        StringTokenizer st = new StringTokenizer(line);
+        int n = Integer.parseInt(line);
 
-        //logic
-        int first = Integer.parseInt(st.nextToken());
-        int second = Integer.parseInt(st.nextToken());
-        int answer = first + second;
+        long[] dp = new long[21];
+        dp[0] = 0;
+        dp[1] = 1;
+        for(int i=2; i<=n; i++) {
+            dp[i] = dp[i - 1] + dp[i - 2];
+        }
 
         //output
-        println(answer);
+        println(dp[n]);
     }
 
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -33,7 +35,7 @@ public class Main {
         br.close();
     }
 
-    void println(int n) throws IOException {
+    void println(long n) throws IOException {
         println(String.valueOf(n));
     }
 
