@@ -1,4 +1,5 @@
-package shane.programmers.devMatching2022Game;
+package shane.programmers.challenge2022.gameq1;
+
 
 import com.tistory.shanepark.STool;
 import org.assertj.core.api.Assertions;

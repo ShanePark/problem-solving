@@ -1,4 +1,4 @@
-package shane.programmers.weekly;
+package shane.programmers.challenge2021.weekly;
 
 public class Week5Dictionary {
     public static void main(String[] args) {

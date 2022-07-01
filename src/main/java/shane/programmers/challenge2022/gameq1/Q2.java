@@ -1,4 +1,4 @@
-package shane.programmers.devMatching2022Game;
+package shane.programmers.challenge2022.gameq1;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;

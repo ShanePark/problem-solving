@@ -1,4 +1,4 @@
-package shane.programmers.weekly;
+package shane.programmers.challenge2021.weekly;
 
 /**
 채점을 시작합니다.

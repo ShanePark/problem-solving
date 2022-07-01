@@ -1,4 +1,4 @@
-package shane.programmers.weekly;
+package shane.programmers.challenge2021.weekly;
 
 public class Week8MinimalRectangle {
     public static void main(String[] args) {

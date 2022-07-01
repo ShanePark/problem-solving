@@ -1,4 +1,4 @@
-package shane.programmers.sk2022;
+package shane.programmers.challenge2022.sk2022;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
