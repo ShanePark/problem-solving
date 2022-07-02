@@ -1,4 +1,4 @@
-package shane.boj.problems.b10828;
+package shane.boj.problems.silver.b10828;
 
 import java.io.*;
 import java.util.Stack;

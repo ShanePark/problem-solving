@@ -1,11 +1,10 @@
-package shane.boj.problems.b10870;
+package shane.boj.problems.bronze.b10870;
 /**
  * don't forget to Copy from import to the EOF
  * * * * * * * * * * * * * * * * *
  */
 
 import java.io.*;
-import java.util.StringTokenizer;
 
 public class Main {
 

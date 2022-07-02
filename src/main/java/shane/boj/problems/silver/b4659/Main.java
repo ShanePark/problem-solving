@@ -1,4 +1,4 @@
-package shane.boj.problems.b4659;
+package shane.boj.problems.silver.b4659;
 /**
  * don't forget to Copy from import to the EOF
  * * * * * * * * * * * * * * * * *
