@@ -1,6 +1,7 @@
 package shane.boj;
 /**
  * don't forget to Copy from import to the EOF
+ * try not to copy first line "package ..."
  * * * * * * * * * * * * * * * * *
  */
 
