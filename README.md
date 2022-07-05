@@ -25,8 +25,9 @@ I use those websites to solve problems, mostly leetcode which I never forgot the
 
 I made small utility package to help ps. it converts String to array, list, etc.. and also has lots of tools for testing the code expecially for leetcode. check it out!
 
-> I tried my best to avoid any license issue but if you have any inqury please send me an e-mail.
->
-> - psh40963@naver.com
->
-> any issue will be handled in 12 hours I guarantee. Thank you
+```
+I tried my best to avoid any license issue but if you have any inqury please send me an e-mail.
+Any issue will be handled in 12 hours I guarantee. Thank you.
+
+psh40963@naver.com
+```
