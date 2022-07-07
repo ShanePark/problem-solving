@@ -34,7 +34,7 @@ vi ~/.zshrc
 - and add alias. 
 
 ```bash
-alias leet="java ~/Documents/git/shane/ps/src/main/java/shane/leet    code/util/ClassNameFactory.java"
+alias leet="java ~/Documents/git/shane/ps/src/main/java/shane/leetcode/util/ClassNameFactory.java"
 ```
 
 > Reminder : if you are using Java 11 or higher, you can run single file program without without compiling, otherwise you should compile it before run.
