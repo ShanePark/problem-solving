@@ -17,7 +17,7 @@ I use those websites to solve problems, mostly leetcode which I never forgot the
 > https://leetcode.com/Shane-Park/
 
 - [Programmers](https://programmers.co.kr/)
-- [Baekjoon Online Judge](www.acmicpc.net)
+- [Baekjoon Online Judge](https://www.acmicpc.net)
 
 ## Leetcode ClassName Factory
 
@@ -37,7 +37,7 @@ vi ~/.zshrc
 alias leet="java ~/Documents/git/shane/ps/src/main/java/shane/leetcode/util/ClassNameFactory.java"
 ```
 
-> Reminder : if you are using Java 11 or higher, you can run single file program without without compiling, otherwise you should compile it before run.
+> Reminder : if you are using Java 11 or higher, you can run single file program without compiling, otherwise you should compile it before run.
 >
 > also don't forget to modify directories on your taste.
 
