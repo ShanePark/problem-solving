@@ -27,13 +27,11 @@ public class Q729MyCalendarI3 {
         TreeMap<Integer, Integer> treeMap = new TreeMap<>();
 
         public MyCalendar() {
-            final int INF = (int) 1e9 + 1;
-            treeMap.put(INF, INF);
         }
 
         public boolean book(int start, int end) {
             Map.Entry<Integer, Integer> higher = treeMap.higherEntry(start);
-            if (end > higher.getValue()) {
+            if (higher != null && end > higher.getValue()) {
                 return false;
             }
             treeMap.put(end, start);
