@@ -3,16 +3,17 @@ package shane.leetcode.problems.xhard;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
-import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
- * Runtime: 19 ms, faster than 26.79% of Java online submissions for Stamping The Sequence.
- * Memory Usage: 44.7 MB, less than 52.68% of Java online submissions for Stamping The Sequence.
+ * Runtime: 43 ms, faster than 24.11% of Java online submissions for Stamping The Sequence.
+ * Memory Usage: 55.1 MB, less than 16.07% of Java online submissions for Stamping The Sequence.
  */
-public class Q936StampingTheSequence {
+public class Q936StampingTheSequence2 {
 
     @Test
     public void test() {
@@ -45,23 +46,20 @@ public class Q936StampingTheSequence {
         int index = target.indexOf(stamp);
         if (index < 0)
             return new int[]{};
-        StringBuilder sb = new StringBuilder(target);
+
+        Set<Integer> set = new HashSet<>();
         for (int i = 0; i < STAMP_LENGTH; i++) {
-            sb.setCharAt(index + i, '?');
+            set.add(index + i);
         }
-        List<Integer> answer = new ArrayList<>();
-        answer.add(index);
-        int changeCnt = STAMP_LENGTH;
-        while (changeCnt < TARGET_LENGTH) {
+        List<Integer> list = new ArrayList<>();
+        list.add(index);
+        while (set.size() < TARGET_LENGTH) {
             boolean change = false;
             for (int i = 0; i <= TARGET_LENGTH - STAMP_LENGTH; i++) {
-                if (check(sb, i, stamp)) {
-                    answer.add(i);
+                if (check(set, i, target, stamp)) {
+                    list.add(i);
                     for (int j = 0; j < STAMP_LENGTH; j++) {
-                        if (sb.charAt(i + j) != '?') {
-                            sb.setCharAt(i + j, '?');
-                            changeCnt++;
-                        }
+                        set.add(i + j);
                     }
                     change = true;
                 }
@@ -70,18 +68,22 @@ public class Q936StampingTheSequence {
                 return new int[]{};
             }
         }
-        Collections.reverse(answer);
-        return answer.stream().mapToInt(Integer::valueOf).toArray();
+        int SIZE = list.size();
+        int[] answer = new int[SIZE];
+        for (int i = 0; i < SIZE; i++) {
+            answer[i] = list.get(SIZE - 1 - i);
+        }
+        return answer;
     }
 
-    private boolean check(StringBuilder sb, int index, String stamp) {
+    private boolean check(Set<Integer> set, int index, String target, String stamp) {
         int cnt = 0;
         for (int i = 0; i < stamp.length(); i++) {
-            char c = sb.charAt(index + i);
-            if (c == '?') {
+            boolean contains = set.contains(index + i);
+            if (contains) {
                 cnt++;
             }
-            if (c != '?' && c != stamp.charAt(i)) {
+            if (!contains && target.charAt(index + i) != stamp.charAt(i)) {
                 return false;
             }
         }
