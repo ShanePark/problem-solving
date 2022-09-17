@@ -1,13 +1,13 @@
-package shane.leetkode.problems.easy
+package shane.leetcode.problems.easy
 
 import org.assertj.core.api.Assertions
 import org.junit.jupiter.api.Test
 
 /**
- * Runtime: 190 ms, faster than 95.24% of Kotlin online submissions for Unique Morse Code Words.
-Memory Usage: 35.2 MB, less than 71.43% of Kotlin online submissions for Unique Morse Code Words.
+ * Runtime: 275 ms, faster than 23.81% of Kotlin online submissions for Unique Morse Code Words.
+ * Memory Usage: 37.8 MB, less than 33.33% of Kotlin online submissions for Unique Morse Code Words.
  */
-class Q804UniqueMorseCodeWords {
+class Q804UniqueMorseCodeWordsK2 {
 
     @Test
     fun test() {
@@ -44,11 +44,7 @@ class Q804UniqueMorseCodeWords {
             "--.."
         )
         return words.map { s ->
-            val sb = StringBuilder()
-            for (c in s) {
-                sb.append(morse[c - 'a'])
-            }
-            sb.toString()
+            s.map { c -> morse[c - 'a'] }.joinToString(separator = "")
         }.toCollection(hashSetOf()).size
     }
 

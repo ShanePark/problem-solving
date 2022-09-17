@@ -1,4 +1,4 @@
-package shane.leetkode.problems.easy
+package shane.leetcode.problems.easy
 
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test
  * Runtime: 184 ms, faster than 97.23% of Kotlin online submissions for Fizz Buzz.
  * Memory Usage: 36.6 MB, less than 92.34% of Kotlin online submissions for Fizz Buzz.
  */
-class Q412FizzBuzz {
+class Q412FizzBuzzK {
 
     @Test
     fun test() {

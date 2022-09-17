@@ -1,4 +1,4 @@
-package shane.leetkode.problems.easy
+package shane.leetcode.problems.easy
 
 import com.tistory.shanepark.STool
 import org.assertj.core.api.Assertions

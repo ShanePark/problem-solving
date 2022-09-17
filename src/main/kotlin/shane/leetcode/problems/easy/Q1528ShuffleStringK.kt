@@ -1,4 +1,4 @@
-package shane.leetkode.problems.easy
+package shane.leetcode.problems.easy
 
 import org.assertj.core.api.Assertions
 import org.junit.jupiter.api.Test
@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test
  * Runtime: 277 ms, faster than 81.32% of Kotlin online submissions for Shuffle String.
  * Memory Usage: 38 MB, less than 94.51% of Kotlin online submissions for Shuffle String.
  */
-class Q1528ShuffleString {
+class Q1528ShuffleStringK {
 
     @Test
     fun test() {

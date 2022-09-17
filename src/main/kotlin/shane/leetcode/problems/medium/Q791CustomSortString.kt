@@ -1,4 +1,4 @@
-package shane.leetkode.problems.medium
+package shane.leetcode.problems.medium
 
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test

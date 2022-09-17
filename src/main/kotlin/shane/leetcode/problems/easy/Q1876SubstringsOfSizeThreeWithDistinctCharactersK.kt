@@ -1,4 +1,4 @@
-package shane.leetkode.problems.easy
+package shane.leetcode.problems.easy
 
 import org.assertj.core.api.Assertions
 import org.junit.jupiter.api.Test
@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test
  * Runtime: 295 ms, faster than 27.27% of Kotlin online submissions for Substrings of Size Three with Distinct Characters.
  * Memory Usage: 35.4 MB, less than 54.55% of Kotlin online submissions for Substrings of Size Three with Distinct Characters.
  */
-class Q1876SubstringsOfSizeThreeWithDistinctCharacters {
+class Q1876SubstringsOfSizeThreeWithDistinctCharactersK {
 
     @Test
     fun test() {
