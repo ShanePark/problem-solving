@@ -20,7 +20,7 @@ dependencies {
 	implementation('org.springframework.boot:spring-boot-starter-aop:')
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	implementation 'org.springframework.boot:spring-boot-starter-test'
-	implementation 'com.github.Shane-Park:shaneutils:1451d7c99f'
+	implementation 'com.github.Shane-Park:shaneutils:072eed138d'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
 }
 
