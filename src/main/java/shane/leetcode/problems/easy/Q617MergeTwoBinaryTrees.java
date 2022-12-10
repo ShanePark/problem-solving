@@ -9,9 +9,9 @@ public class Q617MergeTwoBinaryTrees {
 
     @Test
     public void test() {
-        TreeNode root1 = TreeNode.of(new Integer[]{1, 3, 2, 5});
-        TreeNode root2 = TreeNode.of(new Integer[]{2, 1, 3, null, 4, null, 7});
-        assertThat(mergeTrees(root1, root2)).isEqualTo(TreeNode.of(3, 4, 5, 5, 4, null, 7));
+        TreeNode root1 = TreeNode.ofWithNull(new Integer[]{1, 3, 2, 5});
+        TreeNode root2 = TreeNode.ofWithNull(new Integer[]{2, 1, 3, null, 4, null, 7});
+        assertThat(mergeTrees(root1, root2)).isEqualTo(TreeNode.ofWithNull(3, 4, 5, 5, 4, null, 7));
     }
 
     public TreeNode mergeTrees(TreeNode root1, TreeNode root2) {

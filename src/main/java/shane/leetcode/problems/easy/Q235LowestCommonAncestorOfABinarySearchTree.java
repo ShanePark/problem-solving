@@ -18,19 +18,19 @@ public class Q235LowestCommonAncestorOfABinarySearchTree {
 
     @Test
     public void test() {
-        TreeNode node = TreeNode.of(6, 2, 8, 0, 4, 7, 9, null, null, 3, 5);
+        TreeNode node = TreeNode.ofWithNull(6, 2, 8, 0, 4, 7, 9, null, null, 3, 5);
         assertThat(lowestCommonAncestor(node, node.left, node.right)).isEqualTo(node);
     }
 
     @Test
     public void test2() {
-        TreeNode node = TreeNode.of(6, 2, 8, 0, 4, 7, 9, null, null, 3, 5);
+        TreeNode node = TreeNode.ofWithNull(6, 2, 8, 0, 4, 7, 9, null, null, 3, 5);
         assertThat(lowestCommonAncestor(node, node.left, node.left.right)).isEqualTo(node.left);
     }
 
     @Test
     public void test3() {
-        TreeNode node = TreeNode.of(6, 2, 8, 0, 4, 7, 9, null, null, 3, 5);
+        TreeNode node = TreeNode.ofWithNull(6, 2, 8, 0, 4, 7, 9, null, null, 3, 5);
         assertThat(lowestCommonAncestor(node, node.left.right.right, node.right.left)).isEqualTo(node);
     }
 

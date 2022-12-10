@@ -26,7 +26,7 @@ public class Q94BinaryTreeInorderTraversal {
 
     @Test
     public void test() {
-        assertThat(inorderTraversal(TreeNode.of(1, null, 2, null, null, 3))).containsExactly(1, 3, 2);
+        assertThat(inorderTraversal(TreeNode.ofWithNull(1, null, 2, null, null, 3))).containsExactly(1, 3, 2);
     }
 }
 

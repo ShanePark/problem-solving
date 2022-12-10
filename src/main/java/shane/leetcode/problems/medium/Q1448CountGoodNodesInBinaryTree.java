@@ -9,8 +9,8 @@ public class Q1448CountGoodNodesInBinaryTree {
 
     @Test
     public void test() {
-        assertThat(goodNodes(TreeNode.of(3, 1, 4, 3, null, 1, 5))).isEqualTo(4);
-        assertThat(goodNodes(TreeNode.of(3,3,null,4,2))).isEqualTo(3);
+        assertThat(goodNodes(TreeNode.ofWithNull(3, 1, 4, 3, null, 1, 5))).isEqualTo(4);
+        assertThat(goodNodes(TreeNode.ofWithNull(3,3,null,4,2))).isEqualTo(3);
     }
 
     int cnt;

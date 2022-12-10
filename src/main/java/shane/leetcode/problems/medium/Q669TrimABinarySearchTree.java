@@ -9,7 +9,7 @@ public class Q669TrimABinarySearchTree {
 
     @Test
     public void test() {
-        TreeNode before = TreeNode.of(new Integer[]{1, 0, 2});
+        TreeNode before = TreeNode.ofWithNull(new Integer[]{1, 0, 2});
         TreeNode after = trimBST(before, 1, 2);
         assertThat(after.val).isEqualTo(1);
         assertThat(after.left).isNull();
@@ -18,7 +18,7 @@ public class Q669TrimABinarySearchTree {
 
     @Test
     public void test2() {
-        TreeNode before = TreeNode.of(new Integer[]{3, 0, 4, null, 2, null, null, null, null, 1});
+        TreeNode before = TreeNode.ofWithNull(new Integer[]{3, 0, 4, null, 2, null, null, null, null, 1});
         TreeNode after = trimBST(before, 1, 3);
         after.printTree();
     }

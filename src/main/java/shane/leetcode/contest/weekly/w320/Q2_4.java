@@ -17,10 +17,10 @@ public class Q2_4 {
 
     @Test
     public void test() {
-        assertThat(closestNodes(TreeNode.of(2, 1, null), List.of(1, 2))).isEqualTo(STool.convertToIntList("[[1,1], [2, 2]]"));
-        assertThat(closestNodes(TreeNode.of(16, 8, 18, 1, 12, null, 20, null, 2, 9, null, null, null, null, null, null, null, null, 7), List.of(8, 14, 285508, 6))).isEqualTo(STool.convertToIntList("[[8,8],[12,16],[20,-1],[2,7]]"));
-        assertThat(closestNodes(TreeNode.of(6, 2, 13, 1, 4, 9, 15, null, null, null, null, null, null, 14, null), List.of(2, 5, 16))).isEqualTo(STool.convertToIntList("[[2,2],[4,6],[15,-1]]"));
-        assertThat(closestNodes(TreeNode.of(4, null, 9), List.of(3))).isEqualTo(STool.convertToIntList("[[-1,4]]"));
+        assertThat(closestNodes(TreeNode.ofWithNull(2, 1, null), List.of(1, 2))).isEqualTo(STool.convertToIntList("[[1,1], [2, 2]]"));
+        assertThat(closestNodes(TreeNode.ofWithNull(16, 8, 18, 1, 12, null, 20, null, 2, 9, null, null, null, null, null, null, null, null, 7), List.of(8, 14, 285508, 6))).isEqualTo(STool.convertToIntList("[[8,8],[12,16],[20,-1],[2,7]]"));
+        assertThat(closestNodes(TreeNode.ofWithNull(6, 2, 13, 1, 4, 9, 15, null, null, null, null, null, null, 14, null), List.of(2, 5, 16))).isEqualTo(STool.convertToIntList("[[2,2],[4,6],[15,-1]]"));
+        assertThat(closestNodes(TreeNode.ofWithNull(4, null, 9), List.of(3))).isEqualTo(STool.convertToIntList("[[-1,4]]"));
     }
 
     public List<List<Integer>> closestNodes(TreeNode root, List<Integer> queries) {

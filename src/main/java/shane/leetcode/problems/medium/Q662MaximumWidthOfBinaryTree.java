@@ -11,10 +11,10 @@ public class Q662MaximumWidthOfBinaryTree {
 
     @Test
     void test() {
-        Assertions.assertThat(widthOfBinaryTree(TreeNode.of(new Integer[]{1, 3, 2, 5, 3, null, 9}))).isEqualTo(4);
-        Assertions.assertThat(widthOfBinaryTree(TreeNode.of(new Integer[]{1, 3, null, 5, 3}))).isEqualTo(2);
-        Assertions.assertThat(widthOfBinaryTree(TreeNode.of(new Integer[]{1, 3, 2, 5}))).isEqualTo(2);
-//        Assertions.assertThat(widthOfBinaryTree(TreeNode.of(new Integer[]{1, 3, 2, 5, 0, null, 9, 6, null, null, 7}))).isEqualTo(8);
+        Assertions.assertThat(widthOfBinaryTree(TreeNode.ofWithNull(new Integer[]{1, 3, 2, 5, 3, null, 9}))).isEqualTo(4);
+        Assertions.assertThat(widthOfBinaryTree(TreeNode.ofWithNull(new Integer[]{1, 3, null, 5, 3}))).isEqualTo(2);
+        Assertions.assertThat(widthOfBinaryTree(TreeNode.ofWithNull(new Integer[]{1, 3, 2, 5}))).isEqualTo(2);
+//        Assertions.assertThat(widthOfBinaryTree(TreeNode.ofWithNull(new Integer[]{1, 3, 2, 5, 0, null, 9, 6, null, null, 7}))).isEqualTo(8);
     }
 
     public int widthOfBinaryTree(TreeNode root) {

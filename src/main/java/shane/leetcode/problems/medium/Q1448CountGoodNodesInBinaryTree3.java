@@ -12,9 +12,9 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class Q1448CountGoodNodesInBinaryTree3 {
     @Test
     public void test() {
-        assertThat(goodNodes(TreeNode.of(3, 1, 4, 3, null, 1, 5))).isEqualTo(4);
-        assertThat(goodNodes(TreeNode.of(3, 3, null, 4, 2))).isEqualTo(3);
-        assertThat(goodNodes(TreeNode.of(1))).isEqualTo(1);
+        assertThat(goodNodes(TreeNode.ofWithNull(3, 1, 4, 3, null, 1, 5))).isEqualTo(4);
+        assertThat(goodNodes(TreeNode.ofWithNull(3, 3, null, 4, 2))).isEqualTo(3);
+        assertThat(goodNodes(TreeNode.ofWithNull(1))).isEqualTo(1);
     }
 
     public int goodNodes(TreeNode root) {

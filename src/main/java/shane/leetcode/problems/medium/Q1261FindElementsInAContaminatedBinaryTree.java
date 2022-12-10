@@ -10,7 +10,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class Q1261FindElementsInAContaminatedBinaryTree {
     @Test
     public void test() {
-        TreeNode tree = TreeNode.of(-1, null, -1);
+        TreeNode tree = TreeNode.ofWithNull(-1, null, -1);
         FindElements findElements = new FindElements(tree);
         assertThat(findElements.find(1)).isEqualTo(false);
         assertThat(findElements.find(2)).isEqualTo(true);
@@ -18,7 +18,7 @@ public class Q1261FindElementsInAContaminatedBinaryTree {
 
     @Test
     public void test2() {
-        TreeNode tree = TreeNode.of(-1, null, -1, null, null, -1, null, null, null, null, null, -1);
+        TreeNode tree = TreeNode.ofWithNull(-1, null, -1, null, null, -1, null, null, null, null, null, -1);
         FindElements findElements = new FindElements(tree);
         assertThat(findElements.find(2)).isEqualTo(true);
         assertThat(findElements.find(3)).isEqualTo(false);

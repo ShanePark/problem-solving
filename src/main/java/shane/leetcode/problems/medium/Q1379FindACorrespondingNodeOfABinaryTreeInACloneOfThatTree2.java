@@ -9,8 +9,8 @@ public class Q1379FindACorrespondingNodeOfABinaryTreeInACloneOfThatTree2 {
 
     @Test
     public void test() {
-        TreeNode original = TreeNode.of(7, 4, 3, null, null, 6, 19);
-        TreeNode cloned = TreeNode.of(7, 4, 3, null, null, 6, 19);
+        TreeNode original = TreeNode.ofWithNull(7, 4, 3, null, null, 6, 19);
+        TreeNode cloned = TreeNode.ofWithNull(7, 4, 3, null, null, 6, 19);
         TreeNode target = original.right;
         assertThat(getTargetCopy(original, cloned, target)).isEqualTo(cloned.right);
     }

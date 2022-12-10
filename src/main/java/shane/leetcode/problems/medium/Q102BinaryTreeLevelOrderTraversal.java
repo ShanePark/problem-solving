@@ -13,8 +13,8 @@ public class Q102BinaryTreeLevelOrderTraversal {
 
     @Test
     public void test() {
-        assertThat(levelOrder(TreeNode.of(3, 9, 20, null, null, 15, 7))).isEqualTo(STool.convertToIntList("[[3],[9,20],[15,7]]"));
-        assertThat(levelOrder(TreeNode.of(1))).isEqualTo(STool.convertToIntList("[[1]]"));
+        assertThat(levelOrder(TreeNode.ofWithNull(3, 9, 20, null, null, 15, 7))).isEqualTo(STool.convertToIntList("[[3],[9,20],[15,7]]"));
+        assertThat(levelOrder(TreeNode.ofWithNull(1))).isEqualTo(STool.convertToIntList("[[1]]"));
         assertThat(levelOrder(null)).isEqualTo(STool.convertToIntList("[]"));
     }
 

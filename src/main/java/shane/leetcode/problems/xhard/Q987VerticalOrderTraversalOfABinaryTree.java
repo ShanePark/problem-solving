@@ -17,10 +17,10 @@ public class Q987VerticalOrderTraversalOfABinaryTree {
 
     @Test
     public void test() {
-        assertThat(verticalTraversal(TreeNode.of(3, 1, 4, 0, 2, 2))).isEqualTo(STool.convertToIntList("[[0],[1],[3,2,2],[4]]"));
-        assertThat(verticalTraversal(TreeNode.of(3, 9, 20, null, null, 15, 7))).isEqualTo(STool.convertToIntList("[[9],[3,15],[20],[7]]"));
-        assertThat(verticalTraversal(TreeNode.of(1, 2, 3, 4, 5, 6, 7))).isEqualTo(STool.convertToIntList("[[4],[2],[1,5,6],[3],[7]]"));
-        assertThat(verticalTraversal(TreeNode.of(1, 2, 3, 4, 6, 5, 7))).isEqualTo(STool.convertToIntList("[[4],[2],[1,5,6],[3],[7]]"));
+        assertThat(verticalTraversal(TreeNode.ofWithNull(3, 1, 4, 0, 2, 2))).isEqualTo(STool.convertToIntList("[[0],[1],[3,2,2],[4]]"));
+        assertThat(verticalTraversal(TreeNode.ofWithNull(3, 9, 20, null, null, 15, 7))).isEqualTo(STool.convertToIntList("[[9],[3,15],[20],[7]]"));
+        assertThat(verticalTraversal(TreeNode.ofWithNull(1, 2, 3, 4, 5, 6, 7))).isEqualTo(STool.convertToIntList("[[4],[2],[1,5,6],[3],[7]]"));
+        assertThat(verticalTraversal(TreeNode.ofWithNull(1, 2, 3, 4, 6, 5, 7))).isEqualTo(STool.convertToIntList("[[4],[2],[1,5,6],[3],[7]]"));
     }
 
     public List<List<Integer>> verticalTraversal(TreeNode root) {

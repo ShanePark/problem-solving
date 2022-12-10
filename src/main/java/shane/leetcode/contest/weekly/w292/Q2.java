@@ -12,8 +12,8 @@ public class Q2 {
 
     @Test
     public void test() {
-        assertThat(averageOfSubtree(TreeNode.of(4, 8, 5, 0, 1, null, 6))).isEqualTo(5);
-        assertThat(averageOfSubtree(TreeNode.of(1))).isEqualTo(1);
+        assertThat(averageOfSubtree(TreeNode.ofWithNull(4, 8, 5, 0, 1, null, 6))).isEqualTo(5);
+        assertThat(averageOfSubtree(TreeNode.ofWithNull(1))).isEqualTo(1);
     }
 
     Map<TreeNode, TreeSum> map;

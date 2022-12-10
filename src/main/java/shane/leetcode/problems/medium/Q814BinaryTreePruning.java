@@ -9,14 +9,14 @@ public class Q814BinaryTreePruning {
 
     @Test
     public void test() {
-        TreeNode start = TreeNode.of(1, null, 0, null, null, 0, 1);
+        TreeNode start = TreeNode.ofWithNull(1, null, 0, null, null, 0, 1);
         TreeNode end = pruneTree(start);
-        assertThat(end).isEqualTo(TreeNode.of(1, null, 0, null, null, null, 1));
+        assertThat(end).isEqualTo(TreeNode.ofWithNull(1, null, 0, null, null, null, 1));
     }
 
     @Test
     public void test2() {
-        TreeNode start = TreeNode.of(0, null, 0, null, null, 0, 0);
+        TreeNode start = TreeNode.ofWithNull(0, null, 0, null, null, 0, 0);
         TreeNode end = pruneTree(start);
         assertThat(end).isNull();
     }

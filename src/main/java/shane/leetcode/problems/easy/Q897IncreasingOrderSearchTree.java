@@ -12,7 +12,7 @@ public class Q897IncreasingOrderSearchTree {
 
     @Test
     public void test() {
-        TreeNode node = increasingBST(TreeNode.of(new Integer[]{5, 3, 6, 2, 4, null, 8, 1, null, null, null, null, null, 7, 9}));
+        TreeNode node = increasingBST(TreeNode.ofWithNull(new Integer[]{5, 3, 6, 2, 4, null, 8, 1, null, null, null, null, null, 7, 9}));
         for (int i = 1; i < 10; i++) {
             assertThat(node.val).isEqualTo(i);
             node = node.right;
@@ -21,7 +21,7 @@ public class Q897IncreasingOrderSearchTree {
 
     @Test
     public void test2() {
-        TreeNode node = increasingBST(TreeNode.of(new Integer[]{5, 1, 7}));
+        TreeNode node = increasingBST(TreeNode.ofWithNull(new Integer[]{5, 1, 7}));
         assertThat(node.val).isEqualTo(1);
         assertThat(node.right.val).isEqualTo(5);
         assertThat(node.right.right.val).isEqualTo(7);

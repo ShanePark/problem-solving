@@ -8,7 +8,7 @@ public class Q1315SumOfNodesWithEvenValuedGrandparent {
 
     @Test
     void test() {
-        TreeNode tree = TreeNode.of(new Integer[]{6, 7, 8, 2, 7, 1, 3, 9, null, 1, 4, null, null, null, 5});
+        TreeNode tree = TreeNode.ofWithNull(new Integer[]{6, 7, 8, 2, 7, 1, 3, 9, null, 1, 4, null, null, null, 5});
         Assertions.assertThat(sumEvenGrandparent(tree)).isEqualTo(18);
     }
 

@@ -16,7 +16,7 @@ public class Q114FlattenBinaryTreeToLinkedList {
 
     @Test
     public void test() {
-        TreeNode root = TreeNode.of(1, 2, 5, 3, 4, null, 6);
+        TreeNode root = TreeNode.ofWithNull(1, 2, 5, 3, 4, null, 6);
         flatten(root);
         int i = 1;
         while (root != null) {
@@ -28,7 +28,7 @@ public class Q114FlattenBinaryTreeToLinkedList {
 
     @Test
     public void test2() {
-        TreeNode root = TreeNode.of(0);
+        TreeNode root = TreeNode.ofWithNull(0);
         flatten(root);
         assertThat(root.val).isEqualTo(0);
     }

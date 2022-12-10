@@ -13,8 +13,8 @@ public class Q230KthSmallestElementInABST {
 
     @Test
     public void test() {
-        assertThat(kthSmallest(TreeNode.of(new Integer[]{3, 1, 4, null, 2}), 1)).isEqualTo(1);
-        assertThat(kthSmallest(TreeNode.of(new Integer[]{5, 3, 6, 2, 4, null, null, 1}), 3)).isEqualTo(3);
+        assertThat(kthSmallest(TreeNode.ofWithNull(new Integer[]{3, 1, 4, null, 2}), 1)).isEqualTo(1);
+        assertThat(kthSmallest(TreeNode.ofWithNull(new Integer[]{5, 3, 6, 2, 4, null, null, 1}), 3)).isEqualTo(3);
     }
 
     public int kthSmallest(TreeNode root, int k) {

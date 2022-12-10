@@ -12,10 +12,10 @@ public class Q1028RecoverATreeFromPreorderTraversal {
 
     @Test
     public void test() {
-        assertThat(recoverFromPreorder("1-2--3---4-5--6---7")).isEqualTo(TreeNode.of(1, 2, 5, 3, null, 6, null, 4, null, null, null, 7));
-        assertThat(recoverFromPreorder("1-401--349---90--88")).isEqualTo(TreeNode.of(1, 401, null, 349, 88, null, null, 90));
-        assertThat(recoverFromPreorder("1-2--3--4-5--6--7")).isEqualTo(TreeNode.of(1, 2, 5, 3, 4, 6, 7));
-        assertThat(recoverFromPreorder("1")).isEqualTo(TreeNode.of(1));
+        assertThat(recoverFromPreorder("1-2--3---4-5--6---7")).isEqualTo(TreeNode.ofWithNull(1, 2, 5, 3, null, 6, null, 4, null, null, null, 7));
+        assertThat(recoverFromPreorder("1-401--349---90--88")).isEqualTo(TreeNode.ofWithNull(1, 401, null, 349, 88, null, null, 90));
+        assertThat(recoverFromPreorder("1-2--3--4-5--6--7")).isEqualTo(TreeNode.ofWithNull(1, 2, 5, 3, 4, 6, 7));
+        assertThat(recoverFromPreorder("1")).isEqualTo(TreeNode.ofWithNull(1));
         assertThat(recoverFromPreorder("")).isNull();
     }
 

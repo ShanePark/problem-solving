@@ -17,8 +17,8 @@ public class Q637AverageOfLevelsInBinaryTree2 {
 
     @Test
     public void test() {
-        assertThat(averageOfLevels(TreeNode.of(2147483647, 2147483647, 2147483647))).containsExactly(2147483647.00000, 2147483647.00000);
-        assertThat(averageOfLevels(TreeNode.of(3, 9, 20, null, null, 15, 7))).containsExactly(3.00000, 14.50000, 11.00000);
+        assertThat(averageOfLevels(TreeNode.ofWithNull(2147483647, 2147483647, 2147483647))).containsExactly(2147483647.00000, 2147483647.00000);
+        assertThat(averageOfLevels(TreeNode.ofWithNull(3, 9, 20, null, null, 15, 7))).containsExactly(3.00000, 14.50000, 11.00000);
     }
 
     public List<Double> averageOfLevels(TreeNode root) {

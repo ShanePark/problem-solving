@@ -11,16 +11,16 @@ public class Q99RecoverBinarySearchTree {
 
     @Test
     public void test() {
-        TreeNode root = TreeNode.of(1, 3, null, null, 2);
+        TreeNode root = TreeNode.ofWithNull(1, 3, null, null, 2);
         recoverTree(root);
-        assertThat(root).isEqualTo(TreeNode.of(3, 1, null, null, 2));
+        assertThat(root).isEqualTo(TreeNode.ofWithNull(3, 1, null, null, 2));
     }
 
     @Test
     public void test2() {
-        TreeNode root = TreeNode.of(3, 1, 4, null, null, 2);
+        TreeNode root = TreeNode.ofWithNull(3, 1, 4, null, null, 2);
         recoverTree(root);
-        assertThat(root).isEqualTo(TreeNode.of(2, 1, 4, null, null, 3));
+        assertThat(root).isEqualTo(TreeNode.ofWithNull(2, 1, 4, null, null, 3));
     }
 
     public void recoverTree(TreeNode root) {

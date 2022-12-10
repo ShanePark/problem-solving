@@ -13,10 +13,10 @@ public class Q98ValidateBinarySearchTree {
 
     @Test
     public void test() {
-        assertThat(isValidBST(TreeNode.of(3, 1, 5, 0, 2, 4, 6, null, null, null, 3))).isFalse();
-        assertThat(isValidBST(TreeNode.of(2, 1, 3))).isTrue();
-        assertThat(isValidBST(TreeNode.of(2, 2, 2))).isFalse();
-        assertThat(isValidBST(TreeNode.of(5, 1, 4, null, null, 3, 6))).isFalse();
+        assertThat(isValidBST(TreeNode.ofWithNull(3, 1, 5, 0, 2, 4, 6, null, null, null, 3))).isFalse();
+        assertThat(isValidBST(TreeNode.ofWithNull(2, 1, 3))).isTrue();
+        assertThat(isValidBST(TreeNode.ofWithNull(2, 2, 2))).isFalse();
+        assertThat(isValidBST(TreeNode.ofWithNull(5, 1, 4, null, null, 3, 6))).isFalse();
     }
 
     public boolean isValidBST(TreeNode root) {

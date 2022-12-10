@@ -9,17 +9,17 @@ public class Q968BinaryTreeCameras2 {
 
     @Test
     public void test() {
-        assertThat(minCameraCover(TreeNode.of(
+        assertThat(minCameraCover(TreeNode.ofWithNull(
                 0
                 , 0, 0
                 , null, 0, 0, null
                 , null, null, null, 0))).isEqualTo(2);
-        assertThat(minCameraCover(TreeNode.of(
+        assertThat(minCameraCover(TreeNode.ofWithNull(
                 0
                 , null, 0
                 , null, null, null, 0
                 , null, null, null, null, null, null, null, 0))).isEqualTo(2);
-        assertThat(minCameraCover(TreeNode.of(
+        assertThat(minCameraCover(TreeNode.ofWithNull(
                 0,
                 0, null,
                 null, 0, null, null
@@ -27,9 +27,9 @@ public class Q968BinaryTreeCameras2 {
                 , null, null, null, null, null, 0, null, null, null, null, null, null, null, null, null, null
                 , null, null, null, null, null, null, null, null, null, null, 0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null)))
                 .isEqualTo(2);
-        assertThat(minCameraCover(TreeNode.of(0, 0, null, 0, 0))).isEqualTo(1);
-        assertThat(minCameraCover(TreeNode.of(0))).isEqualTo(1);
-        assertThat(minCameraCover(TreeNode.of(
+        assertThat(minCameraCover(TreeNode.ofWithNull(0, 0, null, 0, 0))).isEqualTo(1);
+        assertThat(minCameraCover(TreeNode.ofWithNull(0))).isEqualTo(1);
+        assertThat(minCameraCover(TreeNode.ofWithNull(
                 0
                 , 0, null
                 , 0, null, null, null

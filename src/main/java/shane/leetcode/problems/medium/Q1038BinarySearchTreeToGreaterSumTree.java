@@ -12,7 +12,7 @@ public class Q1038BinarySearchTreeToGreaterSumTree {
 
     @Test
     void test() {
-        TreeNode root = TreeNode.of(4, 1, 6, 0, 2, 5, 7, null, null, null, 3, null, null, null, 8);
+        TreeNode root = TreeNode.ofWithNull(4, 1, 6, 0, 2, 5, 7, null, null, null, 3, null, null, null, 8);
         bstToGst(root).printTree();
 
     }

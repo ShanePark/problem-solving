@@ -13,8 +13,8 @@ public class Q108ConvertSortedArrayToBinarySearchTree {
 
     @Test
     public void test() {
-        assertThat(sortedArrayToBST(new int[]{-10, -3, 0, 5, 9})).isEqualTo(TreeNode.of(0, -3, 9, -10, null, 5));
-        assertThat(sortedArrayToBST(new int[]{1, 3})).isEqualTo(TreeNode.of(3, 1));
+        assertThat(sortedArrayToBST(new int[]{-10, -3, 0, 5, 9})).isEqualTo(TreeNode.ofWithNull(0, -3, 9, -10, null, 5));
+        assertThat(sortedArrayToBST(new int[]{1, 3})).isEqualTo(TreeNode.ofWithNull(3, 1));
     }
 
     public TreeNode sortedArrayToBST(int[] nums) {

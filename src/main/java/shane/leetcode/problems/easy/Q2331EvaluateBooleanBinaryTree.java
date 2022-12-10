@@ -9,7 +9,7 @@ public class Q2331EvaluateBooleanBinaryTree {
 
     @Test
     public void test() {
-        assertThat(evaluateTree(TreeNode.of(2, 1, 3, null, null, 0, 1))).isTrue();
+        assertThat(evaluateTree(TreeNode.ofWithNull(2, 1, 3, null, null, 0, 1))).isTrue();
     }
 
     public boolean evaluateTree(TreeNode root) {

@@ -17,7 +17,7 @@ public class Q113PathSumII {
 
     @Test
     public void test() {
-        TreeNode root = TreeNode.of(5, 4, 8, 11, null, 13, 4, 7, 2, null, null, null, null, 5, 1);
+        TreeNode root = TreeNode.ofWithNull(5, 4, 8, 11, null, 13, 4, 7, 2, null, null, null, null, 5, 1);
         assertThat(pathSum(root, 22)).containsExactlyInAnyOrder(
                 List.of(5, 4, 11, 2),
                 List.of(5, 8, 4, 5)
@@ -26,13 +26,13 @@ public class Q113PathSumII {
 
     @Test
     public void test2() {
-        TreeNode root = TreeNode.of(1, 2, 3);
+        TreeNode root = TreeNode.ofWithNull(1, 2, 3);
         assertThat(pathSum(root, 5)).isEmpty();
     }
 
     @Test
     public void test3() {
-        TreeNode root = TreeNode.of(1, 2);
+        TreeNode root = TreeNode.ofWithNull(1, 2);
         assertThat(pathSum(root, 0)).isEmpty();
         assertThat(pathSum(null, 1)).isEmpty();
     }

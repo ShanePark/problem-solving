@@ -13,9 +13,9 @@ public class Q1123LowestCommonAncestorOfDeepestLeaves2 {
 
     @Test
     public void test() {
-        assertThat(lcaDeepestLeaves(TreeNode.of(3, 5, 1, 6, 2, 0, 8, null, null, 7, 4))).isEqualTo(TreeNode.of(2, 7, 4));
-        assertThat(lcaDeepestLeaves(TreeNode.of(1))).isEqualTo(TreeNode.of(1));
-        assertThat(lcaDeepestLeaves(TreeNode.of(0, 1, 3, null, 2))).isEqualTo(TreeNode.of(2));
+        assertThat(lcaDeepestLeaves(TreeNode.ofWithNull(3, 5, 1, 6, 2, 0, 8, null, null, 7, 4))).isEqualTo(TreeNode.ofWithNull(2, 7, 4));
+        assertThat(lcaDeepestLeaves(TreeNode.ofWithNull(1))).isEqualTo(TreeNode.ofWithNull(1));
+        assertThat(lcaDeepestLeaves(TreeNode.ofWithNull(0, 1, 3, null, 2))).isEqualTo(TreeNode.ofWithNull(2));
     }
 
 
