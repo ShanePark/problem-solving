@@ -8,7 +8,7 @@ import static org.assertj.core.api.Assertions.assertThat;
  * Runtime 2 ms Beats 88.7%
  * Memory 40.6 MB Beats 90.91%
  */
-public class QLexicographicallySmallestEquivalentString {
+public class Q1061LexicographicallySmallestEquivalentString {
 
     @Test
     public void test() {
