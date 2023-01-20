@@ -4,7 +4,8 @@ import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 /**
- * Time Limit Exceeded
+ * Runtime 4 ms Beats 69.59%
+ * Memory 52.4 MB Beats 90.72%
  */
 public class Q11ContainerWithMostWater2 {
 
