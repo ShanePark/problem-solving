@@ -1,4 +1,4 @@
-package shane.leetcode.problems;
+package shane.leetcode.problems.medium;
 
 import org.junit.jupiter.api.Test;
 
