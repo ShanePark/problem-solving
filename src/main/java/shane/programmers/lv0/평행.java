@@ -1,6 +1,6 @@
 package shane.programmers.lv0;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -9,8 +9,8 @@ public class 평행 {
 
     @Test
     public void test() {
-        assertThat(solution(STool.convertToIntArray("[[1, 4], [9, 2], [3, 8], [10, 4]]"))).isEqualTo(1);
-        assertThat(solution(STool.convertToIntArray("[[3, 5], [4, 1], [2, 4], [5, 10]]"))).isEqualTo(0);
+        assertThat(solution(Ps.intArray("[[1, 4], [9, 2], [3, 8], [10, 4]]"))).isEqualTo(1);
+        assertThat(solution(Ps.intArray("[[3, 5], [4, 1], [2, 4], [5, 10]]"))).isEqualTo(0);
     }
 
     public int solution(int[][] dots) {

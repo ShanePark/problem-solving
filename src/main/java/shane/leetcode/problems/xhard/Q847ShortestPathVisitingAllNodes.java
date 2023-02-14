@@ -1,14 +1,14 @@
 package shane.leetcode.problems.xhard;
 
-import com.tistory.shanepark.STool;
-import org.assertj.core.api.Assertions;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
-import org.springframework.util.StopWatch;
 
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Set;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 /**
  * TLE
@@ -17,14 +17,14 @@ public class Q847ShortestPathVisitingAllNodes {
 
     @Test
     void test() {
-        Assertions.assertThat(shortestPathLength(STool.convertToIntArray("[[1,2,3],[0],[0],[0]]"))).isEqualTo(4);
-        Assertions.assertThat(shortestPathLength(STool.convertToIntArray("[[1],[0,2,4],[1,3,4],[2],[1,2]]"))).isEqualTo(4);
-        StopWatch stopWatch = new StopWatch();
-        stopWatch.start();
-        Assertions.assertThat(shortestPathLength(STool.convertToIntArray("[[6,8],[2,9],[1,3,5],[2,6],[5],[2,6,4],[5,3,0,7],[6],[0],[1]]"))).isEqualTo(12);
-        stopWatch.stop();
-        System.out.println(stopWatch.getTotalTimeMillis() + "ms");
-//        Assertions.assertThat(shortestPathLength(STool.convertToIntArray("[[2,3,5,7],[2,3,7],[0,1],[0,1],[7],[0],[10],[9,10,0,1,4],[9],[7,8],[7,6]]"))).isEqualTo(14);
+        assertThat(shortestPathLength(Ps.intArray("[[1,2,3],[0],[0],[0]]"))).isEqualTo(4);
+        assertThat(shortestPathLength(Ps.intArray("[[1],[0,2,4],[1,3,4],[2],[1,2]]"))).isEqualTo(4);
+    }
+
+    @Test
+    public void tle() {
+        assertThat(shortestPathLength(Ps.intArray("[[6,8],[2,9],[1,3,5],[2,6],[5],[2,6,4],[5,3,0,7],[6],[0],[1]]"))).isEqualTo(12);
+//        Assertions.assertThat(shortestPathLength(Ps.intArray("[[2,3,5,7],[2,3,7],[0,1],[0,1],[7],[0],[10],[9,10,0,1,4],[9],[7,8],[7,6]]"))).isEqualTo(14);
     }
 
     public int shortestPathLength(int[][] graph) {

@@ -1,6 +1,6 @@
 package shane.leetcode.problems.medium;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
@@ -16,10 +16,10 @@ public class Q406QueueReconstructionByHeight {
 
     @Test
     public void test() {
-        assertThat(reconstructQueue(STool.convertToIntArray("[[7,0],[4,4],[7,1],[5,0],[6,1],[5,2]]")))
-                .isDeepEqualTo(STool.convertToIntArray("[[5,0],[7,0],[5,2],[6,1],[4,4],[7,1]]"));
-        assertThat(reconstructQueue(STool.convertToIntArray("[[6,0],[5,0],[4,0],[3,2],[2,2],[1,4]]")))
-                .isDeepEqualTo(STool.convertToIntArray("[[4,0],[5,0],[2,2],[3,2],[1,4],[6,0]]"));
+        assertThat(reconstructQueue(Ps.intArray("[[7,0],[4,4],[7,1],[5,0],[6,1],[5,2]]")))
+                .isDeepEqualTo(Ps.intArray("[[5,0],[7,0],[5,2],[6,1],[4,4],[7,1]]"));
+        assertThat(reconstructQueue(Ps.intArray("[[6,0],[5,0],[4,0],[3,2],[2,2],[1,4]]")))
+                .isDeepEqualTo(Ps.intArray("[[4,0],[5,0],[2,2],[3,2],[1,4],[6,0]]"));
     }
 
     public int[][] reconstructQueue(int[][] people) {

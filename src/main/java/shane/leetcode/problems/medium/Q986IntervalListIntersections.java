@@ -1,6 +1,6 @@
 package shane.leetcode.problems.medium;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -16,10 +16,10 @@ public class Q986IntervalListIntersections {
 
     @Test
     public void test() {
-        assertThat(intervalIntersection(STool.convertToIntArray("[[0,2],[5,10],[13,23],[24,25]]"), STool.convertToIntArray("[[1,5],[8,12],[15,24],[25,26]]")))
-                .isDeepEqualTo(STool.convertToIntArray("[[1,2],[5,5],[8,10],[15,23],[24,24],[25,25]]"));
-        assertThat(intervalIntersection(STool.convertToIntArray("[[1,3],[5,9]]"), STool.convertToIntArray("[]")))
-                .isDeepEqualTo(STool.convertToIntArray("[]"));
+        assertThat(intervalIntersection(Ps.intArray("[[0,2],[5,10],[13,23],[24,25]]"), Ps.intArray("[[1,5],[8,12],[15,24],[25,26]]")))
+                .isDeepEqualTo(Ps.intArray("[[1,2],[5,5],[8,10],[15,23],[24,24],[25,25]]"));
+        assertThat(intervalIntersection(Ps.intArray("[[1,3],[5,9]]"), Ps.intArray("[]")))
+                .isDeepEqualTo(Ps.intArray("[]"));
     }
 
     public int[][] intervalIntersection(int[][] firstList, int[][] secondList) {

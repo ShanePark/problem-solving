@@ -1,6 +1,6 @@
 package shane.leetcode.problems.medium;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
@@ -15,10 +15,10 @@ public class Q2545SortTheStudentsByTheirKthScore {
 
     @Test
     public void test() {
-        assertThat(sortTheStudents(STool.convertToIntArray("[[10,6,9,1],[7,5,11,2],[4,8,3,15]]"), 2))
-                .isDeepEqualTo(STool.convertToIntArray("[[7,5,11,2],[10,6,9,1],[4,8,3,15]]"));
-        assertThat(sortTheStudents(STool.convertToIntArray("[[3,4],[5,6]]"), 0))
-                .isDeepEqualTo(STool.convertToIntArray("[[5,6],[3,4]]"));
+        assertThat(sortTheStudents(Ps.intArray("[[10,6,9,1],[7,5,11,2],[4,8,3,15]]"), 2))
+                .isDeepEqualTo(Ps.intArray("[[7,5,11,2],[10,6,9,1],[4,8,3,15]]"));
+        assertThat(sortTheStudents(Ps.intArray("[[3,4],[5,6]]"), 0))
+                .isDeepEqualTo(Ps.intArray("[[5,6],[3,4]]"));
     }
 
     public int[][] sortTheStudents(int[][] score, int k) {

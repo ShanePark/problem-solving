@@ -1,6 +1,6 @@
 package shane.leetcode.contest.weekly.w290;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import java.util.*;
@@ -13,8 +13,8 @@ public class Q4 {
 
     @Test
     public void test() {
-        assertThat(fullBloomFlowers(STool.convertToIntArray("[[1,6],[3,7],[9,12],[4,13]]"), new int[]{2, 3, 7, 11})).containsExactly(1, 2, 2, 2);
-        assertThat(fullBloomFlowers(STool.convertToIntArray("[[1,10],[3,3]]"), new int[]{3, 3, 2})).containsExactly(2, 2, 1);
+        assertThat(fullBloomFlowers(Ps.intArray("[[1,6],[3,7],[9,12],[4,13]]"), new int[]{2, 3, 7, 11})).containsExactly(1, 2, 2, 2);
+        assertThat(fullBloomFlowers(Ps.intArray("[[1,10],[3,3]]"), new int[]{3, 3, 2})).containsExactly(2, 2, 1);
     }
 
     public int[] fullBloomFlowers2(int[][] flowers, int[] persons) {

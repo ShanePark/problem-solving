@@ -1,6 +1,6 @@
 package shane.leetcode.problems.xhard;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import java.util.TreeSet;
@@ -16,13 +16,13 @@ public class Q363MaxSumOfRectangleNoLargerThanK2 {
 
     @Test
     public void test() {
-        assertThat(maxSumSubmatrix(STool.convertToIntArray("[[5,-4,-3,4],[-3,-4,4,5],[5,1,5,-4]]"), 3))
+        assertThat(maxSumSubmatrix(Ps.intArray("[[5,-4,-3,4],[-3,-4,4,5],[5,1,5,-4]]"), 3))
                 .isEqualTo(2);
-        assertThat(maxSumSubmatrix(STool.convertToIntArray("[[2,2,-1]]"), 2)).isEqualTo(2);
-        assertThat(maxSumSubmatrix(STool.convertToIntArray("[[1,0,1],[0,-2,3]]"), 5)).isEqualTo(4);
-        assertThat(maxSumSubmatrix(STool.convertToIntArray("[[1,0,1],[0,-2,3]]"), 2)).isEqualTo(2);
-        assertThat(maxSumSubmatrix(STool.convertToIntArray("[[2,2,-1]]"), 3)).isEqualTo(3);
-        assertThat(maxSumSubmatrix(STool.convertToIntArray("[[5,-4,-3,4],[-3,-4,4,5],[5,1,5,-4]]"), 8))
+        assertThat(maxSumSubmatrix(Ps.intArray("[[2,2,-1]]"), 2)).isEqualTo(2);
+        assertThat(maxSumSubmatrix(Ps.intArray("[[1,0,1],[0,-2,3]]"), 5)).isEqualTo(4);
+        assertThat(maxSumSubmatrix(Ps.intArray("[[1,0,1],[0,-2,3]]"), 2)).isEqualTo(2);
+        assertThat(maxSumSubmatrix(Ps.intArray("[[2,2,-1]]"), 3)).isEqualTo(3);
+        assertThat(maxSumSubmatrix(Ps.intArray("[[5,-4,-3,4],[-3,-4,4,5],[5,1,5,-4]]"), 8))
                 .isEqualTo(8);
     }
 

@@ -1,6 +1,6 @@
 package shane.programmers.challenge2022.jobis2022;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayDeque;
@@ -14,9 +14,9 @@ public class Q4 {
 
     @Test
     public void test() {
-        assertThat(solution(3, STool.convertToIntArray("[[1,4],[2,2],[1,3],[1,6],[3,-1],[2,-1]]"))).containsExactly(4, 2);
-        assertThat(solution(4, STool.convertToIntArray("[[1,3],[1,2],[3,6],[3,-1],[4,5],[2,-1],[3,-1],[1,-1]]"))).containsExactly(6, 3, 5, 2);
-        assertThat(solution(5, STool.convertToIntArray("[[1,-1],[2,-1],[3,-1],[4,-1],[5,-1]]"))).containsExactly(-1, -1, -1, -1, -1);
+        assertThat(solution(3, Ps.intArray("[[1,4],[2,2],[1,3],[1,6],[3,-1],[2,-1]]"))).containsExactly(4, 2);
+        assertThat(solution(4, Ps.intArray("[[1,3],[1,2],[3,6],[3,-1],[4,5],[2,-1],[3,-1],[1,-1]]"))).containsExactly(6, 3, 5, 2);
+        assertThat(solution(5, Ps.intArray("[[1,-1],[2,-1],[3,-1],[4,-1],[5,-1]]"))).containsExactly(-1, -1, -1, -1, -1);
     }
 
     public int[] solution(int n, int[][] queries) {

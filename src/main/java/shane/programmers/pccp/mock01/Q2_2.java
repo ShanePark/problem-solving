@@ -1,6 +1,6 @@
 package shane.programmers.pccp.mock01;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -8,8 +8,8 @@ public class Q2_2 {
 
     @org.junit.jupiter.api.Test
     public void test() {
-        assertThat(solution(STool.convertToIntArray("[[40, 10, 10], [20, 5, 0], [30, 30, 30], [70, 0, 70], [100, 100, 100]]"))).isEqualTo(210);
-        assertThat(solution(STool.convertToIntArray("[[20, 30], [30, 20], [20, 30]]"))).isEqualTo(60);
+        assertThat(solution(Ps.intArray("[[40, 10, 10], [20, 5, 0], [30, 30, 30], [70, 0, 70], [100, 100, 100]]"))).isEqualTo(210);
+        assertThat(solution(Ps.intArray("[[20, 30], [30, 20], [20, 30]]"))).isEqualTo(60);
     }
 
     int max;

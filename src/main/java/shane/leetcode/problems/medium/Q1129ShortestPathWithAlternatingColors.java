@@ -1,6 +1,6 @@
 package shane.leetcode.problems.medium;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import java.util.*;
@@ -16,7 +16,7 @@ public class Q1129ShortestPathWithAlternatingColors {
 
     @Test
     void test() {
-        assertThat(shortestAlternatingPaths(5, STool.convertToIntArray("[[0,1],[1,2],[2,3],[3,4]]"), STool.convertToIntArray("[[1,2],[2,3],[3,1]]")))
+        assertThat(shortestAlternatingPaths(5, Ps.intArray("[[0,1],[1,2],[2,3],[3,4]]"), Ps.intArray("[[1,2],[2,3],[3,1]]")))
                 .isEqualTo(new int[]{0, 1, 2, 3, 7});
         assertThat(shortestAlternatingPaths(3, new int[][]{{0, 1}}, new int[][]{{2, 1}})).isEqualTo(new int[]{0, 1, -1});
         assertThat(shortestAlternatingPaths(3, new int[][]{{0, 1}, {1, 2}}, new int[][]{})).isEqualTo(new int[]{0, 1, -1});

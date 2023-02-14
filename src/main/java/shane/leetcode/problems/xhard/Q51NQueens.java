@@ -1,6 +1,6 @@
 package shane.leetcode.problems.xhard;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -13,7 +13,7 @@ public class Q51NQueens {
 
     @Test
     public void test() {
-        assertThat(solveNQueens(4)).isEqualTo(STool.convertToStringList("[[\".Q..\",\"...Q\",\"Q...\",\"..Q.\"],[\"..Q.\",\"Q...\",\"...Q\",\".Q..\"]]"));
+        assertThat(solveNQueens(4)).isEqualTo(Ps.strList("[[\".Q..\",\"...Q\",\"Q...\",\"..Q.\"],[\"..Q.\",\"Q...\",\"...Q\",\".Q..\"]]"));
     }
 
     public List<List<String>> solveNQueens(int n) {

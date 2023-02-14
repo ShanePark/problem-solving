@@ -1,6 +1,6 @@
 package shane.leetcode.problems.medium;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
@@ -11,9 +11,9 @@ public class Q63UniquePathsII {
 
     @Test
     public void test() {
-        assertThat(uniquePathsWithObstacles(STool.convertToIntArray("[[0,0,0],[0,1,0],[0,0,0]]"))).isEqualTo(2);
-        assertThat(uniquePathsWithObstacles(STool.convertToIntArray("[[0,1],[0,0]]"))).isEqualTo(1);
-        assertThat(uniquePathsWithObstacles(STool.convertToIntArray("[[0]]"))).isEqualTo(1);
+        assertThat(uniquePathsWithObstacles(Ps.intArray("[[0,0,0],[0,1,0],[0,0,0]]"))).isEqualTo(2);
+        assertThat(uniquePathsWithObstacles(Ps.intArray("[[0,1],[0,0]]"))).isEqualTo(1);
+        assertThat(uniquePathsWithObstacles(Ps.intArray("[[0]]"))).isEqualTo(1);
     }
 
     public int uniquePathsWithObstacles(int[][] obstacleGrid) {

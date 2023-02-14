@@ -1,12 +1,12 @@
 package shane.leetcode.problems.easy;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 
 public class Q463IslandPerimeter {
     public static void main(String[] args) {
-        System.out.println(islandPerimeter(STool.convertToIntArray("[[0,1,0,0],[1,1,1,0],[0,1,0,0],[1,1,0,0]]")));
-        System.out.println(islandPerimeter(STool.convertToIntArray("[[1]]")));
-        System.out.println(islandPerimeter(STool.convertToIntArray("[[0,1]]")));
+        System.out.println(islandPerimeter(Ps.intArray("[[0,1,0,0],[1,1,1,0],[0,1,0,0],[1,1,0,0]]")));
+        System.out.println(islandPerimeter(Ps.intArray("[[1]]")));
+        System.out.println(islandPerimeter(Ps.intArray("[[0,1]]")));
     }
 
     public static int islandPerimeter(int[][] grid) {

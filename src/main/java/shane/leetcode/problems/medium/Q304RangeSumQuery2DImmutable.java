@@ -1,6 +1,6 @@
 package shane.leetcode.problems.medium;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -9,7 +9,7 @@ public class Q304RangeSumQuery2DImmutable {
 
     @Test
     public void test() {
-        NumMatrix numMatrix = new NumMatrix(STool.convertToIntArray("[[3, 0, 1, 4, 2], [5, 6, 3, 2, 1], [1, 2, 0, 1, 5], [4, 1, 0, 1, 7], [1, 0, 3, 0, 5]]"));
+        NumMatrix numMatrix = new NumMatrix(Ps.intArray("[[3, 0, 1, 4, 2], [5, 6, 3, 2, 1], [1, 2, 0, 1, 5], [4, 1, 0, 1, 7], [1, 0, 3, 0, 5]]"));
         assertThat(numMatrix.sumRegion(0, 0, 4, 4)).isEqualTo(58);
         assertThat(numMatrix.sumRegion(0, 0, 1, 4)).isEqualTo(27);
         assertThat(numMatrix.sumRegion(2, 1, 4, 3)).isEqualTo(8);

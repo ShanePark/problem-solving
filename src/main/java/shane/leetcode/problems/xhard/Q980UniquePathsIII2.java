@@ -1,6 +1,6 @@
 package shane.leetcode.problems.xhard;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -13,9 +13,9 @@ public class Q980UniquePathsIII2 {
 
     @Test
     public void test() {
-        assertThat(uniquePathsIII(STool.convertToIntArray("[[1,0,0,0],[0,0,0,0],[0,0,2,-1]]"))).isEqualTo(2);
-        assertThat(uniquePathsIII(STool.convertToIntArray("[[1,0,0,0],[0,0,0,0],[0,0,0,2]]"))).isEqualTo(4);
-        assertThat(uniquePathsIII(STool.convertToIntArray("[[0,1],[2,0]]"))).isEqualTo(0);
+        assertThat(uniquePathsIII(Ps.intArray("[[1,0,0,0],[0,0,0,0],[0,0,2,-1]]"))).isEqualTo(2);
+        assertThat(uniquePathsIII(Ps.intArray("[[1,0,0,0],[0,0,0,0],[0,0,0,2]]"))).isEqualTo(4);
+        assertThat(uniquePathsIII(Ps.intArray("[[0,1],[2,0]]"))).isEqualTo(0);
     }
 
     int cnt = 0;

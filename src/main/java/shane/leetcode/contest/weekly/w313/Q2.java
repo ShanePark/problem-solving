@@ -1,6 +1,6 @@
 package shane.leetcode.contest.weekly.w313;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -9,8 +9,8 @@ public class Q2 {
 
     @Test
     public void test() {
-        assertThat(maxSum(STool.convertToIntArray("[[6,2,1,3],[4,2,1,5],[9,2,8,7],[4,1,2,9]]"))).isEqualTo(30);
-        assertThat(maxSum(STool.convertToIntArray("[[1,2,3],[4,5,6],[7,8,9]]"))).isEqualTo(35);
+        assertThat(maxSum(Ps.intArray("[[6,2,1,3],[4,2,1,5],[9,2,8,7],[4,1,2,9]]"))).isEqualTo(30);
+        assertThat(maxSum(Ps.intArray("[[1,2,3],[4,5,6],[7,8,9]]"))).isEqualTo(35);
     }
 
     public int maxSum(int[][] grid) {

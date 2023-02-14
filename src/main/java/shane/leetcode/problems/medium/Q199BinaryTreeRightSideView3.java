@@ -1,7 +1,7 @@
 package shane.leetcode.problems.medium;
 
 
-import com.tistory.shanepark.leetcode.TreeNode;
+import com.github.shanepark.leetcode.TreeNode;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;

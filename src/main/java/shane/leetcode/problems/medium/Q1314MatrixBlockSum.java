@@ -1,6 +1,6 @@
 package shane.leetcode.problems.medium;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -9,9 +9,9 @@ public class Q1314MatrixBlockSum {
 
     @Test
     public void test() {
-        assertThat(matrixBlockSum(STool.convertToIntArray("[[1,2,3],[4,5,6],[7,8,9]]"), 1)).isDeepEqualTo(STool.convertToIntArray("[[12,21,16],[27,45,33],[24,39,28]]"));
-        assertThat(matrixBlockSum(STool.convertToIntArray("[[1,2,3],[4,5,6],[7,8,9]]"), 2)).isDeepEqualTo(STool.convertToIntArray("[[45,45,45],[45,45,45],[45,45,45]]"));
-        assertThat(matrixBlockSum(STool.convertToIntArray("[[1]]"), 1)).isDeepEqualTo(STool.convertToIntArray("[[1]]"));
+        assertThat(matrixBlockSum(Ps.intArray("[[1,2,3],[4,5,6],[7,8,9]]"), 1)).isDeepEqualTo(Ps.intArray("[[12,21,16],[27,45,33],[24,39,28]]"));
+        assertThat(matrixBlockSum(Ps.intArray("[[1,2,3],[4,5,6],[7,8,9]]"), 2)).isDeepEqualTo(Ps.intArray("[[45,45,45],[45,45,45],[45,45,45]]"));
+        assertThat(matrixBlockSum(Ps.intArray("[[1]]"), 1)).isDeepEqualTo(Ps.intArray("[[1]]"));
     }
 
     public int[][] matrixBlockSum(int[][] mat, int k) {

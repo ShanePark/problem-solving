@@ -1,11 +1,11 @@
 package shane.leetcode.problems.medium;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Assertions;
 
 public class Q1476SubrectangleQueries {
     public static void main(String[] args) {
-        SubrectangleQueries q = new SubrectangleQueries(STool.convertToIntArray("[[[1,2,1],[4,3,4],[3,2,1],[1,1,1]]]"));
+        SubrectangleQueries q = new SubrectangleQueries(Ps.intArray("[[[1,2,1],[4,3,4],[3,2,1],[1,1,1]]]"));
         Assertions.assertEquals(1, q.getValue(0, 2));
         q.updateSubrectangle(0, 0, 3, 2, 5);
         Assertions.assertEquals(5, q.getValue(0, 2));

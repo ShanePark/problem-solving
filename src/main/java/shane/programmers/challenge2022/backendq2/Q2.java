@@ -1,6 +1,6 @@
 package shane.programmers.challenge2022.backendq2;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -9,7 +9,7 @@ public class Q2 {
 
     @Test
     public void test() {
-        assertThat(solution(4, true)).isDeepEqualTo(STool.convertToIntArray("[[1,2,9,10],[4,3,8,11],[5,6,7,12],[16,15,14,13]]"));
+        assertThat(solution(4, true)).isDeepEqualTo(Ps.intArray("[[1,2,9,10],[4,3,8,11],[5,6,7,12],[16,15,14,13]]"));
     }
 
     int cnt = 2;

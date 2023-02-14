@@ -1,6 +1,6 @@
 package shane.leetcode.problems.medium;
 
-import com.tistory.shanepark.leetcode.ListNode;
+import com.github.shanepark.leetcode.ListNode;
 import org.assertj.core.api.Assertions;
 
 import java.util.HashSet;

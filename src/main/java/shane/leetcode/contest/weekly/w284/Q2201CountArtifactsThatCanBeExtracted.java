@@ -1,6 +1,6 @@
 package shane.leetcode.contest.weekly.w284;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -12,9 +12,9 @@ public class Q2201CountArtifactsThatCanBeExtracted {
 
     @Test
     void test() {
-//        Assertions.assertThat(digArtifacts(2, STool.convertToIntArray("[[0,0,0,0],[0,1,1,1]]"), STool.convertToIntArray("[[0,0],[0,1]]"))).isEqualTo(1);
-//        Assertions.assertThat(digArtifacts(2, STool.convertToIntArray("[[0,0,0,0],[0,1,1,1]]"), STool.convertToIntArray("[[0,0],[0,1],[1,1]]"))).isEqualTo(2);
-        Assertions.assertThat(digArtifacts(5, STool.convertToIntArray("[[3,1,4,1],[1,1,2,2],[1,0,2,0],[4,3,4,4],[0,3,1,4],[2,3,3,4]]"), STool.convertToIntArray("[[0,0],[2,1],[2,0],[2,3],[4,3],[2,4],[4,1],[0,2],[4,0],[3,1],[1,2],[1,3],[3,2]]"))).isEqualTo(1);
+//        Assertions.assertThat(digArtifacts(2, Ps.intArray("[[0,0,0,0],[0,1,1,1]]"), Ps.intArray("[[0,0],[0,1]]"))).isEqualTo(1);
+//        Assertions.assertThat(digArtifacts(2, Ps.intArray("[[0,0,0,0],[0,1,1,1]]"), Ps.intArray("[[0,0],[0,1],[1,1]]"))).isEqualTo(2);
+        Assertions.assertThat(digArtifacts(5, Ps.intArray("[[3,1,4,1],[1,1,2,2],[1,0,2,0],[4,3,4,4],[0,3,1,4],[2,3,3,4]]"), Ps.intArray("[[0,0],[2,1],[2,0],[2,3],[4,3],[2,4],[4,1],[0,2],[4,0],[3,1],[1,2],[1,3],[3,2]]"))).isEqualTo(1);
     }
 
     public int digArtifacts(int n, int[][] artifacts, int[][] dig) {

@@ -1,6 +1,6 @@
 package shane.leetcode.contest.weekly.w284;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -16,10 +16,10 @@ public class Q2203MinimumWeightedSubgraphWithTheRequiredPaths {
 
     @Test
     void test() {
-        Assertions.assertThat(minimumWeight(6, STool.convertToIntArray("[[0,2,2],[0,5,6],[1,0,3],[1,4,5],[2,1,1],[2,3,3],[2,3,4],[3,4,2],[4,5,1]]"), 0, 1, 5)).isEqualTo(9);
-        Assertions.assertThat(minimumWeight(6, STool.convertToIntArray("[[0,1,1],[2,1,1]]"), 0, 1, 2)).isEqualTo(-1);
-        Assertions.assertThat(minimumWeight(8, STool.convertToIntArray("[[4,7,24],[1,3,30],[4,0,31],[1,2,31],[1,5,18],[1,6,19],[4,6,25],[5,6,32],[0,6,50]]"), 4, 1, 6)).isEqualTo(44);
-        Assertions.assertThat(minimumWeight(5, STool.convertToIntArray("[[0,2,1],[0,3,1],[2,4,1],[3,4,1],[1,2,1],[1,3,10]]"), 0, 1, 4)).isEqualTo(3);
+        Assertions.assertThat(minimumWeight(6, Ps.intArray("[[0,2,2],[0,5,6],[1,0,3],[1,4,5],[2,1,1],[2,3,3],[2,3,4],[3,4,2],[4,5,1]]"), 0, 1, 5)).isEqualTo(9);
+        Assertions.assertThat(minimumWeight(6, Ps.intArray("[[0,1,1],[2,1,1]]"), 0, 1, 2)).isEqualTo(-1);
+        Assertions.assertThat(minimumWeight(8, Ps.intArray("[[4,7,24],[1,3,30],[4,0,31],[1,2,31],[1,5,18],[1,6,19],[4,6,25],[5,6,32],[0,6,50]]"), 4, 1, 6)).isEqualTo(44);
+        Assertions.assertThat(minimumWeight(5, Ps.intArray("[[0,2,1],[0,3,1],[2,4,1],[3,4,1],[1,2,1],[1,3,10]]"), 0, 1, 4)).isEqualTo(3);
     }
 
     Map<Integer, List<Route>> map = new HashMap<>();

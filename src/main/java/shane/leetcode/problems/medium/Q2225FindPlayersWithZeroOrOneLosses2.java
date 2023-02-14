@@ -1,6 +1,6 @@
 package shane.leetcode.problems.medium;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -18,10 +18,10 @@ public class Q2225FindPlayersWithZeroOrOneLosses2 {
 
     @Test
     public void test() {
-        assertThat(findWinners(STool.convertToIntArray("[[1,3],[2,3],[3,6],[5,6],[5,7],[4,5],[4,8],[4,9],[10,4],[10,9]]")))
-                .isEqualTo(STool.convertToIntList("[[1,2,10],[4,5,7,8]]"));
-        assertThat(findWinners(STool.convertToIntArray("[[2,3],[1,3],[5,4],[6,4]]")))
-                .isEqualTo(STool.convertToIntList("[[1,2,5,6],[]]"));
+        assertThat(findWinners(Ps.intArray("[[1,3],[2,3],[3,6],[5,6],[5,7],[4,5],[4,8],[4,9],[10,4],[10,9]]")))
+                .isEqualTo(Ps.intList("[[1,2,10],[4,5,7,8]]"));
+        assertThat(findWinners(Ps.intArray("[[2,3],[1,3],[5,4],[6,4]]")))
+                .isEqualTo(Ps.intList("[[1,2,5,6],[]]"));
     }
 
     public List<List<Integer>> findWinners(int[][] matches) {

@@ -1,6 +1,6 @@
 package shane.leetcode.problems.medium;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -12,8 +12,8 @@ public class Q1222QueensThatCanAttackTheKing {
 
     @Test
     public void test() {
-        assertThat(queensAttacktheKing(STool.convertToIntArray("[[5,6],[7,7],[2,1],[0,7],[1,6],[5,1],[3,7],[0,3],[4,0],[1,2],[6,3],[5,0],[0,4],[2,2],[1,1],[6,4],[5,4],[0,0],[2,6],[4,5],[5,2],[1,4],[7,5],[2,3],[0,5],[4,2],[1,0],[2,7],[0,1],[4,6],[6,1],[0,6],[4,3],[1,7]]"), new int[]{3, 4}))
-                .containsExactlyInAnyOrderElementsOf(STool.convertToIntList("[[2,3],[1,4],[1,6],[3,7],[4,3],[5,4],[4,5]]"));
+        assertThat(queensAttacktheKing(Ps.intArray("[[5,6],[7,7],[2,1],[0,7],[1,6],[5,1],[3,7],[0,3],[4,0],[1,2],[6,3],[5,0],[0,4],[2,2],[1,1],[6,4],[5,4],[0,0],[2,6],[4,5],[5,2],[1,4],[7,5],[2,3],[0,5],[4,2],[1,0],[2,7],[0,1],[4,6],[6,1],[0,6],[4,3],[1,7]]"), new int[]{3, 4}))
+                .containsExactlyInAnyOrderElementsOf(Ps.intList("[[2,3],[1,4],[1,6],[3,7],[4,3],[5,4],[4,5]]"));
     }
 
     public List<List<Integer>> queensAttacktheKing(int[][] queens, int[] king) {

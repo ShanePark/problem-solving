@@ -1,6 +1,6 @@
 package shane.leetcode.problems.medium;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -13,9 +13,9 @@ public class Q947MostStonesRemovedWithSameRowOrColumn {
 
     @Test
     public void test() {
-        assertThat(removeStones(STool.convertToIntArray("[[0,0],[0,1],[1,0],[1,2],[2,1],[2,2]]"))).isEqualTo(5);
-        assertThat(removeStones(STool.convertToIntArray("[[0,0],[0,2],[1,1],[2,0],[2,2]]"))).isEqualTo(3);
-        assertThat(removeStones(STool.convertToIntArray("[[0,0]]"))).isEqualTo(0);
+        assertThat(removeStones(Ps.intArray("[[0,0],[0,1],[1,0],[1,2],[2,1],[2,2]]"))).isEqualTo(5);
+        assertThat(removeStones(Ps.intArray("[[0,0],[0,2],[1,1],[2,0],[2,2]]"))).isEqualTo(3);
+        assertThat(removeStones(Ps.intArray("[[0,0]]"))).isEqualTo(0);
     }
 
     public int removeStones(int[][] stones) {

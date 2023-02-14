@@ -1,6 +1,6 @@
 package shane.leetcode.problems.medium;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import java.util.*;
@@ -15,11 +15,11 @@ public class Q1202SmallestStringWithSwaps2 {
 
     @Test
     public void test() {
-        assertThat(smallestStringWithSwaps("otilzqqoj", STool.convertToIntList("[[2,3],[7,3],[3,8],[1,7],[1,0],[0,4],[0,6],[3,4],[2,5]]")))
+        assertThat(smallestStringWithSwaps("otilzqqoj", Ps.intList("[[2,3],[7,3],[3,8],[1,7],[1,0],[0,4],[0,6],[3,4],[2,5]]")))
                 .isEqualTo("ijlooqqtz");
-        assertThat(smallestStringWithSwaps("dcab", STool.convertToIntList("[[0,3],[1,2],[0,2]]"))).isEqualTo("abcd");
-        assertThat(smallestStringWithSwaps("dcab", STool.convertToIntList("[[0,3],[1,2]]"))).isEqualTo("bacd");
-        assertThat(smallestStringWithSwaps("cba", STool.convertToIntList("[[0,1],[1,2]]"))).isEqualTo("abc");
+        assertThat(smallestStringWithSwaps("dcab", Ps.intList("[[0,3],[1,2],[0,2]]"))).isEqualTo("abcd");
+        assertThat(smallestStringWithSwaps("dcab", Ps.intList("[[0,3],[1,2]]"))).isEqualTo("bacd");
+        assertThat(smallestStringWithSwaps("cba", Ps.intList("[[0,1],[1,2]]"))).isEqualTo("abc");
         assertThat(smallestStringWithSwaps("dcab", Collections.EMPTY_LIST)).isEqualTo("dcab");
 
     }

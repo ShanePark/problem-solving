@@ -1,6 +1,6 @@
 package shane.leetcode.problems.easy;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -9,8 +9,8 @@ public class Q1351CountNegativeNumbersInASortedMatrix {
 
     @Test
     public void test() {
-        assertThat(countNegatives(STool.convertToIntArray("[[4,3,2,-1],[3,2,1,-1],[1,1,-1,-2],[-1,-1,-2,-3]]"))).isEqualTo(8);
-        assertThat(countNegatives(STool.convertToIntArray("[[3,2],[1,0]]"))).isEqualTo(0);
+        assertThat(countNegatives(Ps.intArray("[[4,3,2,-1],[3,2,1,-1],[1,1,-1,-2],[-1,-1,-2,-3]]"))).isEqualTo(8);
+        assertThat(countNegatives(Ps.intArray("[[3,2],[1,0]]"))).isEqualTo(0);
     }
 
     public int countNegatives(int[][] grid) {

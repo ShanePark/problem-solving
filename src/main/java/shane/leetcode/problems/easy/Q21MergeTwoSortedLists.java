@@ -1,6 +1,6 @@
 package shane.leetcode.problems.easy;
 
-import com.tistory.shanepark.leetcode.ListNode;
+import com.github.shanepark.leetcode.ListNode;
 
 public class Q21MergeTwoSortedLists {
 

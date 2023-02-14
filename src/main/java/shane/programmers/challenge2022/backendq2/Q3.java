@@ -1,6 +1,6 @@
 package shane.programmers.challenge2022.backendq2;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -9,7 +9,7 @@ public class Q3 {
 
     @Test
     public void test() {
-        assertThat(solution(9, 7, STool.convertToIntArray("[[2,2],[2,3],[2,5],[3,2],[3,4],[3,5],[3,6],[4,3],[4,6],[5,2],[5,5],[6,2],[6,3],[6,4],[6,6],[7,2],[7,6],[8,3],[8,4],[8,5]]")))
+        assertThat(solution(9, 7, Ps.intArray("[[2,2],[2,3],[2,5],[3,2],[3,4],[3,5],[3,6],[4,3],[4,6],[5,2],[5,5],[6,2],[6,3],[6,4],[6,6],[7,2],[7,6],[8,3],[8,4],[8,5]]")))
                 .containsExactly(1, 4);
     }
 

@@ -1,6 +1,6 @@
 package shane.leetcode.problems.medium;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -12,8 +12,8 @@ public class Q985SumOfEvenNumbersAfterQueries {
 
     @Test
     public void test() {
-        assertThat(sumEvenAfterQueries(new int[]{1, 2, 3, 4}, STool.convertToIntArray("[[1,0],[-3,1],[-4,0],[2,3]]"))).containsExactly(8, 6, 2, 4);
-        assertThat(sumEvenAfterQueries(new int[]{1}, STool.convertToIntArray("[[4,0]]"))).containsExactly(0);
+        assertThat(sumEvenAfterQueries(new int[]{1, 2, 3, 4}, Ps.intArray("[[1,0],[-3,1],[-4,0],[2,3]]"))).containsExactly(8, 6, 2, 4);
+        assertThat(sumEvenAfterQueries(new int[]{1}, Ps.intArray("[[4,0]]"))).containsExactly(0);
     }
 
     public int[] sumEvenAfterQueries(int[] nums, int[][] queries) {

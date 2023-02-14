@@ -1,6 +1,6 @@
 package shane.leetcode.problems.xhard;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import java.util.*;
@@ -17,16 +17,16 @@ public class Q218TheSkylineProblem2 {
 
     @Test
     public void test() {
-        assertThat(getSkyline(STool.convertToIntArray("[[1,2,1],[1,2,2],[1,2,3]]"))).isEqualTo(STool.convertToIntList("[[1,3],[2,0]]"));
-        assertThat(getSkyline(STool.convertToIntArray("[[2,9,10],[3,7,15],[5,12,12],[15,20,10],[19,24,8]]")))
-                .isEqualTo(STool.convertToIntList("[[2,10],[3,15],[7,12],[12,0],[15,10],[20,8],[24,0]]"));
-        assertThat(getSkyline(STool.convertToIntArray("[[0,2,3],[2,5,3]]")))
-                .isEqualTo(STool.convertToIntList("[[0,3],[5,0]]"));
+        assertThat(getSkyline(Ps.intArray("[[1,2,1],[1,2,2],[1,2,3]]"))).isEqualTo(Ps.intList("[[1,3],[2,0]]"));
+        assertThat(getSkyline(Ps.intArray("[[2,9,10],[3,7,15],[5,12,12],[15,20,10],[19,24,8]]")))
+                .isEqualTo(Ps.intList("[[2,10],[3,15],[7,12],[12,0],[15,10],[20,8],[24,0]]"));
+        assertThat(getSkyline(Ps.intArray("[[0,2,3],[2,5,3]]")))
+                .isEqualTo(Ps.intList("[[0,3],[5,0]]"));
     }
 
     @Test
     public void tle() {
-        assertThat(getSkyline(STool.convertToIntArray("[[0,2147483647,2147483647]]"))).isEqualTo(STool.convertToIntList("[[0, 2147483647], [2147483647, 0]]"));
+        assertThat(getSkyline(Ps.intArray("[[0,2147483647,2147483647]]"))).isEqualTo(Ps.intList("[[0, 2147483647], [2147483647, 0]]"));
     }
 
     public List<List<Integer>> getSkyline(int[][] buildings) {

@@ -1,6 +1,6 @@
 package shane.leetcode.problems.medium;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import java.util.LinkedList;
@@ -16,8 +16,8 @@ public class Q1162AsFarFromLandAsPossible2 {
 
     @Test
     public void test() {
-        assertThat(maxDistance(STool.convertToIntArray("[[1,0,1],[0,0,0],[1,0,1]]"))).isEqualTo(2);
-        assertThat(maxDistance(STool.convertToIntArray("[[1,0,0],[0,0,0],[0,0,0]]"))).isEqualTo(4);
+        assertThat(maxDistance(Ps.intArray("[[1,0,1],[0,0,0],[1,0,1]]"))).isEqualTo(2);
+        assertThat(maxDistance(Ps.intArray("[[1,0,0],[0,0,0],[0,0,0]]"))).isEqualTo(4);
     }
 
     int[][] DIRS = new int[][]{{0, -1}, {0, 1}, {1, 0}, {-1, 0}};

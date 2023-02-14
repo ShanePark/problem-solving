@@ -1,15 +1,15 @@
 package shane.programmers.challenge2021.weekly;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 
 import java.util.*;
 
 public class Week9Pylon {
 
     public static void main(String[] args) {
-        System.out.println(solution(9, STool.convertToIntArray("[[1,3],[2,3],[3,4],[4,5],[4,6],[4,7],[7,8],[7,9]]")));
-        System.out.println(solution(4, STool.convertToIntArray("[[1,2],[2,3],[3,4]]")));
-        System.out.println(solution(7, STool.convertToIntArray("[[1,2],[2,7],[3,7],[3,4],[4,5],[6,7]]")));
+        System.out.println(solution(9, Ps.intArray("[[1,3],[2,3],[3,4],[4,5],[4,6],[4,7],[7,8],[7,9]]")));
+        System.out.println(solution(4, Ps.intArray("[[1,2],[2,3],[3,4]]")));
+        System.out.println(solution(7, Ps.intArray("[[1,2],[2,7],[3,7],[3,4],[4,5],[6,7]]")));
     }
 
     static class Pylon {

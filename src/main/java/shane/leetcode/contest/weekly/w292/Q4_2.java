@@ -1,6 +1,6 @@
 package shane.leetcode.contest.weekly.w292;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -9,10 +9,10 @@ public class Q4_2 {
 
     @Test
     public void test() {
-        assertThat(hasValidPath(STool.convertToCharArray("[[\"(\",\"(\",\"(\",\"(\",\"(\"],[\"(\",\"(\",\")\",\")\",\")\"],[\")\",\"(\",\")\",\")\",\"(\"],[\"(\",\"(\",\")\",\")\",\")\"]]"))).isTrue();
-        assertThat(hasValidPath(STool.convertToCharArray("[[\"(\",\"(\",\"(\"],[\")\",\"(\",\")\"],[\"(\",\"(\",\")\"],[\"(\",\"(\",\")\"]]"))).isTrue();
-        assertThat(hasValidPath(STool.convertToCharArray("[[\"(\",\"(\"],[\"(\",\"(\"]]"))).isFalse();
-        assertThat(hasValidPath(STool.convertToCharArray("[[\")\",\")\"],[\"(\",\"(\"]]"))).isFalse();
+        assertThat(hasValidPath(Ps.charArray("[[\"(\",\"(\",\"(\",\"(\",\"(\"],[\"(\",\"(\",\")\",\")\",\")\"],[\")\",\"(\",\")\",\")\",\"(\"],[\"(\",\"(\",\")\",\")\",\")\"]]"))).isTrue();
+        assertThat(hasValidPath(Ps.charArray("[[\"(\",\"(\",\"(\"],[\")\",\"(\",\")\"],[\"(\",\"(\",\")\"],[\"(\",\"(\",\")\"]]"))).isTrue();
+        assertThat(hasValidPath(Ps.charArray("[[\"(\",\"(\"],[\"(\",\"(\"]]"))).isFalse();
+        assertThat(hasValidPath(Ps.charArray("[[\")\",\")\"],[\"(\",\"(\"]]"))).isFalse();
     }
 
     boolean[][][] memo;

@@ -1,6 +1,6 @@
 package shane.leetcode.contest.weekly.w312;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import java.util.*;
@@ -15,9 +15,9 @@ public class Q4 {
 
     @Test
     public void test() {
-        assertThat(numberOfGoodPaths(new int[]{1, 3, 2, 1, 3}, STool.convertToIntArray("[[0,1],[0,2],[2,3],[2,4]]"))).isEqualTo(6);
-        assertThat(numberOfGoodPaths(new int[]{1, 1, 2, 2, 3}, STool.convertToIntArray("[[0,1],[1,2],[2,3],[2,4]]"))).isEqualTo(7);
-        assertThat(numberOfGoodPaths(new int[]{1}, STool.convertToIntArray("[]"))).isEqualTo(1);
+        assertThat(numberOfGoodPaths(new int[]{1, 3, 2, 1, 3}, Ps.intArray("[[0,1],[0,2],[2,3],[2,4]]"))).isEqualTo(6);
+        assertThat(numberOfGoodPaths(new int[]{1, 1, 2, 2, 3}, Ps.intArray("[[0,1],[1,2],[2,3],[2,4]]"))).isEqualTo(7);
+        assertThat(numberOfGoodPaths(new int[]{1}, Ps.intArray("[]"))).isEqualTo(1);
     }
 
     @Test

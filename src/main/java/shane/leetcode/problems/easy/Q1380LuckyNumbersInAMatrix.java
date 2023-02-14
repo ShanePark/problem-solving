@@ -1,6 +1,6 @@
 package shane.leetcode.problems.easy;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -12,9 +12,9 @@ public class Q1380LuckyNumbersInAMatrix {
 
     @Test
     public void test() {
-        assertThat(luckyNumbers(STool.convertToIntArray("[[3,7,8],[9,11,13],[15,16,17]]"))).containsExactly(15);
-        assertThat(luckyNumbers(STool.convertToIntArray("[[1,10,4,2],[9,3,8,7],[15,16,17,12]]"))).containsExactly(12);
-        assertThat(luckyNumbers(STool.convertToIntArray("[[7,8],[1,2]]"))).containsExactly(7);
+        assertThat(luckyNumbers(Ps.intArray("[[3,7,8],[9,11,13],[15,16,17]]"))).containsExactly(15);
+        assertThat(luckyNumbers(Ps.intArray("[[1,10,4,2],[9,3,8,7],[15,16,17,12]]"))).containsExactly(12);
+        assertThat(luckyNumbers(Ps.intArray("[[7,8],[1,2]]"))).containsExactly(7);
     }
 
     public List<Integer> luckyNumbers(int[][] matrix) {

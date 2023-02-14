@@ -1,6 +1,6 @@
 package shane.leetcode.problems.medium;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -14,10 +14,10 @@ public class Q1310XORQueriesOfASubarray4 {
 
     @Test
     public void test() {
-        assertThat(xorQueries(new int[]{15, 8, 8, 8, 15}, STool.convertToIntArray("[[2,2],[3,3]]"))).containsExactly(8, 8);
-        assertThat(xorQueries(new int[]{16}, STool.convertToIntArray("[[0,0],[0,0],[0,0]]"))).containsExactly(16, 16, 16);
-        assertThat(xorQueries(new int[]{1, 3, 4, 8}, STool.convertToIntArray("[[0,1],[1,2],[0,3],[3,3]]"))).containsExactly(2, 7, 14, 8);
-        assertThat(xorQueries(new int[]{4, 8, 2, 10}, STool.convertToIntArray("[[2,3],[1,3],[0,0],[0,3]]"))).containsExactly(8, 0, 4, 4);
+        assertThat(xorQueries(new int[]{15, 8, 8, 8, 15}, Ps.intArray("[[2,2],[3,3]]"))).containsExactly(8, 8);
+        assertThat(xorQueries(new int[]{16}, Ps.intArray("[[0,0],[0,0],[0,0]]"))).containsExactly(16, 16, 16);
+        assertThat(xorQueries(new int[]{1, 3, 4, 8}, Ps.intArray("[[0,1],[1,2],[0,3],[3,3]]"))).containsExactly(2, 7, 14, 8);
+        assertThat(xorQueries(new int[]{4, 8, 2, 10}, Ps.intArray("[[2,3],[1,3],[0,0],[0,3]]"))).containsExactly(8, 0, 4, 4);
     }
 
     public int[] xorQueries(int[] arr, int[][] queries) {

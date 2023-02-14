@@ -1,6 +1,6 @@
 package shane.leetcode.problems.medium;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import java.util.*;
@@ -15,13 +15,13 @@ public class Q909SnakesAndLadders {
 
     @Test
     public void test() {
-        assertThat(snakesAndLadders(STool.convertToIntArray("[[-1,-1,19,10,-1],[2,-1,-1,6,-1],[-1,17,-1,19,-1],[25,-1,20,-1,-1],[-1,-1,-1,-1,15]]")))
+        assertThat(snakesAndLadders(Ps.intArray("[[-1,-1,19,10,-1],[2,-1,-1,6,-1],[-1,17,-1,19,-1],[25,-1,20,-1,-1],[-1,-1,-1,-1,15]]")))
                 .isEqualTo(2);
-        assertThat(snakesAndLadders(STool.convertToIntArray("[[-1,1,2,-1],[2,13,15,-1],[-1,10,-1,-1],[-1,6,2,8]]")))
+        assertThat(snakesAndLadders(Ps.intArray("[[-1,1,2,-1],[2,13,15,-1],[-1,10,-1,-1],[-1,6,2,8]]")))
                 .isEqualTo(2);
-        assertThat(snakesAndLadders(STool.convertToIntArray("[[-1,-1,-1,-1,-1,-1],[-1,-1,-1,-1,-1,-1],[-1,-1,-1,-1,-1,-1],[-1,35,-1,-1,13,-1],[-1,-1,-1,-1,-1,-1],[-1,15,-1,-1,-1,-1]]")))
+        assertThat(snakesAndLadders(Ps.intArray("[[-1,-1,-1,-1,-1,-1],[-1,-1,-1,-1,-1,-1],[-1,-1,-1,-1,-1,-1],[-1,35,-1,-1,13,-1],[-1,-1,-1,-1,-1,-1],[-1,15,-1,-1,-1,-1]]")))
                 .isEqualTo(4);
-        assertThat(snakesAndLadders(STool.convertToIntArray("[[-1,-1],[-1,3]]")))
+        assertThat(snakesAndLadders(Ps.intArray("[[-1,-1],[-1,3]]")))
                 .isEqualTo(1);
     }
 

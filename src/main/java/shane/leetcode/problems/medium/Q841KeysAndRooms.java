@@ -1,6 +1,6 @@
 package shane.leetcode.problems.medium;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import java.util.*;
@@ -15,8 +15,8 @@ public class Q841KeysAndRooms {
 
     @Test
     public void test() {
-        assertThat(canVisitAllRooms(STool.convertToIntList("[[1],[2],[3],[]]"))).isEqualTo(true);
-        assertThat(canVisitAllRooms(STool.convertToIntList("[[1,3],[3,0,1],[2],[0]]"))).isEqualTo(false);
+        assertThat(canVisitAllRooms(Ps.intList("[[1],[2],[3],[]]"))).isEqualTo(true);
+        assertThat(canVisitAllRooms(Ps.intList("[[1,3],[3,0,1],[2],[0]]"))).isEqualTo(false);
     }
 
     public boolean canVisitAllRooms(List<List<Integer>> rooms) {

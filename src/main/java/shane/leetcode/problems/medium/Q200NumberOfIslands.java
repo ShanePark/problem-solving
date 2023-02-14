@@ -1,6 +1,6 @@
 package shane.leetcode.problems.medium;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -13,13 +13,13 @@ public class Q200NumberOfIslands {
 
     @Test
     public void test() {
-        assertThat(numIslands(STool.convertToCharArray("[\n" +
+        assertThat(numIslands(Ps.charArray("[\n" +
                 "  [\"1\",\"1\",\"1\",\"1\",\"0\"],\n" +
                 "  [\"1\",\"1\",\"0\",\"1\",\"0\"],\n" +
                 "  [\"1\",\"1\",\"0\",\"0\",\"0\"],\n" +
                 "  [\"0\",\"0\",\"0\",\"0\",\"0\"]\n" +
                 "]"))).isEqualTo(1);
-        assertThat(numIslands(STool.convertToCharArray("[\n" +
+        assertThat(numIslands(Ps.charArray("[\n" +
                 "  [\"1\",\"1\",\"0\",\"0\",\"0\"],\n" +
                 "  [\"1\",\"1\",\"0\",\"0\",\"0\"],\n" +
                 "  [\"0\",\"0\",\"1\",\"0\",\"0\"],\n" +

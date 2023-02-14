@@ -1,6 +1,6 @@
 package shane.leetcode.problems.xhard;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import java.util.*;
@@ -16,19 +16,19 @@ public class Q126WordLadderII2 {
      */
     @Test
     public void test3() {
-        assertThat(findLadders("hot", "dog", List.of("hot","cog","dog","tot","hog","hop","pot","dot"))).isEqualTo(STool.convertToStringList("[[\"hot\",\"dot\",\"dog\"],[\"hot\",\"hog\",\"dog\"]]"));
+        assertThat(findLadders("hot", "dog", List.of("hot","cog","dog","tot","hog","hop","pot","dot"))).isEqualTo(Ps.strList("[[\"hot\",\"dot\",\"dog\"],[\"hot\",\"hog\",\"dog\"]]"));
     }
 
     @Test
     public void test() {
-        assertThat(findLadders("a", "c", List.of("a", "b", "c"))).isEqualTo(STool.convertToStringList("[[\"a\",\"c\"]]"));
-        assertThat(findLadders("hit", "cog", List.of("hot", "dot", "dog", "lot", "log", "cog"))).isEqualTo(STool.convertToStringList("[[\"hit\",\"hot\",\"dot\",\"dog\",\"cog\"],[\"hit\",\"hot\",\"lot\",\"log\",\"cog\"]]"));
-        assertThat(findLadders("hit", "cog", List.of("hot", "dot", "dog", "lot", "log"))).isEqualTo(STool.convertToStringList("[]"));
+        assertThat(findLadders("a", "c", List.of("a", "b", "c"))).isEqualTo(Ps.strList("[[\"a\",\"c\"]]"));
+        assertThat(findLadders("hit", "cog", List.of("hot", "dot", "dog", "lot", "log", "cog"))).isEqualTo(Ps.strList("[[\"hit\",\"hot\",\"dot\",\"dog\",\"cog\"],[\"hit\",\"hot\",\"lot\",\"log\",\"cog\"]]"));
+        assertThat(findLadders("hit", "cog", List.of("hot", "dot", "dog", "lot", "log"))).isEqualTo(Ps.strList("[]"));
     }
     @Test
     public void tleTest() {
         assertThat(findLadders("qa", "sq", List.of("si", "go", "se", "cm", "so", "ph", "mt", "db", "mb", "sb", "kr", "ln", "tm", "le", "av", "sm", "ar", "ci", "ca", "br", "ti", "ba", "to", "ra", "fa", "yo", "ow", "sn", "ya", "cr", "po", "fe", "ho", "ma", "re", "or", "rn", "au", "ur", "rh", "sr", "tc", "lt", "lo", "as", "fr", "nb", "yb", "if", "pb", "ge", "th", "pm", "rb", "sh", "co", "ga", "li", "ha", "hz", "no", "bi", "di", "hi", "qa", "pi", "os", "uh", "wm", "an", "me", "mo", "na", "la", "st", "er", "sc", "ne", "mn", "mi", "am", "ex", "pt", "io", "be", "fm", "ta", "tb", "ni", "mr", "pa", "he", "lr", "sq", "ye")))
-                .isEqualTo(STool.convertToStringList("[]"));
+                .isEqualTo(Ps.strList("[]"));
     }
 
 

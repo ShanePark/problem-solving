@@ -1,6 +1,6 @@
 package shane.leetcode.problems.easy;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -17,9 +17,9 @@ public class Q1200MinimumAbsoluteDifference {
 
     @Test
     public void test() {
-        assertThat(minimumAbsDifference(new int[]{4, 2, 1, 3})).isEqualTo(STool.convertToIntList("[[1,2],[2,3],[3,4]]"));
-        assertThat(minimumAbsDifference(new int[]{1, 3, 6, 10, 15})).isEqualTo(STool.convertToIntList("[[1,3]]"));
-        assertThat(minimumAbsDifference(new int[]{3, 8, -10, 23, 19, -4, -14, 27})).isEqualTo(STool.convertToIntList("[[-14,-10],[19,23],[23,27]]"));
+        assertThat(minimumAbsDifference(new int[]{4, 2, 1, 3})).isEqualTo(Ps.intList("[[1,2],[2,3],[3,4]]"));
+        assertThat(minimumAbsDifference(new int[]{1, 3, 6, 10, 15})).isEqualTo(Ps.intList("[[1,3]]"));
+        assertThat(minimumAbsDifference(new int[]{3, 8, -10, 23, 19, -4, -14, 27})).isEqualTo(Ps.intList("[[-14,-10],[19,23],[23,27]]"));
     }
 
     public List<List<Integer>> minimumAbsDifference(int[] arr) {

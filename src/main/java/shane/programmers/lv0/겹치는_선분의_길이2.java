@@ -1,6 +1,6 @@
 package shane.programmers.lv0;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
@@ -15,9 +15,9 @@ public class 겹치는_선분의_길이2 {
 
     @Test
     public void test() {
-        assertThat(solution(STool.convertToIntArray("[[0, 5], [3, 9], [1, 10]]"))).isEqualTo(8);
-        assertThat(solution(STool.convertToIntArray("[[1, -1], [1, 3], [9, 3]]"))).isEqualTo(0);
-        assertThat(solution(STool.convertToIntArray("[[0, 1], [2, 5], [3, 9]]"))).isEqualTo(2);
+        assertThat(solution(Ps.intArray("[[0, 5], [3, 9], [1, 10]]"))).isEqualTo(8);
+        assertThat(solution(Ps.intArray("[[1, -1], [1, 3], [9, 3]]"))).isEqualTo(0);
+        assertThat(solution(Ps.intArray("[[0, 1], [2, 5], [3, 9]]"))).isEqualTo(2);
     }
 
     public int solution(int[][] lines) {

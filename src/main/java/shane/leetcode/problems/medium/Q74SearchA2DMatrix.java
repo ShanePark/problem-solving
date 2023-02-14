@@ -1,6 +1,6 @@
 package shane.leetcode.problems.medium;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -9,11 +9,11 @@ public class Q74SearchA2DMatrix {
 
     @Test
     public void test() {
-        assertThat(searchMatrix(STool.convertToIntArray("[[1,3,5,7],[10,11,16,20],[23,30,34,60]]"), 3)).isTrue();
-        assertThat(searchMatrix(STool.convertToIntArray("[[1,3,5,7],[10,11,16,20],[23,30,34,60]]"), 13)).isFalse();
-        assertThat(searchMatrix(STool.convertToIntArray("[[1]]"), 1)).isTrue();
-        assertThat(searchMatrix(STool.convertToIntArray("[[1,1]]"), 2)).isFalse();
-        assertThat(searchMatrix(STool.convertToIntArray("[[1,3]]"), 3)).isTrue();
+        assertThat(searchMatrix(Ps.intArray("[[1,3,5,7],[10,11,16,20],[23,30,34,60]]"), 3)).isTrue();
+        assertThat(searchMatrix(Ps.intArray("[[1,3,5,7],[10,11,16,20],[23,30,34,60]]"), 13)).isFalse();
+        assertThat(searchMatrix(Ps.intArray("[[1]]"), 1)).isTrue();
+        assertThat(searchMatrix(Ps.intArray("[[1,1]]"), 2)).isFalse();
+        assertThat(searchMatrix(Ps.intArray("[[1,3]]"), 3)).isTrue();
     }
 
     public boolean searchMatrix(int[][] matrix, int target) {

@@ -1,8 +1,5 @@
 package shane.programmers.challenge2021.weekly;
 
-import com.tistory.shanepark.STool;
-
-import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
@@ -44,13 +41,6 @@ import java.util.Set;
  * 합계: 96.6 / 100.0
  */
 public class Week10Star {
-
-    public static void main(String[] args) {
-        STool.printDeepArray(solution(STool.convertToIntArray("[[2, -1, 4], [-2, -1, 4], [0, -1, 1], [5, -8, -12], [5, 8, 12]]")));
-        STool.printDeepArray(solution(STool.convertToIntArray("[[0, 1, -1], [1, 0, -1], [1, 0, 1]]")));
-        STool.printDeepArray(solution(STool.convertToIntArray("[[1, -1, 0], [2, -1, 0]]")));
-        STool.printDeepArray(solution(STool.convertToIntArray("[[1, -1, 0], [2, -1, 0], [4, -1, 0]]")));
-    }
 
     static class Point {
         int x;

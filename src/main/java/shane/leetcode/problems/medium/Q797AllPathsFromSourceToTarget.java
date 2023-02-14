@@ -1,6 +1,6 @@
 package shane.leetcode.problems.medium;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -14,7 +14,7 @@ public class Q797AllPathsFromSourceToTarget {
 
     @Test
     public void test() {
-        assertThat(allPathsSourceTarget(STool.convertToIntArray("[[1,2],[3],[3],[]]"))).containsExactly(Arrays.asList(0, 1, 3), Arrays.asList(0, 2, 3));
+        assertThat(allPathsSourceTarget(Ps.intArray("[[1,2],[3],[3],[]]"))).containsExactly(Arrays.asList(0, 1, 3), Arrays.asList(0, 2, 3));
     }
 
     public List<List<Integer>> allPathsSourceTarget(int[][] graph) {

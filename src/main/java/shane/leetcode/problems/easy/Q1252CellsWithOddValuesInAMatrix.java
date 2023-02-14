@@ -1,6 +1,6 @@
 package shane.leetcode.problems.easy;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -9,8 +9,8 @@ public class Q1252CellsWithOddValuesInAMatrix {
 
     @Test
     public void test() {
-        assertThat(oddCells(2, 3, STool.convertToIntArray(" [[0,1],[1,1]]"))).isEqualTo(6);
-        assertThat(oddCells(2, 2, STool.convertToIntArray(" [[1,1],[0,0]]"))).isEqualTo(0);
+        assertThat(oddCells(2, 3, Ps.intArray(" [[0,1],[1,1]]"))).isEqualTo(6);
+        assertThat(oddCells(2, 2, Ps.intArray(" [[1,1],[0,0]]"))).isEqualTo(0);
     }
 
     public int oddCells(int m, int n, int[][] indices) {

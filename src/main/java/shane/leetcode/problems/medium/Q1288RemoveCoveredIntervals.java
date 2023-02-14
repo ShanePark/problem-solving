@@ -1,6 +1,6 @@
 package shane.leetcode.problems.medium;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -11,8 +11,8 @@ public class Q1288RemoveCoveredIntervals {
 
     @Test
     void test() {
-        Assertions.assertThat(removeCoveredIntervals(STool.convertToIntArray("[[1,4],[3,6],[2,8]]"))).isEqualTo(2);
-        Assertions.assertThat(removeCoveredIntervals(STool.convertToIntArray("[[1,4],[2,3]]"))).isEqualTo(1);
+        Assertions.assertThat(removeCoveredIntervals(Ps.intArray("[[1,4],[3,6],[2,8]]"))).isEqualTo(2);
+        Assertions.assertThat(removeCoveredIntervals(Ps.intArray("[[1,4],[2,3]]"))).isEqualTo(1);
     }
 
     public int removeCoveredIntervals(int[][] intervals) {

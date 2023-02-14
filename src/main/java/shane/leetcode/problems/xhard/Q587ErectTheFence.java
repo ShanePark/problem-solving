@@ -1,6 +1,6 @@
 package shane.leetcode.problems.xhard;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import java.util.*;
@@ -15,21 +15,21 @@ public class Q587ErectTheFence {
 
     @Test
     public void test() {
-        assertThat(outerTrees(STool.convertToIntArray("[[0,2],[0,1],[0,0],[1,0],[2,0],[1,1]]")).length).isEqualTo(6);
+        assertThat(outerTrees(Ps.intArray("[[0,2],[0,1],[0,0],[1,0],[2,0],[1,1]]")).length).isEqualTo(6);
 
-        assertThat(outerTrees(STool.convertToIntArray("[[3,0],[4,0],[5,0],[6,1],[7,2],[7,3],[7,4],[6,5],[5,5],[4,5],[3,5],[2,5],[1,4],[1,3],[1,2],[2,1],[4,2],[0,3]]")).length)
-                .isEqualTo(STool.convertToIntArray("[[4,5],[2,5],[6,1],[3,5],[2,1],[1,4],[1,2],[7,4],[7,3],[7,2],[3,0],[0,3],[5,0],[5,5],[4,0],[6,5]]").length);
+        assertThat(outerTrees(Ps.intArray("[[3,0],[4,0],[5,0],[6,1],[7,2],[7,3],[7,4],[6,5],[5,5],[4,5],[3,5],[2,5],[1,4],[1,3],[1,2],[2,1],[4,2],[0,3]]")).length)
+                .isEqualTo(Ps.intArray("[[4,5],[2,5],[6,1],[3,5],[2,1],[1,4],[1,2],[7,4],[7,3],[7,2],[3,0],[0,3],[5,0],[5,5],[4,0],[6,5]]").length);
 
-        assertThat(outerTrees(STool.convertToIntArray("[[1,2],[2,2],[4,2],[4,1]]")).length).isEqualTo(4);
+        assertThat(outerTrees(Ps.intArray("[[1,2],[2,2],[4,2],[4,1]]")).length).isEqualTo(4);
 
-        assertThat(outerTrees(STool.convertToIntArray("[[1,1],[2,2],[2,0],[2,4],[3,3],[4,2]]")).length).isEqualTo(5);
+        assertThat(outerTrees(Ps.intArray("[[1,1],[2,2],[2,0],[2,4],[3,3],[4,2]]")).length).isEqualTo(5);
 
-        assertThat(outerTrees(STool.convertToIntArray("[[1,1],[1,2],[1,3]]")).length)
-                .isEqualTo(STool.convertToIntArray("[[1, 1], [1, 2], [1, 2]]").length);
+        assertThat(outerTrees(Ps.intArray("[[1,1],[1,2],[1,3]]")).length)
+                .isEqualTo(Ps.intArray("[[1, 1], [1, 2], [1, 2]]").length);
 
-        assertThat(outerTrees(STool.convertToIntArray("[[0,2],[1,1],[2,2],[2,4],[4,2],[3,3]]")).length)
-                .isEqualTo(STool.convertToIntArray("[[0,2],[4,2],[3,3],[1,1],[2,4]]").length);
-        assertThat(outerTrees(STool.convertToIntArray("[[1,2],[2,2],[4,2]]")).length).isEqualTo(3);
+        assertThat(outerTrees(Ps.intArray("[[0,2],[1,1],[2,2],[2,4],[4,2],[3,3]]")).length)
+                .isEqualTo(Ps.intArray("[[0,2],[4,2],[3,3],[1,1],[2,4]]").length);
+        assertThat(outerTrees(Ps.intArray("[[1,2],[2,2],[4,2]]")).length).isEqualTo(3);
     }
 
     public int[][] outerTrees(int[][] trees) {

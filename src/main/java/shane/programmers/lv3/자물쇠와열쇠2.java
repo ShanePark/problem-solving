@@ -1,6 +1,6 @@
 package shane.programmers.lv3;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -15,9 +15,9 @@ public class 자물쇠와열쇠2 {
 
     @Test
     public void test() {
-        assertThat(solution(STool.convertToIntArray("[[1, 1, 1], [1, 1, 1], [1, 1, 1]]"), STool.convertToIntArray("[[1, 1, 1], [1, 1, 1], [1, 1, 1]]"))).isTrue();
-        assertThat(solution(STool.convertToIntArray("[[0, 0, 0], [0, 0, 1], [0, 1, 0]]"), STool.convertToIntArray("[[1, 1, 1], [1, 1, 0], [1, 0, 1]]"))).isTrue();
-        assertThat(solution(STool.convertToIntArray("[[0, 0, 0], [1, 0, 0], [0, 1, 1]]"), STool.convertToIntArray("[[1, 1, 1], [1, 1, 0], [1, 0, 1]]"))).isTrue();
+        assertThat(solution(Ps.intArray("[[1, 1, 1], [1, 1, 1], [1, 1, 1]]"), Ps.intArray("[[1, 1, 1], [1, 1, 1], [1, 1, 1]]"))).isTrue();
+        assertThat(solution(Ps.intArray("[[0, 0, 0], [0, 0, 1], [0, 1, 0]]"), Ps.intArray("[[1, 1, 1], [1, 1, 0], [1, 0, 1]]"))).isTrue();
+        assertThat(solution(Ps.intArray("[[0, 0, 0], [1, 0, 0], [0, 1, 1]]"), Ps.intArray("[[1, 1, 1], [1, 1, 0], [1, 0, 1]]"))).isTrue();
     }
 
     public boolean solution(int[][] key, int[][] lock) {

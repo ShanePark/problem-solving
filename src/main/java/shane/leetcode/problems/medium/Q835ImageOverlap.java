@@ -2,7 +2,7 @@ package shane.leetcode.problems.medium;
 
 import org.junit.jupiter.api.Test;
 
-import static com.tistory.shanepark.STool.convertToIntArray;
+import static com.github.shanepark.Ps.intArray;
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
@@ -13,9 +13,9 @@ public class Q835ImageOverlap {
 
     @Test
     public void test() {
-        assertThat(largestOverlap(convertToIntArray("[[1,1,0],[0,1,0],[0,1,0]]"), convertToIntArray("[[0,0,0],[0,1,1],[0,0,1]]"))).isEqualTo(3);
-        assertThat(largestOverlap(convertToIntArray("[[1]]"), convertToIntArray("[[1]]"))).isEqualTo(1);
-        assertThat(largestOverlap(convertToIntArray("[[0]]"), convertToIntArray("[[0]]"))).isEqualTo(0);
+        assertThat(largestOverlap(intArray("[[1,1,0],[0,1,0],[0,1,0]]"), intArray("[[0,0,0],[0,1,1],[0,0,1]]"))).isEqualTo(3);
+        assertThat(largestOverlap(intArray("[[1]]"), intArray("[[1]]"))).isEqualTo(1);
+        assertThat(largestOverlap(intArray("[[0]]"), intArray("[[0]]"))).isEqualTo(0);
     }
 
     public int largestOverlap(int[][] img1, int[][] img2) {

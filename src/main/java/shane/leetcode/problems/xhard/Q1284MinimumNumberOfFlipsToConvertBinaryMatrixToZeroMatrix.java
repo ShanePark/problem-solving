@@ -1,6 +1,6 @@
 package shane.leetcode.problems.xhard;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import java.util.LinkedList;
@@ -16,10 +16,10 @@ public class Q1284MinimumNumberOfFlipsToConvertBinaryMatrixToZeroMatrix {
     @Test
     public void test() {
         // TLE : 1 sec 779ms  play++ = 623530
-        assertThat(minFlips(STool.convertToIntArray("[[1,0,1],[0,1,0],[1,0,1]]"))).isEqualTo(9);
-//        assertThat(minFlips(STool.convertToIntArray("[[0]]"))).isEqualTo(0);
-//        assertThat(minFlips(STool.convertToIntArray("[[0,0],[0,1]]"))).isEqualTo(3);
-//        assertThat(minFlips(STool.convertToIntArray("[[1,0,0],[1,0,0]]"))).isEqualTo(-1);
+        assertThat(minFlips(Ps.intArray("[[1,0,1],[0,1,0],[1,0,1]]"))).isEqualTo(9);
+//        assertThat(minFlips(Ps.intArray("[[0]]"))).isEqualTo(0);
+//        assertThat(minFlips(Ps.intArray("[[0,0],[0,1]]"))).isEqualTo(3);
+//        assertThat(minFlips(Ps.intArray("[[1,0,0],[1,0,0]]"))).isEqualTo(-1);
     }
 
     @Test

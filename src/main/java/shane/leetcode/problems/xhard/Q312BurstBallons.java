@@ -1,8 +1,6 @@
 package shane.leetcode.problems.xhard;
 
 import org.junit.jupiter.api.Assertions;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,7 +9,6 @@ import java.util.List;
  * Wrong Answer
  */
 public class Q312BurstBallons {
-    static Logger log = LoggerFactory.getLogger(Q312BurstBallons.class);
     public static void main(String[] args) {
 //        Assertions.assertEquals(167, maxCoins(new int[]{3, 1, 5, 8}));
         Assertions.assertEquals(1086136, maxCoins(new int[]{9, 76, 64, 21, 97, 60}));
@@ -36,7 +33,6 @@ public class Q312BurstBallons {
         int left = index == 0 ? 1 : list.get(index - 1);
         int middle = list.get(index);
         int right = index == list.size() - 1 ? 1 : list.get(index + 1);
-        log.info("{} * {} * {} = {}", left, middle, right, left * middle * right);
         list.remove(index);
         return left * middle * right;
     }

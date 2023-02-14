@@ -1,6 +1,6 @@
 package shane.leetcode.contest.biweekly.w73;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -14,10 +14,10 @@ public class Q2192AllAncestorsOfANodeInADirectedAcyclicGraph2 {
 
     @Test
     void test() {
-        Assertions.assertThat(getAncestors(8, STool.convertToIntArray("[[0,3],[0,4],[1,3],[2,4],[2,7],[3,5],[3,6],[3,7],[4,6]]"))).containsExactly(
+        Assertions.assertThat(getAncestors(8, Ps.intArray("[[0,3],[0,4],[1,3],[2,4],[2,7],[3,5],[3,6],[3,7],[4,6]]"))).containsExactly(
                 Arrays.asList(), Arrays.asList(), Arrays.asList(), Arrays.asList(0, 1), Arrays.asList(0, 2), Arrays.asList(0, 1, 3), Arrays.asList(0, 1, 2, 3, 4), Arrays.asList(0, 1, 2, 3)
         );
-        Assertions.assertThat(getAncestors(6, STool.convertToIntArray("[[0,3],[5,0],[2,3],[4,3],[5,3],[1,3],[2,5],[0,1],[4,5],[4,2],[4,0],[2,1],[5,1]]"))).containsExactly(
+        Assertions.assertThat(getAncestors(6, Ps.intArray("[[0,3],[5,0],[2,3],[4,3],[5,3],[1,3],[2,5],[0,1],[4,5],[4,2],[4,0],[2,1],[5,1]]"))).containsExactly(
                 Arrays.asList(2, 4, 5), Arrays.asList(0, 2, 4, 5), Arrays.asList(4), Arrays.asList(0, 1, 2, 4, 5), Arrays.asList(), Arrays.asList(2, 4)
         );
     }

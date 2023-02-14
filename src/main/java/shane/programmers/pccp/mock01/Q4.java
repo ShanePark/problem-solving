@@ -1,6 +1,6 @@
 package shane.programmers.pccp.mock01;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import java.util.*;
@@ -11,9 +11,9 @@ public class Q4 {
 
     @Test
     public void test() {
-        assertThat(solution(STool.convertToIntArray("[[2, 0, 10], [1, 5, 5], [3, 5, 3], [3, 12, 2]]")))
+        assertThat(solution(Ps.intArray("[[2, 0, 10], [1, 5, 5], [3, 5, 3], [3, 12, 2]]")))
                 .containsExactly(20, 5, 0, 16, 0, 0, 0, 0, 0, 0, 0);
-        assertThat(solution(STool.convertToIntArray("[[3, 6, 4], [4, 2, 5], [1, 0, 5], [5, 0, 5]]")))
+        assertThat(solution(Ps.intArray("[[3, 6, 4], [4, 2, 5], [1, 0, 5], [5, 0, 5]]")))
                 .containsExactly(19, 0, 0, 4, 3, 14, 0, 0, 0, 0, 0);
     }
 

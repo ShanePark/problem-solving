@@ -1,6 +1,6 @@
 package shane.leetcode.problems.xhard;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -12,10 +12,10 @@ public class Q1192CriticalConnectionsInANetwork2 {
 
     @Test
     public void test() {
-        assertThat(criticalConnections(6, STool.convertToIntList("[[0,1],[1,2],[2,0],[1,3],[3,4],[4,5],[5,3]]"))).isEqualTo(STool.convertToIntList("[[1,3]]"));
-        assertThat(criticalConnections(5, STool.convertToIntList("[[1,0],[2,0],[3,2],[4,2],[4,3],[3,0],[4,0]]"))).isEqualTo(STool.convertToIntList("[[0,1]]"));
-        assertThat(criticalConnections(4, STool.convertToIntList("[[0,1],[1,2],[2,0],[1,3]]"))).isEqualTo(STool.convertToIntList("[[1,3]]"));
-        assertThat(criticalConnections(2, STool.convertToIntList("[[0,1]]"))).isEqualTo(STool.convertToIntList("[[0,1]]"));
+        assertThat(criticalConnections(6, Ps.intList("[[0,1],[1,2],[2,0],[1,3],[3,4],[4,5],[5,3]]"))).isEqualTo(Ps.intList("[[1,3]]"));
+        assertThat(criticalConnections(5, Ps.intList("[[1,0],[2,0],[3,2],[4,2],[4,3],[3,0],[4,0]]"))).isEqualTo(Ps.intList("[[0,1]]"));
+        assertThat(criticalConnections(4, Ps.intList("[[0,1],[1,2],[2,0],[1,3]]"))).isEqualTo(Ps.intList("[[1,3]]"));
+        assertThat(criticalConnections(2, Ps.intList("[[0,1]]"))).isEqualTo(Ps.intList("[[0,1]]"));
     }
 
     int time;

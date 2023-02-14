@@ -1,6 +1,6 @@
 package shane.leetcode.problems.xhard;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import java.util.HashMap;
@@ -16,9 +16,9 @@ public class Q1074NumberOfSubmatricesThatSumToTarget {
 
     @Test
     public void test() {
-        assertThat(numSubmatrixSumTarget(STool.convertToIntArray("[[0,1,0],[1,1,1],[0,1,0]]"), 0)).isEqualTo(4);
-        assertThat(numSubmatrixSumTarget(STool.convertToIntArray("[[1,-1],[-1,1]]"), 0)).isEqualTo(5);
-        assertThat(numSubmatrixSumTarget(STool.convertToIntArray("[[0,1,1,1,0,1],[0,0,0,0,0,1],[0,0,1,0,0,1],[1,1,0,1,1,0],[1,0,0,1,0,0]]"), 0)).isEqualTo(43);
+        assertThat(numSubmatrixSumTarget(Ps.intArray("[[0,1,0],[1,1,1],[0,1,0]]"), 0)).isEqualTo(4);
+        assertThat(numSubmatrixSumTarget(Ps.intArray("[[1,-1],[-1,1]]"), 0)).isEqualTo(5);
+        assertThat(numSubmatrixSumTarget(Ps.intArray("[[0,1,1,1,0,1],[0,0,0,0,0,1],[0,0,1,0,0,1],[1,1,0,1,1,0],[1,0,0,1,0,0]]"), 0)).isEqualTo(43);
     }
 
     public int numSubmatrixSumTarget(int[][] matrix, int target) {

@@ -1,6 +1,6 @@
 package shane.leetcode.problems.xhard;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -13,10 +13,10 @@ public class Q149MaxPointsOnALine {
 
     @Test
     public void test() {
-        assertThat(maxPoints(STool.convertToIntArray("[[0,0],[1,-1],[1,1]]"))).isEqualTo(2);
-        assertThat(maxPoints(STool.convertToIntArray("[[0,0]]"))).isEqualTo(1);
-        assertThat(maxPoints(STool.convertToIntArray("[[1,1],[2,2],[3,3]]"))).isEqualTo(3);
-        assertThat(maxPoints(STool.convertToIntArray("[[1,1],[3,2],[5,3],[4,1],[2,3],[1,4]]"))).isEqualTo(4);
+        assertThat(maxPoints(Ps.intArray("[[0,0],[1,-1],[1,1]]"))).isEqualTo(2);
+        assertThat(maxPoints(Ps.intArray("[[0,0]]"))).isEqualTo(1);
+        assertThat(maxPoints(Ps.intArray("[[1,1],[2,2],[3,3]]"))).isEqualTo(3);
+        assertThat(maxPoints(Ps.intArray("[[1,1],[3,2],[5,3],[4,1],[2,3],[1,4]]"))).isEqualTo(4);
     }
 
     public int maxPoints(int[][] points) {

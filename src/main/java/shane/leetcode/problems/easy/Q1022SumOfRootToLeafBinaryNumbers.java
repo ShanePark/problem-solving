@@ -1,6 +1,6 @@
 package shane.leetcode.problems.easy;
 
-import com.tistory.shanepark.leetcode.TreeNode;
+import com.github.shanepark.leetcode.TreeNode;
 
 import java.util.ArrayList;
 import java.util.List;

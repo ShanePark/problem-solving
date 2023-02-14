@@ -1,6 +1,6 @@
 package shane.leetcode.problems.easy;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -11,8 +11,8 @@ public class Q1791FindCenterOfStarGraph {
 
     @Test
     void test() {
-        Assertions.assertThat(findCenter(STool.convertToIntArray("[[1,2],[2,3],[4,2]]"))).isEqualTo(2);
-        Assertions.assertThat(findCenter(STool.convertToIntArray("[[1,2],[5,1],[1,3],[1,4]]"))).isEqualTo(1);
+        Assertions.assertThat(findCenter(Ps.intArray("[[1,2],[2,3],[4,2]]"))).isEqualTo(2);
+        Assertions.assertThat(findCenter(Ps.intArray("[[1,2],[5,1],[1,3],[1,4]]"))).isEqualTo(1);
     }
 
     public int findCenter(int[][] edges) {

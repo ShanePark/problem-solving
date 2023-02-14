@@ -1,6 +1,6 @@
 package shane.leetcode.problems.xhard;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import java.util.*;
@@ -15,8 +15,8 @@ public class Q1192CriticalConnectionsInANetwork {
 
     @Test
     public void test() {
-        assertThat(criticalConnections(4, STool.convertToIntList("[[0,1],[1,2],[2,0],[1,3]]"))).isEqualTo(STool.convertToIntList("[[1,3]]"));
-        assertThat(criticalConnections(2, STool.convertToIntList("[[0,1]]"))).isEqualTo(STool.convertToIntList("[[0,1]]"));
+        assertThat(criticalConnections(4, Ps.intList("[[0,1],[1,2],[2,0],[1,3]]"))).isEqualTo(Ps.intList("[[1,3]]"));
+        assertThat(criticalConnections(2, Ps.intList("[[0,1]]"))).isEqualTo(Ps.intList("[[0,1]]"));
     }
 
     Map<Integer, Node> map;

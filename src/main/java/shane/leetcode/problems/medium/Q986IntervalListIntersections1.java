@@ -1,6 +1,6 @@
 package shane.leetcode.problems.medium;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -15,10 +15,7 @@ public class Q986IntervalListIntersections1 {
     public static void main(String[] args) {
         String firstList = "[[0,2],[5,10],[13,23],[24,25]]";
         String secondList = "[[1,5],[8,12],[15,24],[25,26]]";
-        int[][] result = intervalIntersection(STool.convertToIntArray(firstList), STool.convertToIntArray(secondList));
-        for (int[] ints : result) {
-            STool.printArray(ints);
-        }
+        int[][] result = intervalIntersection(Ps.intArray(firstList), Ps.intArray(secondList));
     }
 
     public static int[][] intervalIntersection(int[][] firstList, int[][] secondList) {

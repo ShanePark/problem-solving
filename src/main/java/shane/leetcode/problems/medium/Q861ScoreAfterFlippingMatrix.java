@@ -1,6 +1,6 @@
 package shane.leetcode.problems.medium;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -9,8 +9,8 @@ public class Q861ScoreAfterFlippingMatrix {
 
     @Test
     public void test() {
-        assertThat(matrixScore(STool.convertToIntArray("[[0,0,1,1],[1,0,1,0],[1,1,0,0]]"))).isEqualTo(39);
-        assertThat(matrixScore(STool.convertToIntArray("[[0]]"))).isEqualTo(1);
+        assertThat(matrixScore(Ps.intArray("[[0,0,1,1],[1,0,1,0],[1,1,0,0]]"))).isEqualTo(39);
+        assertThat(matrixScore(Ps.intArray("[[0]]"))).isEqualTo(1);
     }
 
     public int matrixScore(int[][] grid) {

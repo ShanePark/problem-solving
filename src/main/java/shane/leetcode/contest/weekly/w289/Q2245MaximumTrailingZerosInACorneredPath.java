@@ -1,6 +1,6 @@
 package shane.leetcode.contest.weekly.w289;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -9,8 +9,8 @@ public class Q2245MaximumTrailingZerosInACorneredPath {
 
     @Test
     public void test() {
-        assertThat(maxTrailingZeros(STool.convertToIntArray("[[23,17,15,3,20],[8,1,20,27,11],[9,4,6,2,21],[40,9,1,10,6],[22,7,4,5,3]]"))).isEqualTo(3);
-        assertThat(maxTrailingZeros(STool.convertToIntArray("[[3,3,5],[3,3,5],[2,2,10]]"))).isEqualTo(3);
+        assertThat(maxTrailingZeros(Ps.intArray("[[23,17,15,3,20],[8,1,20,27,11],[9,4,6,2,21],[40,9,1,10,6],[22,7,4,5,3]]"))).isEqualTo(3);
+        assertThat(maxTrailingZeros(Ps.intArray("[[3,3,5],[3,3,5],[2,2,10]]"))).isEqualTo(3);
     }
 
     public int maxTrailingZeros(int[][] grid) {

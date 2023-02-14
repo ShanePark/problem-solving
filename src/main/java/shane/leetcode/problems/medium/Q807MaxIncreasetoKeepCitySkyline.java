@@ -1,6 +1,6 @@
 package shane.leetcode.problems.medium;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -8,8 +8,8 @@ public class Q807MaxIncreasetoKeepCitySkyline {
 
     @Test
     void test() {
-        Assertions.assertThat(maxIncreaseKeepingSkyline(STool.convertToIntArray("[[3,0,8,4],[2,4,5,7],[9,2,6,3],[0,3,1,0]]"))).isEqualTo(35);
-        Assertions.assertThat(maxIncreaseKeepingSkyline(STool.convertToIntArray("[[0,0,0],[0,0,0],[0,0,0]]"))).isEqualTo(0);
+        Assertions.assertThat(maxIncreaseKeepingSkyline(Ps.intArray("[[3,0,8,4],[2,4,5,7],[9,2,6,3],[0,3,1,0]]"))).isEqualTo(35);
+        Assertions.assertThat(maxIncreaseKeepingSkyline(Ps.intArray("[[0,0,0],[0,0,0],[0,0,0]]"))).isEqualTo(0);
     }
 
     public int maxIncreaseKeepingSkyline(int[][] grid) {

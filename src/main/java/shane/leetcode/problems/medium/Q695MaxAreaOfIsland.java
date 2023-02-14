@@ -1,6 +1,6 @@
 package shane.leetcode.problems.medium;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -9,9 +9,9 @@ public class Q695MaxAreaOfIsland {
 
     @Test
     public void test() {
-        assertThat(maxAreaOfIsland(STool.convertToIntArray("[[0,0,1,0,0,0,0,1,0,0,0,0,0],[0,0,0,0,0,0,0,1,1,1,0,0,0],[0,1,1,0,1,0,0,0,0,0,0,0,0],[0,1,0,0,1,1,0,0,1,0,1,0,0],[0,1,0,0,1,1,0,0,1,1,1,0,0],[0,0,0,0,0,0,0,0,0,0,1,0,0],[0,0,0,0,0,0,0,1,1,1,0,0,0],[0,0,0,0,0,0,0,1,1,0,0,0,0]]")))
+        assertThat(maxAreaOfIsland(Ps.intArray("[[0,0,1,0,0,0,0,1,0,0,0,0,0],[0,0,0,0,0,0,0,1,1,1,0,0,0],[0,1,1,0,1,0,0,0,0,0,0,0,0],[0,1,0,0,1,1,0,0,1,0,1,0,0],[0,1,0,0,1,1,0,0,1,1,1,0,0],[0,0,0,0,0,0,0,0,0,0,1,0,0],[0,0,0,0,0,0,0,1,1,1,0,0,0],[0,0,0,0,0,0,0,1,1,0,0,0,0]]")))
                 .isEqualTo(6);
-        assertThat(maxAreaOfIsland(STool.convertToIntArray("[[0,0,0,0,0,0,0,0]]"))).isEqualTo(0);
+        assertThat(maxAreaOfIsland(Ps.intArray("[[0,0,0,0,0,0,0,0]]"))).isEqualTo(0);
     }
 
     public int maxAreaOfIsland(int[][] grid) {

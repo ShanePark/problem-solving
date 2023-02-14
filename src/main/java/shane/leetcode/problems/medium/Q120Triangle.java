@@ -1,6 +1,6 @@
 package shane.leetcode.problems.medium;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import java.util.Comparator;
@@ -12,8 +12,8 @@ public class Q120Triangle {
 
     @Test
     public void test() {
-        assertThat(minimumTotal(STool.convertToIntList("[[2],[3,4],[6,5,7],[4,1,8,3]]"))).isEqualTo(11);
-        assertThat(minimumTotal(STool.convertToIntList("[[-10]]"))).isEqualTo(-10);
+        assertThat(minimumTotal(Ps.intList("[[2],[3,4],[6,5,7],[4,1,8,3]]"))).isEqualTo(11);
+        assertThat(minimumTotal(Ps.intList("[[-10]]"))).isEqualTo(-10);
     }
 
     public int minimumTotal(List<List<Integer>> triangle) {

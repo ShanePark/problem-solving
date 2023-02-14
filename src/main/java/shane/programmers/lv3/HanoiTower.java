@@ -1,15 +1,9 @@
 package shane.programmers.lv3;
 
-import com.tistory.shanepark.STool;
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class HanoiTower {
-
-    public static void main(String[] args) {
-        STool.printDeepArray(solution(3));
-    }
 
     public static int[][] solution(int n) {
         List<int[]> list = new ArrayList<>();

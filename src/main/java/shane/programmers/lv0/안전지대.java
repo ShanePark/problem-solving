@@ -1,6 +1,6 @@
 package shane.programmers.lv0;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -9,7 +9,7 @@ public class 안전지대 {
 
     @Test
     public void test() {
-        assertThat(solution(STool.convertToIntArray("[[0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 1, 0, 0], [0, 0, 0, 0, 0]]"))).isEqualTo(16);
+        assertThat(solution(Ps.intArray("[[0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 1, 0, 0], [0, 0, 0, 0, 0]]"))).isEqualTo(16);
     }
 
     public int solution(int[][] board) {

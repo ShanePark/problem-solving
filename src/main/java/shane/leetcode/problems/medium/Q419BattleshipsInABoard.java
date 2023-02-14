@@ -1,6 +1,6 @@
 package shane.leetcode.problems.medium;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -9,9 +9,9 @@ public class Q419BattleshipsInABoard {
 
     @Test
     public void test() {
-        assertThat(countBattleships(STool.convertToCharArray("[[\".\",\"X\"],[\"X\",\".\"]]"))).isEqualTo(2);
-        assertThat(countBattleships(STool.convertToCharArray("[[\"X\",\".\",\".\",\"X\"],[\".\",\".\",\".\",\"X\"],[\".\",\".\",\".\",\"X\"]]"))).isEqualTo(2);
-        assertThat(countBattleships(STool.convertToCharArray("[[\".\"]]"))).isEqualTo(0);
+        assertThat(countBattleships(Ps.charArray("[[\".\",\"X\"],[\"X\",\".\"]]"))).isEqualTo(2);
+        assertThat(countBattleships(Ps.charArray("[[\"X\",\".\",\".\",\"X\"],[\".\",\".\",\".\",\"X\"],[\".\",\".\",\".\",\"X\"]]"))).isEqualTo(2);
+        assertThat(countBattleships(Ps.charArray("[[\".\"]]"))).isEqualTo(0);
     }
 
     public int countBattleships(char[][] board) {

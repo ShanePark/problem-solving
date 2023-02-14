@@ -1,12 +1,12 @@
 package shane.programmers.challenge2021.monthly.sep2021;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 
 public class P7 {
 
     public static void main(String[] args) {
-        System.out.println(solution(2, 2, 0, 0, STool.convertToIntArray("[[2,1],[0,1],[1,1],[0,1],[2,1]]")) == 4);
-        System.out.println(solution(2, 5, 0, 1, STool.convertToIntArray("[[3,1],[2,2],[1,1],[2,3],[0,1],[2,1]]")) == 2);
+        System.out.println(solution(2, 2, 0, 0, Ps.intArray("[[2,1],[0,1],[1,1],[0,1],[2,1]]")) == 4);
+        System.out.println(solution(2, 5, 0, 1, Ps.intArray("[[3,1],[2,2],[1,1],[2,3],[0,1],[2,1]]")) == 2);
     }
 
     public static long solution(int n, int m, int x, int y, int[][] queries) {

@@ -1,6 +1,6 @@
 package shane.leetcode.problems.medium;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import java.util.*;
@@ -11,10 +11,10 @@ public class Q743NetworkDelayTime {
 
     @Test
     public void test() {
-        assertThat(networkDelayTime(STool.convertToIntArray("[[1,2,1],[2,3,2],[1,3,4]]"), 3, 1)).isEqualTo(3);
-        assertThat(networkDelayTime(STool.convertToIntArray("[[2,1,1],[2,3,1],[3,4,1]]"), 4, 2)).isEqualTo(2);
-        assertThat(networkDelayTime(STool.convertToIntArray("[[1,2,1]]"), 2, 1)).isEqualTo(1);
-        assertThat(networkDelayTime(STool.convertToIntArray("[[1,2,1]]"), 2, 2)).isEqualTo(-1);
+        assertThat(networkDelayTime(Ps.intArray("[[1,2,1],[2,3,2],[1,3,4]]"), 3, 1)).isEqualTo(3);
+        assertThat(networkDelayTime(Ps.intArray("[[2,1,1],[2,3,1],[3,4,1]]"), 4, 2)).isEqualTo(2);
+        assertThat(networkDelayTime(Ps.intArray("[[1,2,1]]"), 2, 1)).isEqualTo(1);
+        assertThat(networkDelayTime(Ps.intArray("[[1,2,1]]"), 2, 2)).isEqualTo(-1);
     }
 
     public int networkDelayTime(int[][] times, int n, int k) {

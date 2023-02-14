@@ -1,6 +1,6 @@
 package shane.leetcode.problems.medium;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -19,14 +19,14 @@ public class Q1519NumberOfNodesInTheSubTreeWithTheSameLabel3 {
     @Test
     public void test() {
 
-        assertThat(countSubTrees(6, STool.convertToIntArray("[[0,1],[0,2],[1,3],[3,4],[4,5]]"), "cbabaa")).containsExactly(1, 2, 1, 1, 2, 1);
-        assertThat(countSubTrees(7, STool.convertToIntArray("[[0,1],[0,2],[1,4],[1,5],[2,3],[2,6]]"), "abaedcd")).containsExactly(2, 1, 1, 1, 1, 1, 1);
-        assertThat(countSubTrees(4, STool.convertToIntArray("[[0,1],[1,2],[0,3]]"), "bbbb")).containsExactly(4, 2, 1, 1);
+        assertThat(countSubTrees(6, Ps.intArray("[[0,1],[0,2],[1,3],[3,4],[4,5]]"), "cbabaa")).containsExactly(1, 2, 1, 1, 2, 1);
+        assertThat(countSubTrees(7, Ps.intArray("[[0,1],[0,2],[1,4],[1,5],[2,3],[2,6]]"), "abaedcd")).containsExactly(2, 1, 1, 1, 1, 1, 1);
+        assertThat(countSubTrees(4, Ps.intArray("[[0,1],[1,2],[0,3]]"), "bbbb")).containsExactly(4, 2, 1, 1);
     }
 
     @Test
     public void weirdCase() {
-        assertThat(countSubTrees(4, STool.convertToIntArray("[[0,2],[0,3],[1,2]]"), "aeed"))
+        assertThat(countSubTrees(4, Ps.intArray("[[0,2],[0,3],[1,2]]"), "aeed"))
                 .containsExactly(1, 1, 2, 1);
     }
 

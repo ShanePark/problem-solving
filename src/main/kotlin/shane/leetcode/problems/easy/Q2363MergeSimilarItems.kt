@@ -1,6 +1,6 @@
 package shane.leetcode.problems.easy
 
-import com.tistory.shanepark.STool
+import com.github.shanepark.Ps
 import org.assertj.core.api.Assertions
 import org.junit.jupiter.api.Test
 
@@ -14,10 +14,10 @@ class Q2363MergeSimilarItems {
     fun test() {
         Assertions.assertThat(
             mergeSimilarItems(
-                STool.convertToIntArray("[[1,1],[4,5],[3,8]]"),
-                STool.convertToIntArray("[[3,1],[1,5]]")
+                Ps.intArray("[[1,1],[4,5],[3,8]]"),
+                Ps.intArray("[[3,1],[1,5]]")
             )
-        ).isEqualTo(STool.convertToIntList("[[1,6],[3,9],[4,5]]"))
+        ).isEqualTo(Ps.intList("[[1,6],[3,9],[4,5]]"))
     }
 
     fun mergeSimilarItems(items1: Array<IntArray>, items2: Array<IntArray>): List<List<Int>> {

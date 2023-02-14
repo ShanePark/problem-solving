@@ -1,6 +1,6 @@
 package shane.leetcode.problems.medium;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -9,16 +9,16 @@ public class Q289GameOfLife {
 
     @Test
     public void test() {
-        int[][] board = STool.convertToIntArray("[[0,1,0],[0,0,1],[1,1,1],[0,0,0]]");
+        int[][] board = Ps.intArray("[[0,1,0],[0,0,1],[1,1,1],[0,0,0]]");
         gameOfLife(board);
-        assertThat(board).isDeepEqualTo(STool.convertToIntArray("[[0,0,0],[1,0,1],[0,1,1],[0,1,0]]"));
+        assertThat(board).isDeepEqualTo(Ps.intArray("[[0,0,0],[1,0,1],[0,1,1],[0,1,0]]"));
     }
 
     @Test
     public void test2() {
-        int[][] board = STool.convertToIntArray("[[1,1],[1,0]]");
+        int[][] board = Ps.intArray("[[1,1],[1,0]]");
         gameOfLife(board);
-        assertThat(board).isDeepEqualTo(STool.convertToIntArray("[[1,1],[1,1]]"));
+        assertThat(board).isDeepEqualTo(Ps.intArray("[[1,1],[1,1]]"));
     }
 
     public void gameOfLife(int[][] board) {

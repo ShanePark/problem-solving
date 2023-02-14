@@ -1,6 +1,6 @@
 package shane.leetcode.problems.medium;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -12,9 +12,9 @@ public class Q1631PathWithMinimumEffort {
 
     @Test
     public void test() {
-        assertThat(minimumEffortPath(STool.convertToIntArray("[[1,2,2],[3,8,2],[5,3,5]]"))).isEqualTo(2);
-        assertThat(minimumEffortPath(STool.convertToIntArray("[[1,2,3],[3,8,4],[5,3,5]]"))).isEqualTo(1);
-        assertThat(minimumEffortPath(STool.convertToIntArray("[[1,2,1,1,1],[1,2,1,2,1],[1,2,1,2,1],[1,2,1,2,1],[1,1,1,2,1]]"))).isEqualTo(0);
+        assertThat(minimumEffortPath(Ps.intArray("[[1,2,2],[3,8,2],[5,3,5]]"))).isEqualTo(2);
+        assertThat(minimumEffortPath(Ps.intArray("[[1,2,3],[3,8,4],[5,3,5]]"))).isEqualTo(1);
+        assertThat(minimumEffortPath(Ps.intArray("[[1,2,1,1,1],[1,2,1,2,1],[1,2,1,2,1],[1,2,1,2,1],[1,1,1,2,1]]"))).isEqualTo(0);
     }
 
     int result;

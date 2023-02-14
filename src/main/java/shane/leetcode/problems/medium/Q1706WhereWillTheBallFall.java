@@ -1,6 +1,6 @@
 package shane.leetcode.problems.medium;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -13,10 +13,10 @@ public class Q1706WhereWillTheBallFall {
 
     @Test
     public void test() {
-        assertThat(findBall(STool.convertToIntArray("[[1,1,1,-1,-1],[1,1,1,-1,-1],[-1,-1,-1,1,1],[1,1,1,1,-1],[-1,-1,-1,-1,-1]]")))
+        assertThat(findBall(Ps.intArray("[[1,1,1,-1,-1],[1,1,1,-1,-1],[-1,-1,-1,1,1],[1,1,1,1,-1],[-1,-1,-1,-1,-1]]")))
                 .containsExactly(1, -1, -1, -1, -1);
-        assertThat(findBall(STool.convertToIntArray("[[1,1,1,1,1,1],[-1,-1,-1,-1,-1,-1],[1,1,1,1,1,1],[-1,-1,-1,-1,-1,-1]]"))).containsExactly(0, 1, 2, 3, 4, -1);
-        assertThat(findBall(STool.convertToIntArray("[[-1]]"))).containsExactly(-1);
+        assertThat(findBall(Ps.intArray("[[1,1,1,1,1,1],[-1,-1,-1,-1,-1,-1],[1,1,1,1,1,1],[-1,-1,-1,-1,-1,-1]]"))).containsExactly(0, 1, 2, 3, 4, -1);
+        assertThat(findBall(Ps.intArray("[[-1]]"))).containsExactly(-1);
     }
 
     public int[] findBall(int[][] grid) {

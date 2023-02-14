@@ -1,6 +1,6 @@
 package shane.leetcode.problems.xhard;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -12,8 +12,8 @@ public class Q363MaxSumOfRectangleNoLargerThanK {
 
     @Test
     public void test() {
-        assertThat(maxSumSubmatrix(STool.convertToIntArray("[[1,0,1],[0,-2,3]]"), 2)).isEqualTo(2);
-        assertThat(maxSumSubmatrix(STool.convertToIntArray("[[2,2,-1]]"), 3)).isEqualTo(3);
+        assertThat(maxSumSubmatrix(Ps.intArray("[[1,0,1],[0,-2,3]]"), 2)).isEqualTo(2);
+        assertThat(maxSumSubmatrix(Ps.intArray("[[2,2,-1]]"), 3)).isEqualTo(3);
     }
 
     public int maxSumSubmatrix(int[][] matrix, int k) {

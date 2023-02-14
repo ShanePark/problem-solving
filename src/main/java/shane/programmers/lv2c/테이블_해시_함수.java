@@ -1,6 +1,6 @@
 package shane.programmers.lv2c;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
@@ -11,7 +11,7 @@ public class 테이블_해시_함수 {
 
     @Test
     public void test() {
-        assertThat(solution(STool.convertToIntArray("[[2,2,6],[1,5,10],[4,2,9],[3,8,3]]"), 2, 2, 3))
+        assertThat(solution(Ps.intArray("[[2,2,6],[1,5,10],[4,2,9],[3,8,3]]"), 2, 2, 3))
                 .isEqualTo(4);
     }
 

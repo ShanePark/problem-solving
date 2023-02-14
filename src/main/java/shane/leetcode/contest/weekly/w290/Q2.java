@@ -1,6 +1,6 @@
 package shane.leetcode.contest.weekly.w290;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import java.util.HashSet;
@@ -13,9 +13,9 @@ public class Q2 {
 
     @Test
     public void test() {
-        assertThat(countLatticePoints(STool.convertToIntArray("[[2,2,1]]"))).isEqualTo(5);
-        assertThat(countLatticePoints(STool.convertToIntArray("[[2,2,2],[3,4,1]]"))).isEqualTo(16);
-        assertThat(countLatticePoints(STool.convertToIntArray("[[8,9,6],[9,8,4],[4,1,1],[8,5,1],[7,1,1],[6,7,5],[7,1,1],[7,1,1],[5,5,3]]"))).isEqualTo(141);
+        assertThat(countLatticePoints(Ps.intArray("[[2,2,1]]"))).isEqualTo(5);
+        assertThat(countLatticePoints(Ps.intArray("[[2,2,2],[3,4,1]]"))).isEqualTo(16);
+        assertThat(countLatticePoints(Ps.intArray("[[8,9,6],[9,8,4],[4,1,1],[8,5,1],[7,1,1],[6,7,5],[7,1,1],[7,1,1],[5,5,3]]"))).isEqualTo(141);
     }
 
     public int countLatticePoints(int[][] circles) {

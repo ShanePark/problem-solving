@@ -1,6 +1,6 @@
 package shane.leetcode.contest.weekly.w298;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -9,8 +9,8 @@ public class Q4 {
 
     @Test
     public void test() {
-        assertThat(sellingWood(3, 5, STool.convertToIntArray("[[1,4,2],[2,2,7],[2,1,3]]"))).isEqualTo(19);
-        assertThat(sellingWood(4, 6, STool.convertToIntArray("[[3,2,10],[1,4,2],[4,1,3]]"))).isEqualTo(32);
+        assertThat(sellingWood(3, 5, Ps.intArray("[[1,4,2],[2,2,7],[2,1,3]]"))).isEqualTo(19);
+        assertThat(sellingWood(4, 6, Ps.intArray("[[3,2,10],[1,4,2],[4,1,3]]"))).isEqualTo(32);
     }
 
     public long sellingWood(int m, int n, int[][] prices) {

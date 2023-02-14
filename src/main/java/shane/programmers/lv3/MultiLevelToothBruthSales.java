@@ -1,7 +1,5 @@
 package shane.programmers.lv3;
 
-import com.tistory.shanepark.STool;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -10,10 +8,10 @@ import java.util.Map;
 public class MultiLevelToothBruthSales {
 
     public static void main(String[] args) {
-        STool.printArray(solution(new String[]{"john", "mary", "edward", "sam", "emily", "jaimie", "tod", "young"},
+        solution(new String[]{"john", "mary", "edward", "sam", "emily", "jaimie", "tod", "young"},
                 new String[]{"-", "-", "mary", "edward", "mary", "mary", "jaimie", "edward"},
                 new String[]{"young", "john", "tod", "emily", "mary"},
-                new int[]{12, 4, 2, 5, 10}));
+                new int[]{12, 4, 2, 5, 10});
     }
 
     public static int[] solution(String[] enroll, String[] referral, String[] seller, int[] amount) {

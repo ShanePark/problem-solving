@@ -1,7 +1,6 @@
 package shane.leetcode.contest.weekly.w287;
 
 import org.junit.jupiter.api.Test;
-import org.springframework.util.StopWatch;
 
 import java.util.*;
 
@@ -13,8 +12,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class Q2227EncryptAndDecryptStrings {
     @Test
     public void test() {
-        StopWatch stopWatch = new StopWatch();
-        stopWatch.start();
         Encrypter encrypter = new Encrypter(new char[]{'a', 'b', 'c', 'd'}, new String[]{"ei", "zf", "ei", "am"}, new String[]{"abcd", "acbd", "adbc", "badc", "dacb", "cadb", "cbda", "abad"});
         assertThat(encrypter.encrypt("abcd")).isEqualTo("eizfeiam");
         assertThat(encrypter.decrypt("eizfeiam")).isEqualTo(2);
@@ -39,9 +36,6 @@ public class Q2227EncryptAndDecryptStrings {
         assertThat(test2.decrypt("eieieiei")).isEqualTo(0);
         assertThat(test2.decrypt("cccccccc")).isEqualTo(0);
         assertThat(test2.decrypt("aaaaeiei")).isEqualTo(0);
-        stopWatch.stop();
-        System.out.println("stopWatch.getTotalTimeMillis() = " + stopWatch.getTotalTimeMillis()); // 23ms failed
-
     }
 
     class Encrypter {

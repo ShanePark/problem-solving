@@ -1,6 +1,6 @@
 package shane.leetcode.contest.weekly.w309;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
@@ -18,10 +18,10 @@ public class Q4_2 {
 
     @Test
     public void test() {
-        assertThat(mostBooked(3, STool.convertToIntArray("[[0,10],[1,9],[2,8],[3,7],[4,6]]"))).isEqualTo(1);
-        assertThat(mostBooked(4, STool.convertToIntArray("[[18,19],[3,12],[17,19],[2,13],[7,10]]"))).isEqualTo(0);
-        assertThat(mostBooked(2, STool.convertToIntArray("[[0,10],[1,5],[2,7],[3,4]]"))).isEqualTo(0);
-        assertThat(mostBooked(3, STool.convertToIntArray("[[1,20],[2,10],[3,5],[4,9],[6,8]]"))).isEqualTo(1);
+        assertThat(mostBooked(3, Ps.intArray("[[0,10],[1,9],[2,8],[3,7],[4,6]]"))).isEqualTo(1);
+        assertThat(mostBooked(4, Ps.intArray("[[18,19],[3,12],[17,19],[2,13],[7,10]]"))).isEqualTo(0);
+        assertThat(mostBooked(2, Ps.intArray("[[0,10],[1,5],[2,7],[3,4]]"))).isEqualTo(0);
+        assertThat(mostBooked(3, Ps.intArray("[[1,20],[2,10],[3,5],[4,9],[6,8]]"))).isEqualTo(1);
     }
 
     public int mostBooked(int n, int[][] meetings) {

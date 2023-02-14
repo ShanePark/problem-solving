@@ -1,6 +1,6 @@
 package shane.leetcode.contest.weekly.w287;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import java.util.*;
@@ -11,7 +11,7 @@ public class Q2225FindPlayersWithZeroOrOneLosses {
 
     @Test
     public void test() {
-        assertThat(findWinners(STool.convertToIntArray("[[1,3],[2,3],[3,6],[5,6],[5,7],[4,5],[4,8],[4,9],[10,4],[10,9]]")))
+        assertThat(findWinners(Ps.intArray("[[1,3],[2,3],[3,6],[5,6],[5,7],[4,5],[4,8],[4,9],[10,4],[10,9]]")))
                 .containsExactly(Arrays.asList(new Integer[]{1, 2, 10}), Arrays.asList(new Integer[]{4, 5, 7, 8}));
     }
 

@@ -1,6 +1,6 @@
 package shane.leetcode.problems.medium;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import java.io.BufferedReader;
@@ -20,11 +20,11 @@ public class Q787CheapestFlightsWithinKStops2 {
 
     @Test
     public void test() {
-        assertThat(findCheapestPrice(4, STool.convertToIntArray("[[0,1,100],[1,2,100],[2,0,100],[1,3,600],[2,3,200]]"),
+        assertThat(findCheapestPrice(4, Ps.intArray("[[0,1,100],[1,2,100],[2,0,100],[1,3,600],[2,3,200]]"),
                 0, 3, 1)).isEqualTo(700);
-        assertThat(findCheapestPrice(3, STool.convertToIntArray("[[0,1,100],[1,2,100],[0,2,500]]"),
+        assertThat(findCheapestPrice(3, Ps.intArray("[[0,1,100],[1,2,100],[0,2,500]]"),
                 0, 2, 1)).isEqualTo(200);
-        assertThat(findCheapestPrice(3, STool.convertToIntArray("[[0,1,100],[1,2,100],[0,2,500]]"),
+        assertThat(findCheapestPrice(3, Ps.intArray("[[0,1,100],[1,2,100],[0,2,500]]"),
                 0, 2, 0)).isEqualTo(500);
     }
 
@@ -34,7 +34,7 @@ public class Q787CheapestFlightsWithinKStops2 {
         URL resource = getClass().getClassLoader().getResource(filename);
         BufferedReader bf = new BufferedReader(new FileReader(resource.getFile()));
         String data = bf.readLine();
-        assertThat(findCheapestPrice(83, STool.convertToIntArray(data), 82, 19, 81));
+        assertThat(findCheapestPrice(83, Ps.intArray(data), 82, 19, 81));
     }
 
     public int findCheapestPrice(int n, int[][] flights, int src, int dst, int k) {

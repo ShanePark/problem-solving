@@ -1,7 +1,7 @@
 package shane.programmers.challenge2022.gameq1;
 
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -11,8 +11,8 @@ public class Q3 {
 
     @Test
     void test() {
-//        Assertions.assertThat(solution(STool.convertToIntArray("[[1,1,1,1],[2,1,2,2],[2,2,2,1],[1,1,2,2]]"))).isEqualTo(5);
-        Assertions.assertThat(solution(STool.convertToIntArray("[[1,1,1,2],[1,1,1,2],[2,2,2,1],[1,2,2,2]]"))).isEqualTo(3);
+//        Assertions.assertThat(solution(Ps.intArray("[[1,1,1,1],[2,1,2,2],[2,2,2,1],[1,1,2,2]]"))).isEqualTo(5);
+        Assertions.assertThat(solution(Ps.intArray("[[1,1,1,2],[1,1,1,2],[2,2,2,1],[1,2,2,2]]"))).isEqualTo(3);
     }
 
     public int solution(int[][] grid) {

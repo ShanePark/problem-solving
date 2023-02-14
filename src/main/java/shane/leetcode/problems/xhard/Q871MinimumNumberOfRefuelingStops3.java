@@ -1,6 +1,6 @@
 package shane.leetcode.problems.xhard;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import java.util.Comparator;
@@ -19,16 +19,16 @@ public class Q871MinimumNumberOfRefuelingStops3 {
 
     @Test
     public void test() {
-        assertThat(minRefuelStops(1000, 83, STool.convertToIntArray("[[25,27],[36,187],[140,186],[378,6],[492,202],[517,89],[579,234],[673,86],[808,53],[954,49]]"))).isEqualTo(-1);
-        assertThat(minRefuelStops(100, 50, STool.convertToIntArray("[[25,25],[50,50]]"))).isEqualTo(1);
-        assertThat(minRefuelStops(100, 10, STool.convertToIntArray("[[10,60],[20,30],[30,30],[60,40]]"))).isEqualTo(2);
-        assertThat(minRefuelStops(100, 1, STool.convertToIntArray("[[10,100]]"))).isEqualTo(-1);
-        assertThat(minRefuelStops(1, 1, STool.convertToIntArray("[]"))).isEqualTo(0);
+        assertThat(minRefuelStops(1000, 83, Ps.intArray("[[25,27],[36,187],[140,186],[378,6],[492,202],[517,89],[579,234],[673,86],[808,53],[954,49]]"))).isEqualTo(-1);
+        assertThat(minRefuelStops(100, 50, Ps.intArray("[[25,25],[50,50]]"))).isEqualTo(1);
+        assertThat(minRefuelStops(100, 10, Ps.intArray("[[10,60],[20,30],[30,30],[60,40]]"))).isEqualTo(2);
+        assertThat(minRefuelStops(100, 1, Ps.intArray("[[10,100]]"))).isEqualTo(-1);
+        assertThat(minRefuelStops(1, 1, Ps.intArray("[]"))).isEqualTo(0);
     }
 
     @Test
     public void tle() {
-        assertThat(minRefuelStops(1000, 1, STool.convertToIntArray("[[1,186],[145,161],[183,43],[235,196],[255,169],[263,200],[353,161],[384,190],[474,44],[486,43],[567,48],[568,96],[592,36],[634,181],[645,167],[646,69],[690,52],[732,28],[800,42],[857,55],[922,63],[960,141],[973,13],[977,112],[997,162]]")))
+        assertThat(minRefuelStops(1000, 1, Ps.intArray("[[1,186],[145,161],[183,43],[235,196],[255,169],[263,200],[353,161],[384,190],[474,44],[486,43],[567,48],[568,96],[592,36],[634,181],[645,167],[646,69],[690,52],[732,28],[800,42],[857,55],[922,63],[960,141],[973,13],[977,112],[997,162]]")))
                 .isEqualTo(6);
     }
 

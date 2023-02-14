@@ -1,6 +1,6 @@
 package shane.leetcode.problems.medium;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import java.util.*;
@@ -28,9 +28,9 @@ public class Q429NaryTreeLevelOrderTraversal {
         children1.add(node2);
         children1.add(node4);
         Node node1 = new Node(1, children1);
-        assertThat(levelOrder(node1)).isEqualTo(STool.convertToIntList("[[1],[3,2,4],[5,6]]"));
+        assertThat(levelOrder(node1)).isEqualTo(Ps.intList("[[1],[3,2,4],[5,6]]"));
 
-        assertThat(levelOrder(null)).isEqualTo(STool.convertToIntList("[]"));
+        assertThat(levelOrder(null)).isEqualTo(Ps.intList("[]"));
     }
 
     public List<List<Integer>> levelOrder(Node root) {

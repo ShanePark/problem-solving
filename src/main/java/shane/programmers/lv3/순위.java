@@ -1,6 +1,6 @@
 package shane.programmers.lv3;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Assertions;
 
 import java.util.HashMap;
@@ -28,7 +28,7 @@ import java.util.Set;
 public class 순위 {
 
     public static void main(String[] args) {
-        Assertions.assertEquals(2, solution(5, STool.convertToIntArray("[[4, 3], [4, 2], [3, 2], [1, 2], [2, 5]]")));
+        Assertions.assertEquals(2, solution(5, Ps.intArray("[[4, 3], [4, 2], [3, 2], [1, 2], [2, 5]]")));
     }
 
     public static int solution(int n, int[][] results) {

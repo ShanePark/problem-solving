@@ -1,6 +1,6 @@
 package shane.leetcode.contest.weekly.w299;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
@@ -11,8 +11,8 @@ public class Q1 {
 
     @Test
     public void test() {
-        assertThat(checkXMatrix(STool.convertToIntArray("[[2,0,0,1],[0,3,1,0],[0,5,2,0],[4,0,0,2]]"))).isEqualTo(true);
-        assertThat(checkXMatrix(STool.convertToIntArray("[[5,7,0],[0,3,1],[0,5,0]]"))).isFalse();
+        assertThat(checkXMatrix(Ps.intArray("[[2,0,0,1],[0,3,1,0],[0,5,2,0],[4,0,0,2]]"))).isEqualTo(true);
+        assertThat(checkXMatrix(Ps.intArray("[[5,7,0],[0,3,1],[0,5,0]]"))).isFalse();
     }
 
     public boolean checkXMatrix(int[][] grid) {

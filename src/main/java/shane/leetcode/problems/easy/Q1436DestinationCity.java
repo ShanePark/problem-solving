@@ -1,6 +1,6 @@
 package shane.leetcode.problems.easy;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import java.util.HashSet;
@@ -14,7 +14,7 @@ public class Q1436DestinationCity {
 
     @Test
     public void test() {
-        assertThat(destCity(STool.convertToStringList("[[\"London\",\"New York\"],[\"New York\",\"Lima\"],[\"Lima\",\"Sao Paulo\"]]"))).isEqualTo("Sao Paulo");
+        assertThat(destCity(Ps.strList("[[\"London\",\"New York\"],[\"New York\",\"Lima\"],[\"Lima\",\"Sao Paulo\"]]"))).isEqualTo("Sao Paulo");
     }
 
     public String destCity(List<List<String>> paths) {

@@ -1,6 +1,6 @@
 package shane.leetcode.problems.medium;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -16,13 +16,13 @@ public class Q57InsertInterval {
 
     @Test
     public void test() {
-        assertThat(insert(STool.convertToIntArray("[[2,5],[6,7],[8,9]]"), new int[]{0, 1}))
-                .isEqualTo(STool.convertToIntArray("[[0,1],[2,5],[6,7],[8,9]]"));
-        assertThat(insert(STool.convertToIntArray("[]"), new int[]{5, 7})).isEqualTo(STool.convertToIntArray("[[5,7]]"));
-        assertThat(insert(STool.convertToIntArray("[[1,3],[6,9]]"), new int[]{2, 5}))
-                .isEqualTo(STool.convertToIntArray("[[1,5],[6,9]]"));
-        assertThat(insert(STool.convertToIntArray("[[1,2],[3,5],[6,7],[8,10],[12,16]]"), new int[]{4, 8}))
-                .isEqualTo(STool.convertToIntArray("[[1,2],[3,10],[12,16]]"));
+        assertThat(insert(Ps.intArray("[[2,5],[6,7],[8,9]]"), new int[]{0, 1}))
+                .isEqualTo(Ps.intArray("[[0,1],[2,5],[6,7],[8,9]]"));
+        assertThat(insert(Ps.intArray("[]"), new int[]{5, 7})).isEqualTo(Ps.intArray("[[5,7]]"));
+        assertThat(insert(Ps.intArray("[[1,3],[6,9]]"), new int[]{2, 5}))
+                .isEqualTo(Ps.intArray("[[1,5],[6,9]]"));
+        assertThat(insert(Ps.intArray("[[1,2],[3,5],[6,7],[8,10],[12,16]]"), new int[]{4, 8}))
+                .isEqualTo(Ps.intArray("[[1,2],[3,10],[12,16]]"));
     }
 
     public int[][] insert(int[][] intervals, int[] newInterval) {

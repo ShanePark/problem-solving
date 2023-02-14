@@ -1,6 +1,6 @@
 package shane.leetcode.contest.weekly.w321;
 
-import com.tistory.shanepark.leetcode.ListNode;
+import com.github.shanepark.leetcode.ListNode;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;

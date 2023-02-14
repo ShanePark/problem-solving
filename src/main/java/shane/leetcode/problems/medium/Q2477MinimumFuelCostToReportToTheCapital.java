@@ -1,6 +1,6 @@
 package shane.leetcode.problems.medium;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -19,9 +19,9 @@ public class Q2477MinimumFuelCostToReportToTheCapital {
 
     @Test
     void test() {
-        assertThat(minimumFuelCost(STool.convertToIntArray("[[0,1],[0,2],[0,3]]"), 5)).isEqualTo(3);
-        assertThat(minimumFuelCost(STool.convertToIntArray("[[3,1],[3,2],[1,0],[0,4],[0,5],[4,6]]"), 2)).isEqualTo(7);
-        assertThat(minimumFuelCost(STool.convertToIntArray("[]"), 1)).isEqualTo(0);
+        assertThat(minimumFuelCost(Ps.intArray("[[0,1],[0,2],[0,3]]"), 5)).isEqualTo(3);
+        assertThat(minimumFuelCost(Ps.intArray("[[3,1],[3,2],[1,0],[0,4],[0,5],[4,6]]"), 2)).isEqualTo(7);
+        assertThat(minimumFuelCost(Ps.intArray("[]"), 1)).isEqualTo(0);
     }
 
     public long minimumFuelCost(int[][] roads, int seats) {

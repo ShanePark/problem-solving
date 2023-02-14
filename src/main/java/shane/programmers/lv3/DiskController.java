@@ -1,6 +1,6 @@
 package shane.programmers.lv3;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,7 +8,7 @@ import java.util.PriorityQueue;
 
 public class DiskController {
     public static void main(String[] args) {
-        System.out.println(solution(STool.convertToIntArray("[[0, 3], [1, 9], [2, 6]]")));
+        System.out.println(solution(Ps.intArray("[[0, 3], [1, 9], [2, 6]]")));
     }
 
     public static int solution(int[][] jobs) {

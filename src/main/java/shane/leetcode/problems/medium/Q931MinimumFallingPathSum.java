@@ -1,6 +1,6 @@
 package shane.leetcode.problems.medium;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
@@ -15,8 +15,8 @@ public class Q931MinimumFallingPathSum {
 
     @Test
     public void test() {
-        assertThat(minFallingPathSum(STool.convertToIntArray("[[2,1,3],[6,5,4],[7,8,9]]"))).isEqualTo(13);
-        assertThat(minFallingPathSum(STool.convertToIntArray("[[-19,57],[-40,-5]]"))).isEqualTo(-59);
+        assertThat(minFallingPathSum(Ps.intArray("[[2,1,3],[6,5,4],[7,8,9]]"))).isEqualTo(13);
+        assertThat(minFallingPathSum(Ps.intArray("[[-19,57],[-40,-5]]"))).isEqualTo(-59);
     }
 
     public int minFallingPathSum(int[][] matrix) {

@@ -1,6 +1,6 @@
 package shane.leetcode.problems.medium;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -9,8 +9,8 @@ public class Q59SpiralMatrixII {
 
     @Test
     public void test() {
-        assertThat(generateMatrix(3)).isDeepEqualTo(STool.convertToIntArray("[[1,2,3],[8,9,4],[7,6,5]]"));
-        assertThat(generateMatrix(1)).isDeepEqualTo(STool.convertToIntArray("[[1]]"));
+        assertThat(generateMatrix(3)).isDeepEqualTo(Ps.intArray("[[1,2,3],[8,9,4],[7,6,5]]"));
+        assertThat(generateMatrix(1)).isDeepEqualTo(Ps.intArray("[[1]]"));
     }
 
     public int[][] generateMatrix(int n) {

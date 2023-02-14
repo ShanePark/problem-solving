@@ -1,6 +1,6 @@
 package shane.leetcode.problems.medium;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import java.util.Comparator;
@@ -16,11 +16,11 @@ public class Q452MinimumNumberOfArrowsToBurstBalloons3 {
 
     @Test
     public void test() {
-        assertThat(findMinArrowShots(STool.convertToIntArray("[[3,9],[7,12],[3,8],[6,8],[9,10],[2,9],[0,9],[3,9],[0,6],[2,8]]")))
+        assertThat(findMinArrowShots(Ps.intArray("[[3,9],[7,12],[3,8],[6,8],[9,10],[2,9],[0,9],[3,9],[0,6],[2,8]]")))
                 .isEqualTo(2);
-        assertThat(findMinArrowShots(STool.convertToIntArray("[[10,16],[2,8],[1,6],[7,12]]"))).isEqualTo(2);
-        assertThat(findMinArrowShots(STool.convertToIntArray("[[1,2],[3,4],[5,6],[7,8]]"))).isEqualTo(4);
-        assertThat(findMinArrowShots(STool.convertToIntArray("[[1,2],[2,3],[3,4],[4,5]]"))).isEqualTo(2);
+        assertThat(findMinArrowShots(Ps.intArray("[[10,16],[2,8],[1,6],[7,12]]"))).isEqualTo(2);
+        assertThat(findMinArrowShots(Ps.intArray("[[1,2],[3,4],[5,6],[7,8]]"))).isEqualTo(4);
+        assertThat(findMinArrowShots(Ps.intArray("[[1,2],[2,3],[3,4],[4,5]]"))).isEqualTo(2);
     }
 
     public int findMinArrowShots(int[][] points) {

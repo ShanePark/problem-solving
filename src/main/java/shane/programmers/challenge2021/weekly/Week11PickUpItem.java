@@ -1,6 +1,6 @@
 package shane.programmers.challenge2021.weekly;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 
 import java.util.*;
 
@@ -8,19 +8,19 @@ public class Week11PickUpItem {
     public static void main(String[] args) {
         int result;
 
-        result = solution(STool.convertToIntArray("[[1,1,7,4],[3,2,5,5],[4,3,6,9],[2,6,8,8]]"), 1, 3, 7, 8);
+        result = solution(Ps.intArray("[[1,1,7,4],[3,2,5,5],[4,3,6,9],[2,6,8,8]]"), 1, 3, 7, 8);
         System.out.println(result == 17 ? true : result);
 
-        result = solution(STool.convertToIntArray("[[1,1,8,4],[2,2,4,9],[3,6,9,8],[6,3,7,7]]"), 9, 7, 6, 1);
+        result = solution(Ps.intArray("[[1,1,8,4],[2,2,4,9],[3,6,9,8],[6,3,7,7]]"), 9, 7, 6, 1);
         System.out.println(result == 11 ? true : result);
 
-        result = solution(STool.convertToIntArray("[[1,1,5,7]]"), 1, 1, 4, 7);
+        result = solution(Ps.intArray("[[1,1,5,7]]"), 1, 1, 4, 7);
         System.out.println(result == 9 ? true : result);
 
-        result = solution(STool.convertToIntArray("[[2,1,7,5],[6,4,10,10]]"), 3, 1, 7, 10);
+        result = solution(Ps.intArray("[[2,1,7,5],[6,4,10,10]]"), 3, 1, 7, 10);
         System.out.println(result == 15 ? true : result);
 
-        result = solution(STool.convertToIntArray("[[2,2,5,5],[1,3,6,4],[3,1,4,6]]"), 1, 4, 6, 3);
+        result = solution(Ps.intArray("[[2,2,5,5],[1,3,6,4],[3,1,4,6]]"), 1, 4, 6, 3);
         System.out.println(result == 10 ? true : result);
     }
 

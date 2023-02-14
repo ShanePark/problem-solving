@@ -1,6 +1,6 @@
 package shane.leetcode.problems.medium;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Assertions;
 
 import java.util.Comparator;
@@ -13,9 +13,9 @@ import java.util.PriorityQueue;
 public class Q452MinimumNumberofArrowstoBurstBalloons {
 
     public static void main(String[] args) {
-        Assertions.assertEquals(2, findMinArrowShots(STool.convertToIntArray("[[10,16],[2,8],[1,6],[7,12]]")));
-        Assertions.assertEquals(4, findMinArrowShots(STool.convertToIntArray("[[1,2],[3,4],[5,6],[7,8]]")));
-        Assertions.assertEquals(2, findMinArrowShots(STool.convertToIntArray("[[1,2],[2,3],[3,4],[4,5]]")));
+        Assertions.assertEquals(2, findMinArrowShots(Ps.intArray("[[10,16],[2,8],[1,6],[7,12]]")));
+        Assertions.assertEquals(4, findMinArrowShots(Ps.intArray("[[1,2],[3,4],[5,6],[7,8]]")));
+        Assertions.assertEquals(2, findMinArrowShots(Ps.intArray("[[1,2],[2,3],[3,4],[4,5]]")));
     }
 
     public static int findMinArrowShots(int[][] points) {

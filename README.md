@@ -46,20 +46,10 @@ source ~/.zshrc
 ```
 
 That's it. now you copy the problem title and execute it. it'll automatically make and put proper class name into your clipboard.
+> ![image-20220706091505271](images/leet.png)
 
-![image-20220706091505271](images/leet.png)
+## PSH
 
-## ShaneUtils
-
-> https://github.com/Shane-Park/shaneutils
+> https://github.com/Shane-Park/psh
 
 I made small utility package to help PS. it converts String to array, list, etc.. and also has lots of tools for testing the code especially for leetcode. check it out!
-
-<br><Br>
-
-```
-I tried my best to avoid any license issue but if you have any inqury please send me an e-mail.
-Any issue will be handled in 12 hours I guarantee. Thank you.
-
-psh40963@naver.com
-```

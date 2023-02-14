@@ -1,6 +1,6 @@
 package shane.leetcode.problems.easy;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
@@ -15,9 +15,9 @@ public class Q883ProjectionAreaOf3DShapes {
 
     @Test
     public void test() {
-        assertThat(projectionArea(STool.convertToIntArray("[[1,2],[3,4]]"))).isEqualTo(17);
-        assertThat(projectionArea(STool.convertToIntArray("[[2]]"))).isEqualTo(5);
-        assertThat(projectionArea(STool.convertToIntArray("[[1,0],[0,2]]"))).isEqualTo(8);
+        assertThat(projectionArea(Ps.intArray("[[1,2],[3,4]]"))).isEqualTo(17);
+        assertThat(projectionArea(Ps.intArray("[[2]]"))).isEqualTo(5);
+        assertThat(projectionArea(Ps.intArray("[[1,0],[0,2]]"))).isEqualTo(8);
     }
 
     public int projectionArea(int[][] grid) {

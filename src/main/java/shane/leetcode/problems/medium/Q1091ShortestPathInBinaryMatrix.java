@@ -1,6 +1,6 @@
 package shane.leetcode.problems.medium;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
@@ -13,13 +13,13 @@ public class Q1091ShortestPathInBinaryMatrix {
 
     @Test
     public void test() {
-        assertThat(shortestPathBinaryMatrix(STool.convertToIntArray("[[0,1,1,0,0,0],[0,1,0,1,1,0],[0,1,1,0,1,0],[0,0,0,1,1,0],[1,1,1,1,1,0],[1,1,1,1,1,0]]")))
+        assertThat(shortestPathBinaryMatrix(Ps.intArray("[[0,1,1,0,0,0],[0,1,0,1,1,0],[0,1,1,0,1,0],[0,0,0,1,1,0],[1,1,1,1,1,0],[1,1,1,1,1,0]]")))
                 .isEqualTo(14);
-        assertThat(shortestPathBinaryMatrix(STool.convertToIntArray("[[0,0,0],[1,0,0],[1,1,0]]"))).isEqualTo(3);
-        assertThat(shortestPathBinaryMatrix(STool.convertToIntArray("[[0,0,0],[1,1,0],[1,1,0]]"))).isEqualTo(4);
-        assertThat(shortestPathBinaryMatrix(STool.convertToIntArray("[[0,1],[1,0]]"))).isEqualTo(2);
-        assertThat(shortestPathBinaryMatrix(STool.convertToIntArray("[[1,0,0],[1,1,0],[1,1,0]]"))).isEqualTo(-1);
-        assertThat(shortestPathBinaryMatrix(STool.convertToIntArray("[[0,0,0],[1,1,0],[1,1,1]]"))).isEqualTo(-1);
+        assertThat(shortestPathBinaryMatrix(Ps.intArray("[[0,0,0],[1,0,0],[1,1,0]]"))).isEqualTo(3);
+        assertThat(shortestPathBinaryMatrix(Ps.intArray("[[0,0,0],[1,1,0],[1,1,0]]"))).isEqualTo(4);
+        assertThat(shortestPathBinaryMatrix(Ps.intArray("[[0,1],[1,0]]"))).isEqualTo(2);
+        assertThat(shortestPathBinaryMatrix(Ps.intArray("[[1,0,0],[1,1,0],[1,1,0]]"))).isEqualTo(-1);
+        assertThat(shortestPathBinaryMatrix(Ps.intArray("[[0,0,0],[1,1,0],[1,1,1]]"))).isEqualTo(-1);
     }
 
     public int shortestPathBinaryMatrix(int[][] grid) {

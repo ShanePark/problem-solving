@@ -1,6 +1,6 @@
 package shane.leetcode.problems.medium;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -13,11 +13,11 @@ public class Q79WordSearch2 {
 
     @Test
     public void test() {
-        assertThat(exist(STool.convertToCharArray("[[\"a\"]]"), "a")).isTrue();
-        assertThat(exist(STool.convertToCharArray("[[\"A\",\"B\",\"C\",\"E\"],[\"S\",\"F\",\"C\",\"S\"],[\"A\",\"D\",\"E\",\"E\"]]"), "SEE")).isTrue();
-        assertThat(exist(STool.convertToCharArray("[[\"a\",\"a\"]]"), "aaa")).isFalse();
-        assertThat(exist(STool.convertToCharArray("[[\"A\",\"B\",\"C\",\"E\"],[\"S\",\"F\",\"C\",\"S\"],[\"A\",\"D\",\"E\",\"E\"]]"), "ABCCED")).isTrue();
-        assertThat(exist(STool.convertToCharArray("[[\"A\",\"B\",\"C\",\"E\"],[\"S\",\"F\",\"C\",\"S\"],[\"A\",\"D\",\"E\",\"E\"]]"), "ABCB")).isFalse();
+        assertThat(exist(Ps.charArray("[[\"a\"]]"), "a")).isTrue();
+        assertThat(exist(Ps.charArray("[[\"A\",\"B\",\"C\",\"E\"],[\"S\",\"F\",\"C\",\"S\"],[\"A\",\"D\",\"E\",\"E\"]]"), "SEE")).isTrue();
+        assertThat(exist(Ps.charArray("[[\"a\",\"a\"]]"), "aaa")).isFalse();
+        assertThat(exist(Ps.charArray("[[\"A\",\"B\",\"C\",\"E\"],[\"S\",\"F\",\"C\",\"S\"],[\"A\",\"D\",\"E\",\"E\"]]"), "ABCCED")).isTrue();
+        assertThat(exist(Ps.charArray("[[\"A\",\"B\",\"C\",\"E\"],[\"S\",\"F\",\"C\",\"S\"],[\"A\",\"D\",\"E\",\"E\"]]"), "ABCB")).isFalse();
     }
 
     int[][] DIRS = new int[][]{{0, -1}, {0, 1}, {-1, 0}, {1, 0}};

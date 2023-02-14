@@ -5,7 +5,7 @@ package shane.boj.contest.y2022.wanted_2Q.drop7;
  * * * * * * * * * * * * * * * * *
  */
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import java.io.*;
@@ -17,7 +17,7 @@ public class Main {
 
     @Test
     public void test() {
-        assertThat(findMin(STool.convertToIntArray("[[0, 0, 0, 0, 0, 0, 0]\n" +
+        assertThat(findMin(Ps.intArray("[[0, 0, 0, 0, 0, 0, 0]\n" +
                 ",[0, 0, 0, 0, 0, 0, 0]\n" +
                 ",[0, 0, 0, 0, 0, 0, 0]\n" +
                 ",[0, 0, 0, 0, 0, 0, 0]\n" +

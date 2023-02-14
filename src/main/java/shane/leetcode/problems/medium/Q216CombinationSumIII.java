@@ -1,6 +1,6 @@
 package shane.leetcode.problems.medium;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -13,9 +13,9 @@ public class Q216CombinationSumIII {
 
     @Test
     public void test() {
-        assertThat(combinationSum3(9, 45)).isEqualTo(STool.convertToIntList("[[1,2,3,4,5,6,7,8,9]]"));
-        assertThat(combinationSum3(3, 7)).isEqualTo(STool.convertToIntList(" [[1,2,4]]"));
-        assertThat(combinationSum3(3, 9)).isEqualTo(STool.convertToIntList(" [[1,2,6],[1,3,5],[2,3,4]]"));
+        assertThat(combinationSum3(9, 45)).isEqualTo(Ps.intList("[[1,2,3,4,5,6,7,8,9]]"));
+        assertThat(combinationSum3(3, 7)).isEqualTo(Ps.intList(" [[1,2,4]]"));
+        assertThat(combinationSum3(3, 9)).isEqualTo(Ps.intList(" [[1,2,6],[1,3,5],[2,3,4]]"));
         assertThat(combinationSum3(4, 1)).isEmpty();
     }
 

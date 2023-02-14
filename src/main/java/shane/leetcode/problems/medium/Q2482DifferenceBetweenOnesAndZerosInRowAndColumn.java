@@ -1,6 +1,6 @@
 package shane.leetcode.problems.medium;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -13,8 +13,8 @@ public class Q2482DifferenceBetweenOnesAndZerosInRowAndColumn {
 
     @Test
     public void test() {
-        assertThat(onesMinusZeros(STool.convertToIntArray("[[0,1,1],[1,0,1],[0,0,1]]"))).isDeepEqualTo(STool.convertToIntArray("[[0,0,4],[0,0,4],[-2,-2,2]]"));
-        assertThat(onesMinusZeros(STool.convertToIntArray("[[1,1,1],[1,1,1]]"))).isDeepEqualTo(STool.convertToIntArray("[[5,5,5],[5,5,5]]"));
+        assertThat(onesMinusZeros(Ps.intArray("[[0,1,1],[1,0,1],[0,0,1]]"))).isDeepEqualTo(Ps.intArray("[[0,0,4],[0,0,4],[-2,-2,2]]"));
+        assertThat(onesMinusZeros(Ps.intArray("[[1,1,1],[1,1,1]]"))).isDeepEqualTo(Ps.intArray("[[5,5,5],[5,5,5]]"));
 
     }
 

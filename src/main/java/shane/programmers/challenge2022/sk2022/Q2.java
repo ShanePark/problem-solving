@@ -1,16 +1,6 @@
 package shane.programmers.challenge2022.sk2022;
 
-import com.tistory.shanepark.STool;
-import org.junit.jupiter.api.Test;
-
 public class Q2 {
-
-    @Test
-    void test() {
-        STool.printDeepArray(solution(5, true));
-//        STool.printDeepArray(solution(6, false));
-//        STool.printDeepArray(solution(9, false));
-    }
 
     public int[][] solution(int n, boolean clockwise) {
         int[][] answer = new int[n][n];

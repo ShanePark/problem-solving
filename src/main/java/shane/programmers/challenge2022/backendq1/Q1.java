@@ -1,6 +1,6 @@
 package shane.programmers.challenge2022.backendq1;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -13,8 +13,8 @@ public class Q1 {
 
     @Test
     public void test() {
-        assertThat(solution(STool.convertToIntArray("[[0,5,2,4,1],[5,0,3,9,6],[2,3,0,6,3],[4,9,6,0,3],[1,6,3,3,0]]"))).isDeepEqualTo(STool.convertToIntArray("[[1,2,0,4,3],[3,4,0,2,1]]"));
-        assertThat(solution(STool.convertToIntArray("[[0,2,3,1],[2,0,1,1],[3,1,0,2],[1,1,2,0]]"))).isDeepEqualTo(STool.convertToIntArray("[[2,1,3,0],[0,3,1,2]]"));
+        assertThat(solution(Ps.intArray("[[0,5,2,4,1],[5,0,3,9,6],[2,3,0,6,3],[4,9,6,0,3],[1,6,3,3,0]]"))).isDeepEqualTo(Ps.intArray("[[1,2,0,4,3],[3,4,0,2,1]]"));
+        assertThat(solution(Ps.intArray("[[0,2,3,1],[2,0,1,1],[3,1,0,2],[1,1,2,0]]"))).isDeepEqualTo(Ps.intArray("[[2,1,3,0],[0,3,1,2]]"));
     }
 
     public int[][] solution(int[][] dist) {

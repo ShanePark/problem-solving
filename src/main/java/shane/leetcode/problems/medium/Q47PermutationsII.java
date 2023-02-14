@@ -1,6 +1,6 @@
 package shane.leetcode.problems.medium;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import java.util.*;
@@ -16,8 +16,8 @@ public class Q47PermutationsII {
 
     @Test
     public void test() {
-        assertThat(permuteUnique(new int[]{2, 2, 1, 1})).containsExactlyInAnyOrderElementsOf(STool.convertToIntList("[[1,1,2,2],[1,2,1,2],[1,2,2,1],[2,1,1,2],[2,1,2,1],[2,2,1,1]]"));
-        assertThat(permuteUnique(new int[]{1, 1, 2})).containsExactlyInAnyOrderElementsOf(STool.convertToIntList("[[1, 1, 2], [2, 1, 1], [1, 2, 1]]"));
+        assertThat(permuteUnique(new int[]{2, 2, 1, 1})).containsExactlyInAnyOrderElementsOf(Ps.intList("[[1,1,2,2],[1,2,1,2],[1,2,2,1],[2,1,1,2],[2,1,2,1],[2,2,1,1]]"));
+        assertThat(permuteUnique(new int[]{1, 1, 2})).containsExactlyInAnyOrderElementsOf(Ps.intList("[[1, 1, 2], [2, 1, 1], [1, 2, 1]]"));
     }
 
     public List<List<Integer>> permuteUnique(int[] nums) {

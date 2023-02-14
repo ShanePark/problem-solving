@@ -1,6 +1,6 @@
 package shane.leetcode.problems.medium;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -10,8 +10,8 @@ public class Q1637WidestVerticalAreaBetweenTwoPointsContainingNoPoints2 {
 
     @Test
     void test() {
-        Assertions.assertThat(maxWidthOfVerticalArea(STool.convertToIntArray("[[8,7],[9,9],[7,4],[9,7]]"))).isEqualTo(1);
-        Assertions.assertThat(maxWidthOfVerticalArea(STool.convertToIntArray("[[3,1],[9,0],[1,0],[1,4],[5,3],[8,8]]"))).isEqualTo(3);
+        Assertions.assertThat(maxWidthOfVerticalArea(Ps.intArray("[[8,7],[9,9],[7,4],[9,7]]"))).isEqualTo(1);
+        Assertions.assertThat(maxWidthOfVerticalArea(Ps.intArray("[[3,1],[9,0],[1,0],[1,4],[5,3],[8,8]]"))).isEqualTo(3);
     }
 
     public int maxWidthOfVerticalArea(int[][] points) {

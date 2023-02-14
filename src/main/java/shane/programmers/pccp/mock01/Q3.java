@@ -1,6 +1,6 @@
 package shane.programmers.pccp.mock01;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -9,10 +9,10 @@ public class Q3 {
 
     @Test
     public void test() {
-        assertThat(solution(STool.convertToIntArray("[[3, 5]]"))).containsExactly("RR");
-        assertThat(solution(STool.convertToIntArray("[[3, 8], [2, 2]]"))).containsExactly("rr", "Rr");
-        assertThat(solution(STool.convertToIntArray("[[3, 1], [2, 3], [3, 9]]"))).containsExactly("RR", "Rr", "RR");
-        assertThat(solution(STool.convertToIntArray("[[4, 26]]"))).containsExactly("Rr");
+        assertThat(solution(Ps.intArray("[[3, 5]]"))).containsExactly("RR");
+        assertThat(solution(Ps.intArray("[[3, 8], [2, 2]]"))).containsExactly("rr", "Rr");
+        assertThat(solution(Ps.intArray("[[3, 1], [2, 3], [3, 9]]"))).containsExactly("RR", "Rr", "RR");
+        assertThat(solution(Ps.intArray("[[4, 26]]"))).containsExactly("Rr");
     }
 
     public String[] solution(int[][] queries) {

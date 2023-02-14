@@ -1,11 +1,11 @@
 package shane.leetcode.contest.weekly.w287;
 
 import org.junit.jupiter.api.Test;
-import org.springframework.util.StopWatch;
 
 import java.util.HashMap;
 import java.util.Map;
 
+import static org.assertj.core.api.Assertions.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
@@ -14,8 +14,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class Q2227EncryptAndDecryptStrings2 {
     @Test
     public void test() {
-        StopWatch stopWatch = new StopWatch();
-        stopWatch.start();
         Encrypter encrypter = new Encrypter(new char[]{'a', 'b', 'c', 'd'}, new String[]{"ei", "zf", "ei", "am"}, new String[]{"abcd", "acbd", "adbc", "badc", "dacb", "cadb", "cbda", "abad"});
         assertThat(encrypter.encrypt("abcd")).isEqualTo("eizfeiam");
         assertThat(encrypter.decrypt("eizfeiam")).isEqualTo(2);
@@ -27,8 +25,10 @@ public class Q2227EncryptAndDecryptStrings2 {
         test.decrypt("aaaaaaaa");
         test.decrypt("aaaaaaaaaaaaaa");
         test.decrypt("aefagafvabfgshdthn");
+    }
 
-
+    @Test
+    public void tle() {
         Encrypter test2 = new Encrypter(new char[]{'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'},
                 new String[]{"ei", "zf", "ei", "am", "gb", "zz", "zz", "ac", "qa", "mn", "aa", "is", "aa", "op", "pq", "qr", "rs", "st", "tu", "uv", "aa", "sz", "bb", "aa", "ac", "aa"},
                 new String[]{"abcd", "acbd", "adbc", "badc", "dacb", "cadb", "cbda", "abad"});
@@ -40,9 +40,6 @@ public class Q2227EncryptAndDecryptStrings2 {
         assertThat(test2.decrypt("eieieiei")).isEqualTo(0);
         assertThat(test2.decrypt("cccccccc")).isEqualTo(0);
         assertThat(test2.decrypt("aaaaeiei")).isEqualTo(0);
-        stopWatch.stop();
-        System.out.println("stopWatch.getTotalTimeMillis() = " + stopWatch.getTotalTimeMillis());
-
     }
 
     class Encrypter {

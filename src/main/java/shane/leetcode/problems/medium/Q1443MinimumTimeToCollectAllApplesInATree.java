@@ -1,6 +1,6 @@
 package shane.leetcode.problems.medium;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -18,12 +18,12 @@ public class Q1443MinimumTimeToCollectAllApplesInATree {
 
     @Test
     public void test() {
-        assertThat(minTime(4, STool.convertToIntArray("[[0,2],[0,3],[1,2]]"), List.of(false, true, false, false))).isEqualTo(4);
-        assertThat(minTime(7, STool.convertToIntArray("[[0,1],[0,2],[1,4],[1,5],[2,3],[2,6]]"), List.of(false, false, true, false, true, true, false)))
+        assertThat(minTime(4, Ps.intArray("[[0,2],[0,3],[1,2]]"), List.of(false, true, false, false))).isEqualTo(4);
+        assertThat(minTime(7, Ps.intArray("[[0,1],[0,2],[1,4],[1,5],[2,3],[2,6]]"), List.of(false, false, true, false, true, true, false)))
                 .isEqualTo(8);
-        assertThat(minTime(7, STool.convertToIntArray("[[0,1],[0,2],[1,4],[1,5],[2,3],[2,6]]"), List.of(false, false, true, false, false, true, false)))
+        assertThat(minTime(7, Ps.intArray("[[0,1],[0,2],[1,4],[1,5],[2,3],[2,6]]"), List.of(false, false, true, false, false, true, false)))
                 .isEqualTo(6);
-        assertThat(minTime(7, STool.convertToIntArray("[[0,1],[0,2],[1,4],[1,5],[2,3],[2,6]]"), List.of(false, false, false, false, false, false, false)))
+        assertThat(minTime(7, Ps.intArray("[[0,1],[0,2],[1,4],[1,5],[2,3],[2,6]]"), List.of(false, false, false, false, false, false, false)))
                 .isEqualTo(0);
     }
 

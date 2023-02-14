@@ -1,6 +1,6 @@
 package shane.leetcode.problems.xhard;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
@@ -17,14 +17,14 @@ public class Q630CourseScheduleIII2 {
 
     @Test
     public void test() {
-        assertThat(scheduleCourse(STool.convertToIntArray("[[100,200],[210,1300],[1000,1250],[2000,3200]]"))).isEqualTo(3);
-        assertThat(scheduleCourse(STool.convertToIntArray("[[100,200],[200,1300],[1000,1250],[2000,3200]]"))).isEqualTo(3);
-        assertThat(scheduleCourse(STool.convertToIntArray("[[2,5],[2,19],[1,8],[1,3]]"))).isEqualTo(4);
-        assertThat(scheduleCourse(STool.convertToIntArray("[[1,2],[2,3]]"))).isEqualTo(2);
-        assertThat(scheduleCourse(STool.convertToIntArray("[[914,9927],[333,712],[163,5455],[835,5040],[905,8433],[417,8249],[921,9553],[913,7394],[303,7525],[582,8658],[86,957],[40,9152],[600,6941],[466,5775],[718,8485],[34,3903],[380,9996],[316,7755]]")))
+        assertThat(scheduleCourse(Ps.intArray("[[100,200],[210,1300],[1000,1250],[2000,3200]]"))).isEqualTo(3);
+        assertThat(scheduleCourse(Ps.intArray("[[100,200],[200,1300],[1000,1250],[2000,3200]]"))).isEqualTo(3);
+        assertThat(scheduleCourse(Ps.intArray("[[2,5],[2,19],[1,8],[1,3]]"))).isEqualTo(4);
+        assertThat(scheduleCourse(Ps.intArray("[[1,2],[2,3]]"))).isEqualTo(2);
+        assertThat(scheduleCourse(Ps.intArray("[[914,9927],[333,712],[163,5455],[835,5040],[905,8433],[417,8249],[921,9553],[913,7394],[303,7525],[582,8658],[86,957],[40,9152],[600,6941],[466,5775],[718,8485],[34,3903],[380,9996],[316,7755]]")))
                 .isEqualTo(18);
-        assertThat(scheduleCourse(STool.convertToIntArray("[[1,2]]"))).isEqualTo(1);
-        assertThat(scheduleCourse(STool.convertToIntArray("[[3,2],[4,3]]"))).isEqualTo(0);
+        assertThat(scheduleCourse(Ps.intArray("[[1,2]]"))).isEqualTo(1);
+        assertThat(scheduleCourse(Ps.intArray("[[3,2],[4,3]]"))).isEqualTo(0);
     }
 
     public int scheduleCourse(int[][] courses) {

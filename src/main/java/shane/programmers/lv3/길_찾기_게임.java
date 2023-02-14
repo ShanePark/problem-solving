@@ -1,6 +1,6 @@
 package shane.programmers.lv3;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -14,8 +14,8 @@ public class 길_찾기_게임 {
 
     @Test
     public void test() {
-        assertThat(solution(STool.convertToIntArray("[[5,3],[11,5],[13,3],[3,5],[6,1],[1,3],[8,6],[7,2],[2,2]]")))
-                .isEqualTo(STool.convertToIntArray("[[7,4,6,9,1,8,5,2,3],[9,6,5,8,1,4,3,2,7]]"));
+        assertThat(solution(Ps.intArray("[[5,3],[11,5],[13,3],[3,5],[6,1],[1,3],[8,6],[7,2],[2,2]]")))
+                .isEqualTo(Ps.intArray("[[7,4,6,9,1,8,5,2,3],[9,6,5,8,1,4,3,2,7]]"));
     }
 
     public int[][] solution(int[][] nodeinfo) {

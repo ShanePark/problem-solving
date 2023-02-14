@@ -1,6 +1,6 @@
 package shane.leetcode.problems.easy;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -13,9 +13,9 @@ public class Q1971FindIfPathExistsInGraph {
 
     @Test
     public void test() {
-        assertThat(validPath(10, STool.convertToIntArray("[[0,7],[0,8],[6,1],[2,0],[0,4],[5,8],[4,7],[1,3],[3,5],[6,5]]"), 7, 5)).isTrue();
-        assertThat(validPath(3, STool.convertToIntArray("[[0,1],[1,2],[2,0]]"), 0, 2)).isTrue();
-        assertThat(validPath(6, STool.convertToIntArray("[[0,1],[0,2],[3,5],[5,4],[4,3]]"), 0, 5)).isFalse();
+        assertThat(validPath(10, Ps.intArray("[[0,7],[0,8],[6,1],[2,0],[0,4],[5,8],[4,7],[1,3],[3,5],[6,5]]"), 7, 5)).isTrue();
+        assertThat(validPath(3, Ps.intArray("[[0,1],[1,2],[2,0]]"), 0, 2)).isTrue();
+        assertThat(validPath(6, Ps.intArray("[[0,1],[0,2],[3,5],[5,4],[4,3]]"), 0, 5)).isFalse();
     }
 
     public boolean validPath(int n, int[][] edges, int source, int destination) {

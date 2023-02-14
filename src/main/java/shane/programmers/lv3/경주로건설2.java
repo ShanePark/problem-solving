@@ -1,6 +1,6 @@
 package shane.programmers.lv3;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
@@ -44,10 +44,10 @@ public class 경주로건설2 {
 
     @Test
     public void test() {
-        assertThat(solution(STool.convertToIntArray("[[0,0,1,0],[0,0,0,0],[0,1,0,1],[1,0,0,0]]"))).isEqualTo(2100);
-        assertThat(solution(STool.convertToIntArray("[[0,0,0],[0,0,0],[0,0,0]]"))).isEqualTo(900);
-        assertThat(solution(STool.convertToIntArray("[[0,0,0,0,0,0,0,1],[0,0,0,0,0,0,0,0],[0,0,0,0,0,1,0,0],[0,0,0,0,1,0,0,0],[0,0,0,1,0,0,0,1],[0,0,1,0,0,0,1,0],[0,1,0,0,0,1,0,0],[1,0,0,0,0,0,0,0]]"))).isEqualTo(3800);
-        assertThat(solution(STool.convertToIntArray("[[0,0,0,0,0,0],[0,1,1,1,1,0],[0,0,1,0,0,0],[1,0,0,1,0,1],[1,1,0,0,0,1],[1,1,0,1,0,0]]"))).isEqualTo(3200);
+        assertThat(solution(Ps.intArray("[[0,0,1,0],[0,0,0,0],[0,1,0,1],[1,0,0,0]]"))).isEqualTo(2100);
+        assertThat(solution(Ps.intArray("[[0,0,0],[0,0,0],[0,0,0]]"))).isEqualTo(900);
+        assertThat(solution(Ps.intArray("[[0,0,0,0,0,0,0,1],[0,0,0,0,0,0,0,0],[0,0,0,0,0,1,0,0],[0,0,0,0,1,0,0,0],[0,0,0,1,0,0,0,1],[0,0,1,0,0,0,1,0],[0,1,0,0,0,1,0,0],[1,0,0,0,0,0,0,0]]"))).isEqualTo(3800);
+        assertThat(solution(Ps.intArray("[[0,0,0,0,0,0],[0,1,1,1,1,0],[0,0,1,0,0,0],[1,0,0,1,0,1],[1,1,0,0,0,1],[1,1,0,1,0,0]]"))).isEqualTo(3200);
     }
 
     public int solution(int[][] board) {

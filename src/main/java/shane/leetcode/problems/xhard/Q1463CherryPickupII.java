@@ -1,6 +1,6 @@
 package shane.leetcode.problems.xhard;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -13,9 +13,9 @@ public class Q1463CherryPickupII {
 
     @Test
     public void test() {
-        assertThat(cherryPickup(STool.convertToIntArray("[[1,0,0,3],[0,0,0,3],[0,0,3,3],[9,0,3,3]]"))).isEqualTo(22);
-        assertThat(cherryPickup(STool.convertToIntArray("[[3,1,1],[2,5,1],[1,5,5],[2,1,1]]"))).isEqualTo(24);
-        assertThat(cherryPickup(STool.convertToIntArray("[[1,0,0,0,0,0,1],[2,0,0,0,0,3,0],[2,0,9,0,0,0,0],[0,3,0,5,4,0,0],[1,0,2,3,0,0,6]]"))).isEqualTo(28);
+        assertThat(cherryPickup(Ps.intArray("[[1,0,0,3],[0,0,0,3],[0,0,3,3],[9,0,3,3]]"))).isEqualTo(22);
+        assertThat(cherryPickup(Ps.intArray("[[3,1,1],[2,5,1],[1,5,5],[2,1,1]]"))).isEqualTo(24);
+        assertThat(cherryPickup(Ps.intArray("[[1,0,0,0,0,0,1],[2,0,0,0,0,3,0],[2,0,9,0,0,0,0],[0,3,0,5,4,0,0],[1,0,2,3,0,0,6]]"))).isEqualTo(28);
     }
 
     public int cherryPickup(int[][] grid) {

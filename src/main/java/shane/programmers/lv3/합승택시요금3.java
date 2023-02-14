@@ -1,6 +1,6 @@
 package shane.programmers.lv3;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -11,10 +11,10 @@ public class 합승택시요금3 {
     @Test
     public void test() {
         assertThat(solution(7, 3, 4, 1,
-                STool.convertToIntArray("[[5, 7, 9], [4, 6, 4], [3, 6, 1], [3, 2, 3], [2, 1, 6]]")))
+                Ps.intArray("[[5, 7, 9], [4, 6, 4], [3, 6, 1], [3, 2, 3], [2, 1, 6]]")))
                 .isEqualTo(14);
         assertThat(solution(6, 4, 6, 2,
-                STool.convertToIntArray("[[4, 1, 10], [3, 5, 24], [5, 6, 2], [3, 1, 41], [5, 1, 24], [4, 6, 50], [2, 4, 66], [2, 3, 22], [1, 6, 25]]")))
+                Ps.intArray("[[4, 1, 10], [3, 5, 24], [5, 6, 2], [3, 1, 41], [5, 1, 24], [4, 6, 50], [2, 4, 66], [2, 3, 22], [1, 6, 25]]")))
                 .isEqualTo(82);
 
     }

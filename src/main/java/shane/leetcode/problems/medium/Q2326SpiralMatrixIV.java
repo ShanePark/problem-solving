@@ -1,7 +1,7 @@
 package shane.leetcode.problems.medium;
 
-import com.tistory.shanepark.STool;
-import com.tistory.shanepark.leetcode.ListNode;
+import com.github.shanepark.Ps;
+import com.github.shanepark.leetcode.ListNode;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
@@ -13,11 +13,11 @@ public class Q2326SpiralMatrixIV {
     @Test
     public void test() {
         assertThat(spiralMatrix(3, 5, ListNode.of(3, 0, 2, 6, 8, 1, 7, 9, 4, 2, 5, 5, 0)))
-                .isDeepEqualTo(STool.convertToIntArray("[[3,0,2,6,8],[5,0,-1,-1,1],[5,2,4,9,7]]"));
+                .isDeepEqualTo(Ps.intArray("[[3,0,2,6,8],[5,0,-1,-1,1],[5,2,4,9,7]]"));
         assertThat(spiralMatrix(1, 4, ListNode.of(0, 1, 2)))
-                .isDeepEqualTo(STool.convertToIntArray("[[0,1,2,-1]]"));
+                .isDeepEqualTo(Ps.intArray("[[0,1,2,-1]]"));
         assertThat(spiralMatrix(1, 4, ListNode.of(0, 1, 2, 3, 4, 5)))
-                .isDeepEqualTo(STool.convertToIntArray("[[0,1,2,3]]"));
+                .isDeepEqualTo(Ps.intArray("[[0,1,2,3]]"));
     }
 
     public int[][] spiralMatrix(int m, int n, ListNode head) {

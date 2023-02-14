@@ -1,13 +1,13 @@
 package shane.leetcode.problems.medium;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Assertions;
 
 public class Q1094CarPooling2 {
 
     public static void main(String[] args) {
-        Assertions.assertEquals(false, carPooling(STool.convertToIntArray("[[2,1,5],[3,3,7]]"), 4));
-        Assertions.assertEquals(true, carPooling(STool.convertToIntArray("[[2,1,5],[3,3,7]]"), 5));
+        Assertions.assertEquals(false, carPooling(Ps.intArray("[[2,1,5],[3,3,7]]"), 4));
+        Assertions.assertEquals(true, carPooling(Ps.intArray("[[2,1,5],[3,3,7]]"), 5));
     }
 
     public static boolean carPooling(int[][] trips, int capacity) {

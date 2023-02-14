@@ -1,6 +1,6 @@
 package shane.programmers.lv3;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -9,7 +9,7 @@ import java.util.List;
 public class SpeedCam {
 
     public static void main(String[] args) {
-        System.out.println(solution(STool.convertToIntArray("[[-20,-15], [-14,-5], [-18,-13], [-5,-3]]")));
+        System.out.println(solution(Ps.intArray("[[-20,-15], [-14,-5], [-18,-13], [-5,-3]]")));
     }
 
     static class Car {

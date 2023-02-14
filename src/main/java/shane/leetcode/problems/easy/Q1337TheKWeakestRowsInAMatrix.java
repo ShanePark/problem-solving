@@ -1,6 +1,6 @@
 package shane.leetcode.problems.easy;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -14,7 +14,7 @@ public class Q1337TheKWeakestRowsInAMatrix {
 
     @Test
     public void test() {
-        assertThat(kWeakestRows(STool.convertToIntArray("[[1,1,0,0,0],\n" +
+        assertThat(kWeakestRows(Ps.intArray("[[1,1,0,0,0],\n" +
                 " [1,1,1,1,0],\n" +
                 " [1,0,0,0,0],\n" +
                 " [1,1,0,0,0],\n" +

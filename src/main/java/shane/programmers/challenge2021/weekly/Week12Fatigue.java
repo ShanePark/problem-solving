@@ -1,6 +1,6 @@
 package shane.programmers.challenge2021.weekly;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -9,8 +9,8 @@ import java.util.List;
 public class Week12Fatigue {
 
     public static void main(String[] args) {
-//        System.out.println(solution(80, STool.convertToIntArray("[[80,20],[50,40],[30,10]]")));
-        System.out.println(solution(80, STool.convertToIntArray("[[90,20],[50,40],[30,10]]")));
+//        System.out.println(solution(80, Ps.intArray("[[80,20],[50,40],[30,10]]")));
+        System.out.println(solution(80, Ps.intArray("[[90,20],[50,40],[30,10]]")));
     }
 
     public static int solution(int k, int[][] dungeons) {

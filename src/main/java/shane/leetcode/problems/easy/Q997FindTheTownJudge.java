@@ -1,13 +1,13 @@
 package shane.leetcode.problems.easy;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Assertions;
 
 public class Q997FindTheTownJudge {
     public static void main(String[] args) {
-        Assertions.assertEquals(2, findJudge(2, STool.convertToIntArray("[[1,2]]")));
-        Assertions.assertEquals(3, findJudge(3, STool.convertToIntArray("[[1,3],[2,3]]")));
-        Assertions.assertEquals(-1, findJudge(3, STool.convertToIntArray("[[1,3],[2,3],[3,1]]")));
+        Assertions.assertEquals(2, findJudge(2, Ps.intArray("[[1,2]]")));
+        Assertions.assertEquals(3, findJudge(3, Ps.intArray("[[1,3],[2,3]]")));
+        Assertions.assertEquals(-1, findJudge(3, Ps.intArray("[[1,3],[2,3],[3,1]]")));
     }
 
     public static int findJudge(int n, int[][] trust) {

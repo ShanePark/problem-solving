@@ -1,6 +1,6 @@
 package shane.leetcode.problems.medium;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -9,8 +9,8 @@ public class Q785IsGraphBipartite {
 
     @Test
     public void test() {
-        assertThat(isBipartite(STool.convertToIntArray("[[1,2,3],[0,2],[0,1,3],[0,2]]"))).isFalse();
-        assertThat(isBipartite(STool.convertToIntArray("[[1,3],[0,2],[1,3],[0,2]]"))).isTrue();
+        assertThat(isBipartite(Ps.intArray("[[1,2,3],[0,2],[0,1,3],[0,2]]"))).isFalse();
+        assertThat(isBipartite(Ps.intArray("[[1,3],[0,2],[1,3],[0,2]]"))).isTrue();
     }
 
     public boolean isBipartite(int[][] graph) {

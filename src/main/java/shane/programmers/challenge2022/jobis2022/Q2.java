@@ -1,6 +1,6 @@
 package shane.programmers.challenge2022.jobis2022;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import java.util.*;
@@ -34,8 +34,8 @@ public class Q2 {
 
     @Test
     public void test() {
-        assertThat(solution(STool.convertToIntArray("[[2, 1, 0, 3], [3, 2, 0, 1], [3, 0 ,2, 1], [2, 3, 0, 1]]"))).containsExactly(1, 3);
-        assertThat(solution(STool.convertToIntArray("[[2, 3, 4, 0, 1], [1, 4, 3, 2, 0], [ 4, 1, 0, 2, 3], [ 3, 2, 1, 4, 0], [ 0, 3, 2, 1, 4]]"))).containsExactly(4, 3);
+        assertThat(solution(Ps.intArray("[[2, 1, 0, 3], [3, 2, 0, 1], [3, 0 ,2, 1], [2, 3, 0, 1]]"))).containsExactly(1, 3);
+        assertThat(solution(Ps.intArray("[[2, 3, 4, 0, 1], [1, 4, 3, 2, 0], [ 4, 1, 0, 2, 3], [ 3, 2, 1, 4, 0], [ 0, 3, 2, 1, 4]]"))).containsExactly(4, 3);
     }
 
     public int[] solution(int[][] orders) {

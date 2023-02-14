@@ -1,6 +1,6 @@
 package shane.leetcode.problems.medium;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
@@ -11,9 +11,9 @@ public class Q1029TwoCityScheduling {
 
     @Test
     public void test() {
-        assertThat(twoCitySchedCost(STool.convertToIntArray("[[10,20],[30,200],[400,50],[30,20]]"))).isEqualTo(110);
-        assertThat(twoCitySchedCost(STool.convertToIntArray("[[259,770],[448,54],[926,667],[184,139],[840,118],[577,469]]"))).isEqualTo(1859);
-        assertThat(twoCitySchedCost(STool.convertToIntArray("[[515,563],[451,713],[537,709],[343,819],[855,779],[457,60],[650,359],[631,42]]"))).isEqualTo(3086);
+        assertThat(twoCitySchedCost(Ps.intArray("[[10,20],[30,200],[400,50],[30,20]]"))).isEqualTo(110);
+        assertThat(twoCitySchedCost(Ps.intArray("[[259,770],[448,54],[926,667],[184,139],[840,118],[577,469]]"))).isEqualTo(1859);
+        assertThat(twoCitySchedCost(Ps.intArray("[[515,563],[451,713],[537,709],[343,819],[855,779],[457,60],[650,359],[631,42]]"))).isEqualTo(3086);
     }
 
     public int twoCitySchedCost(int[][] costs) {

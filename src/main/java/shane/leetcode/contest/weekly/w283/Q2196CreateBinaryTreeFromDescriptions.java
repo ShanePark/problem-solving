@@ -1,18 +1,18 @@
 package shane.leetcode.contest.weekly.w283;
 
-import com.tistory.shanepark.STool;
-import com.tistory.shanepark.leetcode.TreeNode;
+import com.github.shanepark.Ps;
+import com.github.shanepark.leetcode.TreeNode;
 import org.junit.jupiter.api.Test;
 
 import java.util.HashMap;
 import java.util.Map;
 
-// TODO Stool couldn't be used for Q3 int array
+// TODO Ps couldn't be used for Q3 int array
 public class Q2196CreateBinaryTreeFromDescriptions {
 
     @Test
     void test() {
-        TreeNode tree = createBinaryTree(STool.convertToIntArray(" [[20,15,1],[20,17,0],[50,20,1],[50,80,0],[80,19,1]]"));
+        TreeNode tree = createBinaryTree(Ps.intArray(" [[20,15,1],[20,17,0],[50,20,1],[50,80,0],[80,19,1]]"));
         tree.printTree();
     }
 

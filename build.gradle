@@ -1,31 +1,29 @@
 plugins {
-	id 'org.springframework.boot' version '2.5.2'
-	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
-	id 'java'
+    id 'java'
     id 'org.jetbrains.kotlin.jvm' version '1.6.21'
 }
 
-group = 'shane.programmers'
+group = 'com.github.Shane-Park'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = JavaVersion.VERSION_11
 targetCompatibility = JavaVersion.VERSION_11
 
 repositories {
-	mavenCentral()
-	maven { url 'https://jitpack.io' }
+    mavenLocal()
+    mavenCentral()
+    maven { url 'https://jitpack.io' }
 }
 
 dependencies {
-	implementation 'org.projectlombok:lombok'
-	implementation('org.springframework.boot:spring-boot-starter-aop:')
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	implementation 'org.springframework.boot:spring-boot-starter-test'
-	implementation 'com.github.Shane-Park:shaneutils:1.10'
-	implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+    implementation 'org.junit.jupiter:junit-jupiter-api:5.9.2'
+    implementation 'org.assertj:assertj-core:3.20.2'
+    implementation 'com.github.Shane-Park:psh:master-SNAPSHOT'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.2'
 }
 
 test {
-	useJUnitPlatform()
+    useJUnitPlatform()
 }
 compileKotlin {
     kotlinOptions {

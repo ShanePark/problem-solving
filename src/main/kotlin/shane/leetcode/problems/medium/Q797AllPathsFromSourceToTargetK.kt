@@ -1,6 +1,6 @@
 package shane.leetcode.problems.medium
 
-import com.tistory.shanepark.STool
+import com.github.shanepark.Ps
 import org.assertj.core.api.Assertions
 import org.junit.jupiter.api.Test
 
@@ -12,10 +12,10 @@ class Q797AllPathsFromSourceToTargetK {
 
     @Test
     fun test() {
-        Assertions.assertThat(allPathsSourceTarget(STool.convertToIntArray("[[1,2],[3],[3],[]]")))
-            .containsAll(STool.convertToIntList("[[0,1,3],[0,2,3]]"))
-        Assertions.assertThat(allPathsSourceTarget(STool.convertToIntArray("[[4,3,1],[3,2,4],[3],[4],[]]")))
-            .containsAll(STool.convertToIntList("[[0,4],[0,3,4],[0,1,3,4],[0,1,2,3,4],[0,1,4]]"))
+        Assertions.assertThat(allPathsSourceTarget(Ps.intArray("[[1,2],[3],[3],[]]")))
+            .containsAll(Ps.intList("[[0,1,3],[0,2,3]]"))
+        Assertions.assertThat(allPathsSourceTarget(Ps.intArray("[[4,3,1],[3,2,4],[3],[4],[]]")))
+            .containsAll(Ps.intList("[[0,4],[0,3,4],[0,1,3,4],[0,1,2,3,4],[0,1,4]]"))
     }
 
     fun allPathsSourceTarget(graph: Array<IntArray>): List<List<Int>> {

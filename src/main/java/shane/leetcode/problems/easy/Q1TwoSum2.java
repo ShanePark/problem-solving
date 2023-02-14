@@ -1,15 +1,13 @@
 package shane.leetcode.problems.easy;
 
-import com.tistory.shanepark.STool;
-
 import java.util.HashMap;
 import java.util.Map;
 
 public class Q1TwoSum2 {
     public static void main(String[] args) {
-        STool.printArray(twoSum(new int[]{2, 7, 11, 15}, 9));
-        STool.printArray(twoSum(new int[]{3, 2, 4}, 6));
-        STool.printArray(twoSum(new int[]{3, 3}, 6));
+        twoSum(new int[]{2, 7, 11, 15}, 9);
+        twoSum(new int[]{3, 2, 4}, 6);
+        twoSum(new int[]{3, 3}, 6);
     }
 
     public static int[] twoSum(int[] nums, int target) {

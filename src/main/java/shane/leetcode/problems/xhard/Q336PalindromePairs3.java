@@ -1,6 +1,6 @@
 package shane.leetcode.problems.xhard;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -17,9 +17,9 @@ public class Q336PalindromePairs3 {
 
     @Test
     public void test() {
-        assertThat(palindromePairs(new String[]{"abcd", "dcba", "lls", "s", "sssll"})).isEqualTo(STool.convertToIntList("[[1, 0], [0, 1], [3, 2], [2, 4]]"));
-        assertThat(palindromePairs(new String[]{"bat", "tab", "cat"})).isEqualTo(STool.convertToIntList(" [[1, 0], [0, 1]]"));
-        assertThat(palindromePairs(new String[]{"a", ""})).isEqualTo(STool.convertToIntList("[[0,1],[1,0]]"));
+        assertThat(palindromePairs(new String[]{"abcd", "dcba", "lls", "s", "sssll"})).isEqualTo(Ps.intList("[[1, 0], [0, 1], [3, 2], [2, 4]]"));
+        assertThat(palindromePairs(new String[]{"bat", "tab", "cat"})).isEqualTo(Ps.intList(" [[1, 0], [0, 1]]"));
+        assertThat(palindromePairs(new String[]{"a", ""})).isEqualTo(Ps.intList("[[0,1],[1,0]]"));
     }
 
     /**

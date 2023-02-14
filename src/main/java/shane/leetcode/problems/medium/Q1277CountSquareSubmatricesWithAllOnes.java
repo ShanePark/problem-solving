@@ -1,6 +1,6 @@
 package shane.leetcode.problems.medium;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -9,12 +9,12 @@ public class Q1277CountSquareSubmatricesWithAllOnes {
 
     @Test
     public void test() {
-        assertThat(countSquares(STool.convertToIntArray("[\n" +
+        assertThat(countSquares(Ps.intArray("[\n" +
                 "  [0,1,1,1],\n" +
                 "  [1,1,1,1],\n" +
                 "  [0,1,1,1]\n" +
                 "]"))).isEqualTo(15);
-        assertThat(countSquares(STool.convertToIntArray("[\n" +
+        assertThat(countSquares(Ps.intArray("[\n" +
                 "  [1,0,1],\n" +
                 "  [1,1,0],\n" +
                 "  [1,1,0]\n" +

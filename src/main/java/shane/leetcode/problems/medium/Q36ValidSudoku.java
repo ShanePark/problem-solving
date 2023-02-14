@@ -1,6 +1,6 @@
 package shane.leetcode.problems.medium;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import java.util.HashSet;
@@ -16,7 +16,7 @@ public class Q36ValidSudoku {
 
     @Test
     public void test() {
-        assertThat(isValidSudoku(STool.convertToCharArray("" +
+        assertThat(isValidSudoku(Ps.charArray("" +
                 "[[\"5\",\"3\",\".\",\".\",\"7\",\".\",\".\",\".\",\".\"]\n" +
                 ",[\"6\",\".\",\".\",\"1\",\"9\",\"5\",\".\",\".\",\".\"]\n" +
                 ",[\".\",\"9\",\"8\",\".\",\".\",\".\",\".\",\"6\",\".\"]\n" +
@@ -30,7 +30,7 @@ public class Q36ValidSudoku {
 
     @Test
     public void test2() {
-        assertThat(isValidSudoku(STool.convertToCharArray("" +
+        assertThat(isValidSudoku(Ps.charArray("" +
                 "[[\"8\",\"3\",\".\",\".\",\"7\",\".\",\".\",\".\",\".\"]\n" +
                 ",[\"6\",\".\",\".\",\"1\",\"9\",\"5\",\".\",\".\",\".\"]\n" +
                 ",[\".\",\"9\",\"8\",\".\",\".\",\".\",\".\",\"6\",\".\"]\n" +

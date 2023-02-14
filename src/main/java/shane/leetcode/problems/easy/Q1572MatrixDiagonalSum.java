@@ -1,6 +1,6 @@
 package shane.leetcode.problems.easy;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -9,11 +9,11 @@ public class Q1572MatrixDiagonalSum {
 
     @Test
     public void test() {
-        assertThat(diagonalSum(STool.convertToIntArray("[[1,1,1,1],\n" +
+        assertThat(diagonalSum(Ps.intArray("[[1,1,1,1],\n" +
                 "              [1,1,1,1],\n" +
                 "              [1,1,1,1],\n" +
                 "              [1,1,1,1]]"))).isEqualTo(8);
-        assertThat(diagonalSum(STool.convertToIntArray("[[5]]"))).isEqualTo(5);
+        assertThat(diagonalSum(Ps.intArray("[[5]]"))).isEqualTo(5);
     }
 
     public int diagonalSum(int[][] mat) {

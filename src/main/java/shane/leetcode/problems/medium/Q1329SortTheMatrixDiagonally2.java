@@ -1,6 +1,6 @@
 package shane.leetcode.problems.medium;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -13,12 +13,12 @@ public class Q1329SortTheMatrixDiagonally2 {
 
     @Test
     public void test() {
-        assertThat(diagonalSort(STool.convertToIntArray("[[37,98,82,45,42]]")))
-                .isDeepEqualTo(STool.convertToIntArray("[[37, 98, 82, 45, 42]]"));
-        assertThat(diagonalSort(STool.convertToIntArray("[[3,3,1,1],[2,2,1,2],[1,1,1,2]]")))
-                .isDeepEqualTo(STool.convertToIntArray("[[1,1,1,1],[1,2,2,2],[1,2,3,3]]"));
-        assertThat(diagonalSort(STool.convertToIntArray("[[11,25,66,1,69,7],[23,55,17,45,15,52],[75,31,36,44,58,8],[22,27,33,25,68,4],[84,28,14,11,5,50]]")))
-                .isDeepEqualTo(STool.convertToIntArray("[[5,17,4,1,52,7],[11,11,25,45,8,69],[14,23,25,44,58,15],[22,27,31,36,50,66],[84,28,75,33,55,68]]"));
+        assertThat(diagonalSort(Ps.intArray("[[37,98,82,45,42]]")))
+                .isDeepEqualTo(Ps.intArray("[[37, 98, 82, 45, 42]]"));
+        assertThat(diagonalSort(Ps.intArray("[[3,3,1,1],[2,2,1,2],[1,1,1,2]]")))
+                .isDeepEqualTo(Ps.intArray("[[1,1,1,1],[1,2,2,2],[1,2,3,3]]"));
+        assertThat(diagonalSort(Ps.intArray("[[11,25,66,1,69,7],[23,55,17,45,15,52],[75,31,36,44,58,8],[22,27,33,25,68,4],[84,28,14,11,5,50]]")))
+                .isDeepEqualTo(Ps.intArray("[[5,17,4,1,52,7],[11,11,25,45,8,69],[14,23,25,44,58,15],[22,27,31,36,50,66],[84,28,75,33,55,68]]"));
     }
 
     public int[][] diagonalSort(int[][] mat) {

@@ -1,6 +1,6 @@
 package shane.leetcode.problems.xhard;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
@@ -17,7 +17,7 @@ public class Q1293ShortestPathInAGridWithObstaclesElimination {
 
     @Test
     public void test2() {
-        assertThat(shortestPath(STool.convertToIntArray("[[0]]"), 1)).isEqualTo(0);
+        assertThat(shortestPath(Ps.intArray("[[0]]"), 1)).isEqualTo(0);
         assertThat(shortestPath(new int[][]{{0, 0, 0}, {1, 1, 0}, {0, 0, 0}, {0, 1, 1}, {0, 0, 0}}, 1)).isEqualTo(6);
         assertThat(shortestPath(new int[][]{{0, 1, 1}, {1, 1, 1}, {1, 0, 0}}, 1)).isEqualTo(-1);
     }
@@ -79,7 +79,7 @@ public class Q1293ShortestPathInAGridWithObstaclesElimination {
     @Test
     public void test() {
         assertThat(shortestPath(
-                STool.convertToIntArray("" +
+                Ps.intArray("" +
                         "[[0,0,0,0,0]," +
                         "[1,1,1,1,0]," +
                         "[0,0,0,0,0]," +
@@ -88,7 +88,7 @@ public class Q1293ShortestPathInAGridWithObstaclesElimination {
                 , 0))
                 .isEqualTo(16);
         assertThat(shortestPath(
-                STool.convertToIntArray("" +
+                Ps.intArray("" +
                         "[[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]," +
                         "[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0]," +
                         "[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]," +

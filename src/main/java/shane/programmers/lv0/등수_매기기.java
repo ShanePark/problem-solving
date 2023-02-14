@@ -1,6 +1,6 @@
 package shane.programmers.lv0;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -13,8 +13,8 @@ public class 등수_매기기 {
 
     @Test
     public void test() {
-        assertThat(solution(STool.convertToIntArray("[[80, 70], [90, 50], [40, 70], [50, 80]]"))).containsExactly(1, 2, 4, 3);
-        assertThat(solution(STool.convertToIntArray("[[80, 70], [70, 80], [30, 50], [90, 100], [100, 90], [100, 100], [10, 30]]"))).containsExactly(4, 4, 6, 2, 2, 1, 7);
+        assertThat(solution(Ps.intArray("[[80, 70], [90, 50], [40, 70], [50, 80]]"))).containsExactly(1, 2, 4, 3);
+        assertThat(solution(Ps.intArray("[[80, 70], [70, 80], [30, 50], [90, 100], [100, 90], [100, 100], [10, 30]]"))).containsExactly(4, 4, 6, 2, 2, 1, 7);
     }
 
     public int[] solution(int[][] score) {

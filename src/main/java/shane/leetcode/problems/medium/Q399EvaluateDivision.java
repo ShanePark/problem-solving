@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.*;
 
-import static com.tistory.shanepark.STool.convertToStringList;
+import static com.github.shanepark.Ps.strList;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class Q399EvaluateDivision {
@@ -12,9 +12,9 @@ public class Q399EvaluateDivision {
     @Test
     public void test() {
         assertThat(calcEquation(
-                convertToStringList("[[\"a\",\"b\"],[\"b\",\"c\"]]"),
+                strList("[[\"a\",\"b\"],[\"b\",\"c\"]]"),
                 new double[]{2.0, 3.0},
-                convertToStringList("[[\"a\",\"c\"],[\"b\",\"a\"],[\"a\",\"e\"],[\"a\",\"a\"],[\"x\",\"x\"]]"))).containsExactly(6.00000, 0.50000, -1.00000, 1.00000, -1.00000);
+                strList("[[\"a\",\"c\"],[\"b\",\"a\"],[\"a\",\"e\"],[\"a\",\"a\"],[\"x\",\"x\"]]"))).containsExactly(6.00000, 0.50000, -1.00000, 1.00000, -1.00000);
     }
 
     public double[] calcEquation(List<List<String>> equations, double[] values, List<List<String>> queries) {

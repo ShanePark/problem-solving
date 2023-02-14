@@ -1,6 +1,6 @@
 package shane.leetcode.problems.easy;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -13,8 +13,8 @@ public class Q766ToeplitzMatrix {
 
     @Test
     public void test() {
-        assertThat(isToeplitzMatrix(STool.convertToIntArray("[[1,2,3,4],[5,1,2,3],[9,5,1,2]]"))).isTrue();
-        assertThat(isToeplitzMatrix(STool.convertToIntArray("[[1,2],[2,2]]"))).isFalse();
+        assertThat(isToeplitzMatrix(Ps.intArray("[[1,2,3,4],[5,1,2,3],[9,5,1,2]]"))).isTrue();
+        assertThat(isToeplitzMatrix(Ps.intArray("[[1,2],[2,2]]"))).isFalse();
     }
 
     public boolean isToeplitzMatrix(int[][] matrix) {

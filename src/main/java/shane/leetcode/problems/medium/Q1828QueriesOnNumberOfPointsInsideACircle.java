@@ -1,13 +1,13 @@
 package shane.leetcode.problems.medium;
 
-import static com.tistory.shanepark.STool.convertToIntArray;
+import static com.github.shanepark.Ps.intArray;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class Q1828QueriesOnNumberOfPointsInsideACircle {
 
     public static void main(String[] args) {
-        assertThat(countPoints(convertToIntArray("[[1,3],[3,3],[5,3],[2,2]]"), convertToIntArray("[[2,3,1],[4,3,1],[1,1,2]]"))).containsExactly(3, 2, 2);
-        assertThat(countPoints(convertToIntArray("[[1,1],[2,2],[3,3],[4,4],[5,5]]"), convertToIntArray("[[1,2,2],[2,2,2],[4,3,2],[4,3,3]]"))).containsExactly(2, 3, 2, 4);
+        assertThat(countPoints(intArray("[[1,3],[3,3],[5,3],[2,2]]"), intArray("[[2,3,1],[4,3,1],[1,1,2]]"))).containsExactly(3, 2, 2);
+        assertThat(countPoints(intArray("[[1,1],[2,2],[3,3],[4,4],[5,5]]"), intArray("[[1,2,2],[2,2,2],[4,3,2],[4,3,3]]"))).containsExactly(2, 3, 2, 4);
     }
 
     public static int[] countPoints(int[][] points, int[][] queries) {

@@ -1,6 +1,6 @@
 package shane.programmers.skillCheck.level3;
 
-import com.tistory.shanepark.STool;
+import com.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -13,7 +13,7 @@ public class Camera {
 
     @Test
     public void test() {
-        assertThat(solution(STool.convertToIntArray("[[-20,-15], [-14,-5], [-18,-13], [-5,-3]]"))).isEqualTo(2);
+        assertThat(solution(Ps.intArray("[[-20,-15], [-14,-5], [-18,-13], [-5,-3]]"))).isEqualTo(2);
     }
 
     static class Car {
