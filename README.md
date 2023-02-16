@@ -21,7 +21,7 @@ I use those websites to solve problems, mostly leetcode which I never forgot the
 
 ## Leetcode ClassName Factory
 
-> located in [src.main.java.shane.leetcode.util.ClassNameFactory](https://github.com/Shane-Park/problem-solving/blob/main/src/main/java/shane/leetcode/util/ClassNameFactory.java)
+> located in [src.main.java.shane.leetcode.util.ClassNameFactory](https://github.com/ShanePark/problem-solving/blob/main/src/main/java/shane/leetcode/util/ClassNameFactory.java)
 
 If you're a Leetcode lover who wants to code on their own IDE not the web, you can use this Class to get a proper class name easily.
 
@@ -50,6 +50,6 @@ That's it. now you copy the problem title and execute it. it'll automatically ma
 
 ## PSH
 
-> https://github.com/Shane-Park/psh
+> https://github.com/ShanePark/psh
 
 I made small utility package to help PS. it converts String to array, list, etc.. and also has lots of tools for testing the code especially for leetcode. check it out!

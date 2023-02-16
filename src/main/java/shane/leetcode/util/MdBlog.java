@@ -5,7 +5,7 @@ import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.StringSelection;
 
 public class MdBlog {
-    static final String MDBLOG = "https://raw.githubusercontent.com/Shane-Park/mdblog/main/";
+    static final String MDBLOG = "https://raw.githubusercontent.com/ShanePark/mdblog/main/";
 
     public static void main(String[] args) throws InterruptedException {
 
