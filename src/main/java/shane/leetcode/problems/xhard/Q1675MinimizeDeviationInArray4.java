@@ -10,7 +10,7 @@ import static org.assertj.core.api.Assertions.assertThat;
  * Runtime 148 ms Beats 62.26%
  * Memory 94.3 MB Beats 7.55%
  */
-public class Q1675MinimizeDeviationInArray2 {
+public class Q1675MinimizeDeviationInArray4 {
 
     @Test
     public void test() {

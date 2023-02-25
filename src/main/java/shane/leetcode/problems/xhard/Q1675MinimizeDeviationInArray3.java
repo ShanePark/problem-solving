@@ -9,7 +9,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 /**
  * 67 / 75 testcases passed
  */
-public class Q1675MinimizeDeviationInArray {
+public class Q1675MinimizeDeviationInArray3 {
 
     @Test
     public void test() {
