@@ -1,6 +1,6 @@
 package shane.leetcode.problems.easy;
 
-import com.github.shanepark.leetcode.TreeNode;
+import io.github.shanepark.leetcode.TreeNode;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -14,9 +14,9 @@ public class Q112PathSum {
     @Test
     public void test() {
         assertThat(hasPathSum(null, 0)).isFalse();
-        TreeNode root = TreeNode.ofWithNull(5, 4, 8, 11, null, 13, 4, 7, 2, null, null, null, null, null, 1);
+        TreeNode root = TreeNode.of(5, 4, 8, 11, null, 13, 4, 7, 2, null, null, null, null, null, 1);
         assertThat(hasPathSum(root, 22)).isTrue();
-        TreeNode root2 = TreeNode.ofWithNull(1, 2, 3);
+        TreeNode root2 = TreeNode.of(1, 2, 3);
         assertThat(hasPathSum(root2, 5)).isFalse();
     }
 

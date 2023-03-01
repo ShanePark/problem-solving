@@ -1,6 +1,6 @@
 package shane.programmers.lv0;
 
-import com.github.shanepark.Ps;
+import io.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import java.util.HashMap;

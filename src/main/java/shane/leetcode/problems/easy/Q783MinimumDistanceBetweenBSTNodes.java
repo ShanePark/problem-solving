@@ -1,6 +1,6 @@
 package shane.leetcode.problems.easy;
 
-import com.github.shanepark.leetcode.TreeNode;
+import io.github.shanepark.leetcode.TreeNode;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;

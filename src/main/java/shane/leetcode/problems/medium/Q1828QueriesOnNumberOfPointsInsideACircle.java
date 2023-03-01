@@ -1,6 +1,6 @@
 package shane.leetcode.problems.medium;
 
-import static com.github.shanepark.Ps.intArray;
+import static io.github.shanepark.Ps.intArray;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class Q1828QueriesOnNumberOfPointsInsideACircle {

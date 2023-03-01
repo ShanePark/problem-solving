@@ -1,6 +1,6 @@
 package shane.leetcode.problems.medium;
 
-import com.github.shanepark.leetcode.TreeNode;
+import io.github.shanepark.leetcode.TreeNode;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;

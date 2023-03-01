@@ -1,6 +1,6 @@
 package shane.leetcode.problems.medium;
 
-import com.github.shanepark.leetcode.TreeNode;
+import io.github.shanepark.leetcode.TreeNode;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -13,10 +13,10 @@ public class Q623AddOneRowToTree {
 
     @Test
     public void test() {
-        assertThat(addOneRow(TreeNode.ofWithNull(1, 2, 3, 4), 5, 4)).isEqualTo(TreeNode.ofWithNull(1, 2, 3, 4, null, null, null, 5, 5));
-        assertThat(addOneRow(TreeNode.ofWithNull(4, 2, null, 3, 1), 1, 3)).isEqualTo(TreeNode.ofWithNull(4, 2, null, 1, 1, null, null, 3, null, null, 1));
-        assertThat(addOneRow(TreeNode.ofWithNull(1, 2, 3), 1, 1)).isEqualTo(TreeNode.ofWithNull(1, 1, null, 2, 3));
-        assertThat(addOneRow(TreeNode.ofWithNull(4, 2, 6, 3, 1, 5), 1, 2)).isEqualTo(TreeNode.ofWithNull(4, 1, 1, 2, null, null, 6, 3, 1, null, null, null, null, 5));
+        assertThat(addOneRow(TreeNode.of(1, 2, 3, 4), 5, 4)).isEqualTo(TreeNode.of(1, 2, 3, 4, null, null, null, 5, 5));
+        assertThat(addOneRow(TreeNode.of(4, 2, null, 3, 1), 1, 3)).isEqualTo(TreeNode.of(4, 2, null, 1, 1, null, null, 3, null, null, 1));
+        assertThat(addOneRow(TreeNode.of(1, 2, 3), 1, 1)).isEqualTo(TreeNode.of(1, 1, null, 2, 3));
+        assertThat(addOneRow(TreeNode.of(4, 2, 6, 3, 1, 5), 1, 2)).isEqualTo(TreeNode.of(4, 1, 1, 2, null, null, 6, 3, 1, null, null, null, null, 5));
     }
 
     public TreeNode addOneRow(TreeNode root, int val, int depth) {

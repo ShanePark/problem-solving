@@ -5,7 +5,7 @@ package shane.boj.contest.y2022.wanted_2Q.drop7;
  * * * * * * * * * * * * * * * * *
  */
 
-import com.github.shanepark.Ps;
+import io.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import java.io.*;

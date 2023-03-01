@@ -1,6 +1,6 @@
 package shane.programmers.lv2c;
 
-import com.github.shanepark.Ps;
+import io.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;

@@ -1,6 +1,6 @@
 package shane.leetcode.problems.easy;
 
-import com.github.shanepark.leetcode.TreeNode;
+import io.github.shanepark.leetcode.TreeNode;
 import org.junit.jupiter.api.Test;
 
 import java.util.HashSet;
@@ -16,8 +16,8 @@ public class Q653TwoSumIVInputIsABST {
 
     @Test
     public void test() {
-        assertThat(findTarget(TreeNode.ofWithNull(5, 3, 6, 2, 4, null, 7), 9)).isTrue();
-        assertThat(findTarget(TreeNode.ofWithNull(5, 3, 6, 2, 4, null, 7), 28)).isFalse();
+        assertThat(findTarget(TreeNode.of(5, 3, 6, 2, 4, null, 7), 9)).isTrue();
+        assertThat(findTarget(TreeNode.of(5, 3, 6, 2, 4, null, 7), 28)).isFalse();
     }
 
     public boolean findTarget(TreeNode root, int k) {

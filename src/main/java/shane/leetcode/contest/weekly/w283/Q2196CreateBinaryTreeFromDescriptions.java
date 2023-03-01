@@ -1,7 +1,7 @@
 package shane.leetcode.contest.weekly.w283;
 
-import com.github.shanepark.Ps;
-import com.github.shanepark.leetcode.TreeNode;
+import io.github.shanepark.Ps;
+import io.github.shanepark.leetcode.TreeNode;
 import org.junit.jupiter.api.Test;
 
 import java.util.HashMap;

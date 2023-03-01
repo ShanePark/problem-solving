@@ -1,6 +1,6 @@
 package shane.leetcode.contest.weekly.w281;
 
-import com.github.shanepark.leetcode.ListNode;
+import io.github.shanepark.leetcode.ListNode;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 

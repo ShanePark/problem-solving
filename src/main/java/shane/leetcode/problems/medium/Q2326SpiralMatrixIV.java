@@ -1,7 +1,7 @@
 package shane.leetcode.problems.medium;
 
-import com.github.shanepark.Ps;
-import com.github.shanepark.leetcode.ListNode;
+import io.github.shanepark.Ps;
+import io.github.shanepark.leetcode.ListNode;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;

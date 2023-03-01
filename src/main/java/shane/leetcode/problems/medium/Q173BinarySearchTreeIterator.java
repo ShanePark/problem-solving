@@ -1,6 +1,6 @@
 package shane.leetcode.problems.medium;
 
-import com.github.shanepark.leetcode.TreeNode;
+import io.github.shanepark.leetcode.TreeNode;
 import org.junit.jupiter.api.Test;
 
 import java.util.LinkedList;
@@ -12,7 +12,7 @@ public class Q173BinarySearchTreeIterator {
 
     @Test
     public void test() {
-        TreeNode tree = TreeNode.ofWithNull(7, 3, 15, null, null, 9, 20);
+        TreeNode tree = TreeNode.of(7, 3, 15, null, null, 9, 20);
         BSTIterator b = new BSTIterator(tree);
 
         assertThat(b.next()).isEqualTo(3);

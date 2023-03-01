@@ -1,6 +1,6 @@
 package shane.leetcode.problems.easy;
 
-import com.github.shanepark.leetcode.ListNode;
+import io.github.shanepark.leetcode.ListNode;
 import org.junit.jupiter.api.Test;
 
 import java.util.Deque;

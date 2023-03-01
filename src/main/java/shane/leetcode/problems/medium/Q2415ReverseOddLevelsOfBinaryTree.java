@@ -1,6 +1,6 @@
 package shane.leetcode.problems.medium;
 
-import com.github.shanepark.leetcode.TreeNode;
+import io.github.shanepark.leetcode.TreeNode;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -13,22 +13,22 @@ public class Q2415ReverseOddLevelsOfBinaryTree {
 
     @Test
     public void test() {
-        TreeNode root = TreeNode.ofWithNull(2, 3, 5, 8, 13, 21, 34);
+        TreeNode root = TreeNode.of(2, 3, 5, 8, 13, 21, 34);
         root.printTree();
 
         TreeNode result = reverseOddLevels(root);
         result.printTree();
-        assertThat(result).isEqualTo(TreeNode.ofWithNull(2, 5, 3, 8, 13, 21, 34));
+        assertThat(result).isEqualTo(TreeNode.of(2, 5, 3, 8, 13, 21, 34));
     }
 
     @Test
     public void test2() {
-        TreeNode root = TreeNode.ofWithNull(0, 1, 2, 0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2);
+        TreeNode root = TreeNode.of(0, 1, 2, 0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2);
         root.printTree();
 
         TreeNode result = reverseOddLevels(root);
         result.printTree();
-        assertThat(result).isEqualTo(TreeNode.ofWithNull(0, 2, 1, 0, 0, 0, 0, 2, 2, 2, 2, 1, 1, 1, 1));
+        assertThat(result).isEqualTo(TreeNode.of(0, 2, 1, 0, 0, 0, 0, 2, 2, 2, 2, 1, 1, 1, 1));
     }
 
     public TreeNode reverseOddLevels(TreeNode root) {

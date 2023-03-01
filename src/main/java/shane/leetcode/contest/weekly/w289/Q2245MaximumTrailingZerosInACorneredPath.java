@@ -1,6 +1,6 @@
 package shane.leetcode.contest.weekly.w289;
 
-import com.github.shanepark.Ps;
+import io.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;

@@ -1,7 +1,7 @@
 package shane.leetcode.problems.medium;
 
 
-import com.github.shanepark.leetcode.TreeNode;
+import io.github.shanepark.leetcode.TreeNode;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -15,9 +15,9 @@ public class Q199BinaryTreeRightSideView2 {
 
     @Test
     public void test() {
-        assertThat(rightSideView(TreeNode.ofWithNull(1, 2, 3, null, 5, null, 4))).containsExactly(1, 3, 4);
-        assertThat(rightSideView(TreeNode.ofWithNull(1, 2))).containsExactly(1, 2);
-        assertThat(rightSideView(TreeNode.ofWithNull())).containsExactly();
+        assertThat(rightSideView(TreeNode.of(1, 2, 3, null, 5, null, 4))).containsExactly(1, 3, 4);
+        assertThat(rightSideView(TreeNode.of(1, 2))).containsExactly(1, 2);
+        assertThat(rightSideView(TreeNode.of())).containsExactly();
     }
 
     int maxDepth;

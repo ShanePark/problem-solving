@@ -1,6 +1,6 @@
 package shane.programmers.challenge2021.weekly;
 
-import com.github.shanepark.Ps;
+import io.github.shanepark.Ps;
 
 import java.util.HashSet;
 import java.util.Objects;

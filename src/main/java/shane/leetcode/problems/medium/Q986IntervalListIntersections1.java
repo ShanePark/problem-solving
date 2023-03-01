@@ -1,6 +1,6 @@
 package shane.leetcode.problems.medium;
 
-import com.github.shanepark.Ps;
+import io.github.shanepark.Ps;
 
 import java.util.ArrayList;
 import java.util.HashSet;

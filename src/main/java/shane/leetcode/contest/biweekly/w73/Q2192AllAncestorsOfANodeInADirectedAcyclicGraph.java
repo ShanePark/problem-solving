@@ -1,6 +1,6 @@
 package shane.leetcode.contest.biweekly.w73;
 
-import com.github.shanepark.Ps;
+import io.github.shanepark.Ps;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 

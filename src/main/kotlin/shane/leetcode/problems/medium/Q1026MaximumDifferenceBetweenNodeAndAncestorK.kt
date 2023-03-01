@@ -1,6 +1,6 @@
 package shane.leetcode.problems.medium
 
-import com.github.shanepark.leetcode.TreeNode
+import io.github.shanepark.leetcode.TreeNode
 import org.assertj.core.api.Assertions
 import org.junit.jupiter.api.Test
 import kotlin.math.abs
@@ -15,11 +15,11 @@ class Q1026MaximumDifferenceBetweenNodeAndAncestorK {
 
     @Test
     fun test() {
-        Assertions.assertThat(maxAncestorDiff(TreeNode.ofWithNull(8, 3, 10, 1, 6, null, 14, null, null, 4, 7, null, null, 13)))
+        Assertions.assertThat(maxAncestorDiff(TreeNode.of(8, 3, 10, 1, 6, null, 14, null, null, 4, 7, null, null, 13)))
             .isEqualTo(7)
         Assertions.assertThat(
             maxAncestorDiff(
-                TreeNode.ofWithNull(1, null, 2, null, null, null, 0, null, null, null, null, null, null, 3)
+                TreeNode.of(1, null, 2, null, null, null, 0, null, null, null, null, null, null, 3)
             )
         ).isEqualTo(3)
     }

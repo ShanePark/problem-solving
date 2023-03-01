@@ -1,6 +1,6 @@
 package shane.leetcode.problems.medium;
 
-import com.github.shanepark.leetcode.TreeNode;
+import io.github.shanepark.leetcode.TreeNode;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -9,8 +9,8 @@ public class Q979DistributeCoinsInBinaryTree {
 
     @Test
     public void test() {
-        assertThat(distributeCoins(TreeNode.ofWithNull(0, 3, 0))).isEqualTo(3);
-        assertThat(distributeCoins(TreeNode.ofWithNull(3, 0, 0))).isEqualTo(2);
+        assertThat(distributeCoins(TreeNode.of(0, 3, 0))).isEqualTo(3);
+        assertThat(distributeCoins(TreeNode.of(3, 0, 0))).isEqualTo(2);
     }
 
     int cnt;

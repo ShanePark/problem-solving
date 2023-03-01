@@ -1,6 +1,6 @@
 package shane.leetcode.problems.medium;
 
-import com.github.shanepark.leetcode.ListNode;
+import io.github.shanepark.leetcode.ListNode;
 import org.junit.jupiter.api.Test;
 
 public class Q2AddTwoNumbers {

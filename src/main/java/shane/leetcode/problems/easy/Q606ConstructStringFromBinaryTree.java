@@ -1,6 +1,6 @@
 package shane.leetcode.problems.easy;
 
-import com.github.shanepark.leetcode.TreeNode;
+import io.github.shanepark.leetcode.TreeNode;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -13,8 +13,8 @@ public class Q606ConstructStringFromBinaryTree {
 
     @Test
     public void test() {
-        assertThat(tree2str(TreeNode.ofWithNull(1, 2, 3, 4))).isEqualTo("1(2(4))(3)");
-        assertThat(tree2str(TreeNode.ofWithNull(1, 2, 3, null, 4))).isEqualTo("1(2()(4))(3)");
+        assertThat(tree2str(TreeNode.of(1, 2, 3, 4))).isEqualTo("1(2(4))(3)");
+        assertThat(tree2str(TreeNode.of(1, 2, 3, null, 4))).isEqualTo("1(2()(4))(3)");
     }
 
     public String tree2str(TreeNode root) {

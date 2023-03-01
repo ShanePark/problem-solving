@@ -1,6 +1,6 @@
 package shane.leetcode.problems.easy;
 
-import com.github.shanepark.leetcode.TreeNode;
+import io.github.shanepark.leetcode.TreeNode;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -17,10 +17,10 @@ public class Q94BinaryTreeInorderTraversal2 {
 
     @Test
     public void test() {
-        assertThat(inorderTraversal(TreeNode.ofWithNull(2, 3, null, 1))).containsExactly(1, 3, 2);
-        assertThat(inorderTraversal(TreeNode.ofWithNull(1, null, 2, null, null, 3))).containsExactly(1, 3, 2);
+        assertThat(inorderTraversal(TreeNode.of(2, 3, null, 1))).containsExactly(1, 3, 2);
+        assertThat(inorderTraversal(TreeNode.of(1, null, 2, null, null, 3))).containsExactly(1, 3, 2);
         assertThat(inorderTraversal(null)).isEmpty();
-        assertThat(inorderTraversal(TreeNode.ofWithNull(1))).containsExactly(1);
+        assertThat(inorderTraversal(TreeNode.of(1))).containsExactly(1);
     }
 
     public List<Integer> inorderTraversal(TreeNode root) {

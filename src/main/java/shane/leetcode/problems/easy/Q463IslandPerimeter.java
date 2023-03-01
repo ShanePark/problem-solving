@@ -1,6 +1,6 @@
 package shane.leetcode.problems.easy;
 
-import com.github.shanepark.Ps;
+import io.github.shanepark.Ps;
 
 public class Q463IslandPerimeter {
     public static void main(String[] args) {

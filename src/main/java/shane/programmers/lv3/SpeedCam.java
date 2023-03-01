@@ -1,6 +1,6 @@
 package shane.programmers.lv3;
 
-import com.github.shanepark.Ps;
+import io.github.shanepark.Ps;
 
 import java.util.ArrayList;
 import java.util.Collections;

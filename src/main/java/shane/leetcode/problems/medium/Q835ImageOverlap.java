@@ -2,7 +2,7 @@ package shane.leetcode.problems.medium;
 
 import org.junit.jupiter.api.Test;
 
-import static com.github.shanepark.Ps.intArray;
+import static io.github.shanepark.Ps.intArray;
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**

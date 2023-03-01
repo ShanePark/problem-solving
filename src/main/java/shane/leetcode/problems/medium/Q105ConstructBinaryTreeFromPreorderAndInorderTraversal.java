@@ -1,6 +1,6 @@
 package shane.leetcode.problems.medium;
 
-import com.github.shanepark.leetcode.TreeNode;
+import io.github.shanepark.leetcode.TreeNode;
 import org.junit.jupiter.api.Test;
 
 import java.util.HashMap;
@@ -16,8 +16,8 @@ public class Q105ConstructBinaryTreeFromPreorderAndInorderTraversal {
 
     @Test
     public void test() {
-        assertThat(buildTree(new int[]{3, 9, 20, 15, 7}, new int[]{9, 3, 15, 20, 7})).isEqualTo(TreeNode.ofWithNull(3, 9, 20, null, null, 15, 7));
-        assertThat(buildTree(new int[]{-1}, new int[]{-1})).isEqualTo(TreeNode.ofWithNull(-1));
+        assertThat(buildTree(new int[]{3, 9, 20, 15, 7}, new int[]{9, 3, 15, 20, 7})).isEqualTo(TreeNode.of(3, 9, 20, null, null, 15, 7));
+        assertThat(buildTree(new int[]{-1}, new int[]{-1})).isEqualTo(TreeNode.of(-1));
     }
 
     public TreeNode buildTree(int[] preorder, int[] inorder) {

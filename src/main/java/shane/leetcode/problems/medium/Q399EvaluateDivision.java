@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.*;
 
-import static com.github.shanepark.Ps.strList;
+import static io.github.shanepark.Ps.strList;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class Q399EvaluateDivision {

@@ -1,6 +1,6 @@
 package shane.programmers.challenge2021.monthly.sep2021;
 
-import com.github.shanepark.Ps;
+import io.github.shanepark.Ps;
 
 public class P7 {
 

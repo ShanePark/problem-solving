@@ -1,6 +1,6 @@
 package shane.programmers.pccp.mock01;
 
-import com.github.shanepark.Ps;
+import io.github.shanepark.Ps;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

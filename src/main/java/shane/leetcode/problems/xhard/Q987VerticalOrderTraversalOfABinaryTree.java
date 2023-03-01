@@ -1,7 +1,7 @@
 package shane.leetcode.problems.xhard;
 
-import com.github.shanepark.Ps;
-import com.github.shanepark.leetcode.TreeNode;
+import io.github.shanepark.Ps;
+import io.github.shanepark.leetcode.TreeNode;
 import org.junit.jupiter.api.Test;
 
 import java.util.*;
@@ -17,10 +17,10 @@ public class Q987VerticalOrderTraversalOfABinaryTree {
 
     @Test
     public void test() {
-        assertThat(verticalTraversal(TreeNode.ofWithNull(3, 1, 4, 0, 2, 2))).isEqualTo(Ps.intList("[[0],[1],[3,2,2],[4]]"));
-        assertThat(verticalTraversal(TreeNode.ofWithNull(3, 9, 20, null, null, 15, 7))).isEqualTo(Ps.intList("[[9],[3,15],[20],[7]]"));
-        assertThat(verticalTraversal(TreeNode.ofWithNull(1, 2, 3, 4, 5, 6, 7))).isEqualTo(Ps.intList("[[4],[2],[1,5,6],[3],[7]]"));
-        assertThat(verticalTraversal(TreeNode.ofWithNull(1, 2, 3, 4, 6, 5, 7))).isEqualTo(Ps.intList("[[4],[2],[1,5,6],[3],[7]]"));
+        assertThat(verticalTraversal(TreeNode.of(3, 1, 4, 0, 2, 2))).isEqualTo(Ps.intList("[[0],[1],[3,2,2],[4]]"));
+        assertThat(verticalTraversal(TreeNode.of(3, 9, 20, null, null, 15, 7))).isEqualTo(Ps.intList("[[9],[3,15],[20],[7]]"));
+        assertThat(verticalTraversal(TreeNode.of(1, 2, 3, 4, 5, 6, 7))).isEqualTo(Ps.intList("[[4],[2],[1,5,6],[3],[7]]"));
+        assertThat(verticalTraversal(TreeNode.of(1, 2, 3, 4, 6, 5, 7))).isEqualTo(Ps.intList("[[4],[2],[1,5,6],[3],[7]]"));
     }
 
     public List<List<Integer>> verticalTraversal(TreeNode root) {

@@ -1,6 +1,6 @@
 package shane.leetcode.problems.medium;
 
-import com.github.shanepark.leetcode.TreeNode;
+import io.github.shanepark.leetcode.TreeNode;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
@@ -15,7 +15,7 @@ public class Q1457PseudoPalindromicPathsInABinaryTree {
 
     @Test
     public void test() {
-        assertThat(pseudoPalindromicPaths(TreeNode.ofWithNull(2, 3, 1, 3, 1, null, 1))).isEqualTo(2);
+        assertThat(pseudoPalindromicPaths(TreeNode.of(2, 3, 1, 3, 1, null, 1))).isEqualTo(2);
     }
 
     int cnt;

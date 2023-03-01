@@ -1,7 +1,7 @@
 package shane.programmers.challenge2022.gameq1;
 
 
-import com.github.shanepark.Ps;
+import io.github.shanepark.Ps;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 

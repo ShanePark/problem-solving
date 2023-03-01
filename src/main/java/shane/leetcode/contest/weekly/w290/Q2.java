@@ -1,6 +1,6 @@
 package shane.leetcode.contest.weekly.w290;
 
-import com.github.shanepark.Ps;
+import io.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import java.util.HashSet;

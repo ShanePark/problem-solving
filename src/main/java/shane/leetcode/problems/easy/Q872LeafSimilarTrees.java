@@ -1,6 +1,6 @@
 package shane.leetcode.problems.easy;
 
-import com.github.shanepark.leetcode.TreeNode;
+import io.github.shanepark.leetcode.TreeNode;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -14,12 +14,12 @@ public class Q872LeafSimilarTrees {
     @Test
     public void test() {
         assertThat(leafSimilar(
-                TreeNode.ofWithNull(3, 5, 1, 6, 2, 9, 8, null, null, 7, 4)
-                , TreeNode.ofWithNull(3, 5, 1, 6, 7, 4, 2, null, null, null, null, null, null, 9, 8)))
+                TreeNode.of(3, 5, 1, 6, 2, 9, 8, null, null, 7, 4)
+                , TreeNode.of(3, 5, 1, 6, 7, 4, 2, null, null, null, null, null, null, 9, 8)))
                 .isTrue();
         assertThat(leafSimilar(
-                TreeNode.ofWithNull(1, 2, 3)
-                , TreeNode.ofWithNull(1, 3, 2)))
+                TreeNode.of(1, 2, 3)
+                , TreeNode.of(1, 3, 2)))
                 .isFalse();
     }
 

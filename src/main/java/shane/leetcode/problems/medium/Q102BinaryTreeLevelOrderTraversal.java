@@ -1,7 +1,7 @@
 package shane.leetcode.problems.medium;
 
-import com.github.shanepark.Ps;
-import com.github.shanepark.leetcode.TreeNode;
+import io.github.shanepark.Ps;
+import io.github.shanepark.leetcode.TreeNode;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -13,8 +13,8 @@ public class Q102BinaryTreeLevelOrderTraversal {
 
     @Test
     public void test() {
-        assertThat(levelOrder(TreeNode.ofWithNull(3, 9, 20, null, null, 15, 7))).isEqualTo(Ps.intList("[[3],[9,20],[15,7]]"));
-        assertThat(levelOrder(TreeNode.ofWithNull(1))).isEqualTo(Ps.intList("[[1]]"));
+        assertThat(levelOrder(TreeNode.of(3, 9, 20, null, null, 15, 7))).isEqualTo(Ps.intList("[[3],[9,20],[15,7]]"));
+        assertThat(levelOrder(TreeNode.of(1))).isEqualTo(Ps.intList("[[1]]"));
         assertThat(levelOrder(null)).isEqualTo(Ps.intList("[]"));
     }
 

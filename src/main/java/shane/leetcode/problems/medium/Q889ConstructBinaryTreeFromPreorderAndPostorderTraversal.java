@@ -1,6 +1,6 @@
 package shane.leetcode.problems.medium;
 
-import com.github.shanepark.leetcode.TreeNode;
+import io.github.shanepark.leetcode.TreeNode;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
@@ -17,16 +17,16 @@ public class Q889ConstructBinaryTreeFromPreorderAndPostorderTraversal {
     public void test() {
         TreeNode answer = constructFromPrePost(new int[]{1, 2, 4, 5, 3, 6, 7}, new int[]{4, 5, 2, 6, 7, 3, 1});
         answer.printTree();
-        assertThat(answer).isEqualTo(TreeNode.ofWithNull(1, 2, 3, 4, 5, 6, 7));
+        assertThat(answer).isEqualTo(TreeNode.of(1, 2, 3, 4, 5, 6, 7));
 
-        assertThat(constructFromPrePost(new int[]{1}, new int[]{1})).isEqualTo(TreeNode.ofWithNull(1));
+        assertThat(constructFromPrePost(new int[]{1}, new int[]{1})).isEqualTo(TreeNode.of(1));
     }
 
     @Test
     public void test2() {
         TreeNode answer = constructFromPrePost(new int[]{2, 1}, new int[]{1, 2});
         answer.printTree();
-        assertThat(answer).isEqualTo(TreeNode.ofWithNull(2, 1));
+        assertThat(answer).isEqualTo(TreeNode.of(2, 1));
     }
 
     public TreeNode constructFromPrePost(int[] preorder, int[] postorder) {

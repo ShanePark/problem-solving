@@ -1,6 +1,6 @@
 package shane.leetcode.problems.medium;
 
-import com.github.shanepark.leetcode.TreeNode;
+import io.github.shanepark.leetcode.TreeNode;
 import org.junit.jupiter.api.Test;
 
 import java.util.HashMap;
@@ -16,13 +16,13 @@ public class Q236LowestCommonAncestorOfABinaryTree {
 
     @Test
     public void test() {
-        TreeNode head = TreeNode.ofWithNull(3, 5, 1, 6, 2, 0, 8, null, null, 7, 4);
+        TreeNode head = TreeNode.of(3, 5, 1, 6, 2, 0, 8, null, null, 7, 4);
         assertThat(lowestCommonAncestor(head, head.left, head.right)).isEqualTo(head);
     }
 
     @Test
     public void test2() {
-        TreeNode head = TreeNode.ofWithNull(3, 5, 1, 6, 2, 0, 8, null, null, 7, 4);
+        TreeNode head = TreeNode.of(3, 5, 1, 6, 2, 0, 8, null, null, 7, 4);
         assertThat(lowestCommonAncestor(head, head.left, head.left.right.right)).isEqualTo(head.left);
     }
 

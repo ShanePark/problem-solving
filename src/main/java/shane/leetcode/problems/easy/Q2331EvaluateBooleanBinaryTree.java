@@ -1,6 +1,6 @@
 package shane.leetcode.problems.easy;
 
-import com.github.shanepark.leetcode.TreeNode;
+import io.github.shanepark.leetcode.TreeNode;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -9,7 +9,7 @@ public class Q2331EvaluateBooleanBinaryTree {
 
     @Test
     public void test() {
-        assertThat(evaluateTree(TreeNode.ofWithNull(2, 1, 3, null, null, 0, 1))).isTrue();
+        assertThat(evaluateTree(TreeNode.of(2, 1, 3, null, null, 0, 1))).isTrue();
     }
 
     public boolean evaluateTree(TreeNode root) {

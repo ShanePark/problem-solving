@@ -1,6 +1,6 @@
 package shane.leetcode.problems.medium;
 
-import com.github.shanepark.leetcode.TreeNode;
+import io.github.shanepark.leetcode.TreeNode;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -11,7 +11,7 @@ public class Q1382BalanceABinarySearchTree {
 
     @Test
     public void test() {
-        TreeNode root = TreeNode.ofWithNull(new Integer[]{1, null, 2, null, null, null, 3, null, null, null, null, null, null, null, 4});
+        TreeNode root = TreeNode.of(new Integer[]{1, null, 2, null, null, null, 3, null, null, null, null, null, null, null, 4});
         TreeNode output = balanceBST(root);
         output.printTree();
     }
