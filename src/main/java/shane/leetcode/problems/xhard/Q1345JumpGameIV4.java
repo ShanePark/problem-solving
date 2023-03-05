@@ -5,9 +5,10 @@ import org.junit.jupiter.api.Test;
 
 import java.util.*;
 
+
 /**
- * Runtime 209 ms Beats 7.68%
- * Memory 74.3 MB Beats 21.11%
+ * Runtime 141 ms Beats 16.84%
+ * Memory 77.3 MB Beats 20.90%
  */
 @SuppressWarnings("DuplicatedCode")
 public class Q1345JumpGameIV4 {
@@ -29,38 +30,31 @@ public class Q1345JumpGameIV4 {
         Set<Integer> visited = new HashSet<>();
         Queue<Integer> q = new LinkedList<>();
         q.offer(0);
+        visited.add(0);
         int step = 0;
 
         while (!q.isEmpty()) {
-            int size = q.size();
-            for (int i = 0; i < size; i++) {
+            for (int i = q.size(); i > 0; i--) {
                 Integer poll = q.poll();
                 if (poll == arr.length - 1)
                     return step;
-                // step back
+                Set<Integer> next = valueIndexes.get(arr[poll]);
                 if (poll + 1 < arr.length && visited.add(poll + 1)) {
-                    q.offer(poll + 1);
+                    q.add(poll + 1);
                 }
-
-                // step forward
                 if (0 < poll && visited.add(poll - 1)) {
-                    q.offer(poll - 1);
+                    q.add(poll - 1);
                 }
-
-                // teleport
-                Set<Integer> warps = valueIndexes.get(arr[poll]);
-                Set<Integer> used = new HashSet<>();
-                for (Integer warp : warps) {
-                    used.add(warp);
+                for (Integer warp : next) {
                     if (visited.add(warp)) {
                         q.offer(warp);
                     }
                 }
-                warps.removeAll(used);
+                next.clear();
             }
             step++;
         }
-        return step;
+        throw new IllegalStateException();
     }
 
 }
