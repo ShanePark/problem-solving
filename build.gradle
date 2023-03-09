@@ -19,7 +19,7 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.2'
 
-    implementation 'io.github.shanepark:psh:1.1.0'
+    implementation 'io.github.shanepark:psh:1.2.0'
 }
 
 test {
