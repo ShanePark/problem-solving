@@ -3,19 +3,23 @@ package shane.leetcode.util;
 import java.awt.*;
 import java.awt.datatransfer.*;
 import java.io.IOException;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Scanner;
-import java.util.Set;
+import java.util.List;
+import java.util.*;
 
 public class ClassNameFactory {
 
-    public static final Set<Character> INVALID_CHARACTERS = new HashSet<>(Arrays.asList('-', '.', '\''));
-    public static final String LEETCODE_TITLE_REGEX = "[0-9]+\\..*";
-    public static final Scanner SCANNER = new Scanner(System.in);
+    public final String LEETCODE_TITLE_REGEX = "[0-9]+\\..*";
+    private final Set<Character> INVALID_CHARACTERS;
+
+    public ClassNameFactory() {
+        List<Character> invalidCharacters = Arrays.asList(
+                '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '+', '=', '{', '}', '[', ']', '|', '\\', ':', ';', '"', '\'', '<', '>', ',', '.', '?', '/', ' '
+        );
+        this.INVALID_CHARACTERS = new HashSet<>(invalidCharacters);
+    }
 
     public static void main(String[] args) throws InterruptedException {
-
+        ClassNameFactory classNameFactory = new ClassNameFactory();
         Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
 
         if (args == null || args.length == 0) {
@@ -23,7 +27,7 @@ public class ClassNameFactory {
             if (contents != null) {
                 try {
                     String clipboardString = ((String) contents.getTransferData(DataFlavor.stringFlavor)).trim();
-                    if (clipboardString.matches(LEETCODE_TITLE_REGEX)) {
+                    if (clipboardString.matches(classNameFactory.LEETCODE_TITLE_REGEX)) {
                         args = clipboardString.split(" ");
                     }
                 } catch (UnsupportedFlavorException | IOException e) {
@@ -33,10 +37,10 @@ public class ClassNameFactory {
         }
 
         if (args == null || args.length == 0) {
-            args = getTitleInput();
+            args = classNameFactory.getTitleInput();
         }
 
-        String className = getClassName(args);
+        String className = classNameFactory.getClassName(args);
 
         System.out.println("Class name : " + className);
         System.out.println("class name has been copied to your Clipboard!");
@@ -48,12 +52,12 @@ public class ClassNameFactory {
 
     }
 
-    private static String[] getTitleInput() {
+    private String[] getTitleInput() {
         System.out.println("Leetcode title: ");
-        return SCANNER.nextLine().split(" ");
+        return new Scanner(System.in).nextLine().split(" ");
     }
 
-    public static String getClassName(String[] args) {
+    public String getClassName(String[] args) {
         StringBuilder sb = new StringBuilder("Q");
         for (String s : args) {
             for (int i = 0; i < s.length(); i++) {
