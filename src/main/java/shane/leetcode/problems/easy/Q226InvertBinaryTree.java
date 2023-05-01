@@ -1,4 +1,4 @@
-package shane.leetcode;
+package shane.leetcode.problems.easy;
 
 import io.github.shanepark.leetcode.TreeNode;
 import org.junit.jupiter.api.Test;
