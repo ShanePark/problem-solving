@@ -2,14 +2,17 @@ package shane.leetcode.problems.medium;
 
 import org.junit.jupiter.api.Test;
 
+import java.math.BigInteger;
 import java.util.Arrays;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
- * TLE
+ * Tried to use BigInteger. it passes but fourth submission was faster.
+ * Runtime 1883 ms Beats 5.18%
+ * Memory 52.4 MB Beats 10.59%
  */
-public class Q1498NumberOfSubsequencesThatSatisfyTheGivenSumCondition3 {
+public class Q1498NumberOfSubsequencesThatSatisfyTheGivenSumCondition5 {
 
     @Test
     void test() {
@@ -50,12 +53,10 @@ public class Q1498NumberOfSubsequencesThatSatisfyTheGivenSumCondition3 {
         return answer;
     }
 
-    private int modPow(int pow) {
-        int number = 1;
-        for (int i = 0; i < pow; i++) {
-            number = (int) (((long) number * 2) % MOD);
-        }
-        return number;
+    private int modPow(int length) {
+        BigInteger base = BigInteger.valueOf(2);
+        BigInteger power = base.pow(length);
+        return power.mod(BigInteger.valueOf(MOD)).intValue();
     }
 
 }
