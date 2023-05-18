@@ -3,13 +3,15 @@ package shane.leetcode.problems.medium;
 import io.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
-import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
+import java.util.*;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class Q1557MinimumNumberOfVerticesToReachAllNodes2 {
+/**
+ * Runtime 115 ms Beats 5.1%
+ * Memory 102.5 MB Beats 5.1%
+ */
+public class Q1557MinimumNumberOfVerticesToReachAllNodes3 {
 
     @Test
     public void test() {
@@ -23,8 +25,35 @@ public class Q1557MinimumNumberOfVerticesToReachAllNodes2 {
     }
 
     public List<Integer> findSmallestSetOfVertices(int n, List<List<Integer>> edges) {
-        boolean[] checked = new boolean[n];
-        edges.stream().forEach(e -> checked[e.get(1)]=true);
-        return IntStream.range(0, n).filter(i -> !checked[i]).boxed().collect(Collectors.toList());
+        Map<Integer, Node> nodes = new HashMap<>();
+        for (int i = 0; i < n; i++) {
+            nodes.put(i, new Node(i));
+        }
+        for (List<Integer> edge : edges) {
+            Integer from = edge.get(0);
+            Integer to = edge.get(1);
+            Node fromNode = nodes.get(from);
+            Node toNode = nodes.get(to);
+            fromNode.next.add(toNode);
+            toNode.parents.add(fromNode);
+        }
+        List<Integer> answer = new ArrayList<>();
+        for (Node node : nodes.values()) {
+            if (node.parents.isEmpty()) {
+                answer.add(node.index);
+            }
+        }
+        return answer;
     }
+
+    class Node {
+        int index;
+        Set<Node> next = new HashSet<>();
+        Set<Node> parents = new HashSet<>();
+
+        public Node(int index) {
+            this.index = index;
+        }
+    }
+
 }

@@ -4,12 +4,17 @@ import io.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class Q1557MinimumNumberOfVerticesToReachAllNodes2 {
+/**
+ * Runtime 32 ms Beats 15.3%
+ * Memory 83 MB Beats 50.43%
+ */
+public class Q1557MinimumNumberOfVerticesToReachAllNodes4 {
 
     @Test
     public void test() {
@@ -23,8 +28,15 @@ public class Q1557MinimumNumberOfVerticesToReachAllNodes2 {
     }
 
     public List<Integer> findSmallestSetOfVertices(int n, List<List<Integer>> edges) {
-        boolean[] checked = new boolean[n];
-        edges.stream().forEach(e -> checked[e.get(1)]=true);
-        return IntStream.range(0, n).filter(i -> !checked[i]).boxed().collect(Collectors.toList());
+        Set<Integer> children = edges.stream()
+                .map(e -> e.get(1))
+                .collect(Collectors.toSet());
+
+        return IntStream.range(0, n)
+                .filter(i -> !children.contains(i))
+                .boxed()
+                .collect(Collectors.toList());
     }
+
+
 }
