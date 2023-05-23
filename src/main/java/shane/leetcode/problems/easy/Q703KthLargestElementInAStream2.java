@@ -6,11 +6,7 @@ import java.util.PriorityQueue;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-/**
- * Runtime 15 ms Beats 98.20%
- * Memory 46.7 MB Beats 70.9%
- */
-public class Q703KthLargestElementInAStream {
+public class Q703KthLargestElementInAStream2 {
 
     @Test
     public void test() {
@@ -45,20 +41,23 @@ public class Q703KthLargestElementInAStream {
     class KthLargest {
 
         PriorityQueue<Integer> pq;
-        int k;
+        int capacity;
 
         public KthLargest(int k, int[] nums) {
-            this.k = k;
-            pq = new PriorityQueue<>();
+            pq = new PriorityQueue<>(k);
+            this.capacity = k;
             for (int num : nums) {
-                pq.offer(num);
+                add(num);
             }
-            while (pq.size() > k)
-                pq.poll();
         }
 
         public int add(int val) {
-            pq.offer(pq.size() < k ? val : Math.max(val, pq.poll()));
+            if (pq.size() == capacity && pq.peek() < val) {
+                pq.poll();
+            }
+            if (pq.size() < capacity) {
+                pq.offer(val);
+            }
             return pq.peek();
         }
     }
