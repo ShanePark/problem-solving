@@ -3,22 +3,19 @@ package shane.leetcode.problems.medium;
 import io.github.shanepark.Ps;
 import org.junit.jupiter.api.Test;
 
-import java.util.ArrayList;
-import java.util.HashSet;
+import java.util.Arrays;
 import java.util.List;
-import java.util.Set;
 import java.util.stream.Collectors;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
- * Resolved overflow but very slow
- * <p>
- * Runtime 1545 ms Beats 5.3
- * Memory 44.5 MB Beats 6.89%
+ * Avoid Circular Dependency
+ * Runtime 135 ms Beats 45.3%
+ * Memory 43.8 MB Beats 17.35%
  */
 @SuppressWarnings("DuplicatedCode")
-public class Q2101DetonateTheMaximumBombs3 {
+public class Q2101DetonateTheMaximumBombs4 {
 
     @Test
     void test() {
@@ -33,9 +30,8 @@ public class Q2101DetonateTheMaximumBombs3 {
         assertThat(maximumDetonation(Ps.intArray("[[1,1,5],[10,10,5]]"))).isEqualTo(1);
     }
 
-
     /**
-     * 70 ms
+     * 34 ms
      */
     @Test
     void slow() {
@@ -47,43 +43,38 @@ public class Q2101DetonateTheMaximumBombs3 {
     }
 
     public int maximumDetonation(int[][] bombs) {
-        int length = bombs.length;
-        List<Bomb> list = new ArrayList<>();
-        for (int i = 0; i < length; i++) {
-            int[] arr = bombs[i];
-            list.add(new Bomb(i, arr[0], arr[1], arr[2]));
-        }
+        List<Bomb> list = Arrays.stream(bombs)
+                .map(arr -> new Bomb(arr[0], arr[1], arr[2]))
+                .collect(Collectors.toList());
 
-        for (int i = 0; i < length; i++) {
-            for (int j = 0; j < length; j++) {
-                if (i == j)
-                    continue;
-                Bomb bomb1 = list.get(i);
-                Bomb bomb2 = list.get(j);
-                if (bomb1.canDetonate(bomb2)) {
-                    bomb1.next.add(bomb2);
-                }
-            }
-        }
         int max = 0;
-
-        for (Bomb bomb : list) {
-            int size = bomb.detonate().size();
-            max = Math.max(max, size);
+        for (int i = 0; i < bombs.length; i++) {
+            max = Math.max(max, dfs(i, list, new boolean[bombs.length]));
         }
-
         return max;
     }
 
+    private int dfs(int index, List<Bomb> bombs, boolean[] visited) {
+        int cnt = 1;
+        visited[index] = true;
+        Bomb bomb = bombs.get(index);
+        for (int i = 0; i < visited.length; i++) {
+            if (visited[i])
+                continue;
+            if (bomb.canDetonate(bombs.get(i))) {
+                cnt += dfs(i, bombs, visited);
+            }
+        }
+
+        return cnt;
+    }
+
     class Bomb {
-        int index;
         int x;
         int y;
         int radius;
-        Set<Bomb> next = new HashSet<>();
 
-        public Bomb(int index, int x, int y, int radius) {
-            this.index = index;
+        public Bomb(int x, int y, int radius) {
             this.x = x;
             this.y = y;
             this.radius = radius;
@@ -92,31 +83,6 @@ public class Q2101DetonateTheMaximumBombs3 {
         public boolean canDetonate(Bomb bomb2) {
             long distanceXDistance = (long) (x - bomb2.x) * (x - bomb2.x) + (long) (y - bomb2.y) * (y - bomb2.y);
             return (long) radius * radius >= distanceXDistance;
-        }
-
-        public Set<Bomb> detonate() {
-            HashSet<Bomb> visited = new HashSet<>();
-            visited.add(this);
-            return detonate(visited);
-        }
-
-        public Set<Bomb> detonate(Set<Bomb> visited) {
-            for (Bomb bomb : next) {
-                if (visited.add(bomb)) {
-                    visited.addAll(bomb.detonate(visited));
-                }
-            }
-            visited.addAll(next);
-            visited.add(this);
-            return visited;
-        }
-
-        @Override
-        public String toString() {
-            return "Bomb{" +
-                    "index=" + index +
-                    ", next=" + next.stream().map(b -> b.index).collect(Collectors.toList()) +
-                    '}';
         }
     }
 
