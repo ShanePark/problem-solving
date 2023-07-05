@@ -21,14 +21,15 @@ public class ClassNameFactory {
     public static void main(String[] args) throws InterruptedException {
         ClassNameFactory classNameFactory = new ClassNameFactory();
         Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+        String clipboardString = null;
 
         if (args == null || args.length == 0) {
             Transferable contents = clipboard.getContents(clipboard);
             if (contents != null) {
                 try {
-                    String clipboardString = ((String) contents.getTransferData(DataFlavor.stringFlavor)).trim();
-                    if (clipboardString.matches(classNameFactory.LEETCODE_TITLE_REGEX)) {
-                        args = clipboardString.split(" ");
+                    clipboardString = ((String) contents.getTransferData(DataFlavor.stringFlavor)).trim();
+                    if (!clipboardString.matches(classNameFactory.LEETCODE_TITLE_REGEX)) {
+                        clipboardString = null;
                     }
                 } catch (UnsupportedFlavorException | IOException e) {
                     System.out.println("ClipBoard Data Type is invalid.");
@@ -36,11 +37,16 @@ public class ClassNameFactory {
             }
         }
 
-        if (args == null || args.length == 0) {
+        if (clipboardString == null && (args == null || args.length == 0)) {
             args = classNameFactory.getTitleInput();
         }
 
-        String className = classNameFactory.getClassName(args);
+        String className;
+        if (clipboardString != null) {
+            className = classNameFactory.getClassName(clipboardString);
+        } else {
+            className = classNameFactory.getClassName(args);
+        }
 
         System.out.println("Class name : " + className);
         System.out.println("class name has been copied to your Clipboard!");
@@ -55,6 +61,10 @@ public class ClassNameFactory {
     private String[] getTitleInput() {
         System.out.println("Leetcode title: ");
         return new Scanner(System.in).nextLine().split(" ");
+    }
+
+    public String getClassName(String str) {
+        return getClassName(str.split(" "));
     }
 
     public String getClassName(String[] args) {

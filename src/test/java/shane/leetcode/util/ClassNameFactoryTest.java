@@ -39,6 +39,9 @@ public class ClassNameFactoryTest {
                 .isEqualTo("Q2124CheckIfAllAsAppearsBeforeAllBs");
         assertThat(classNameFactory.getClassName("208. Implement Trie (Prefix Tree)".split(" ")))
                 .isEqualTo("Q208ImplementTriePrefixTree");
+        assertThat(classNameFactory.getClassName("1493. Longest Subarray of 1's After Deleting One Element"))
+                .isEqualTo("Q1493LongestSubarrayOf1sAfterDeletingOneElement");
+
     }
 
 }
