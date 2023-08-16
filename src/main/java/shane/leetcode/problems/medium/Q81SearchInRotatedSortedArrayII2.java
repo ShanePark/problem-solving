@@ -7,7 +7,7 @@ import java.util.Arrays;
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
- * Runtime 2 ms Beats 7.14% Memory 43.7 MB Beats 7.65%
+ * O(NlogN)
  */
 public class Q81SearchInRotatedSortedArrayII2 {
 

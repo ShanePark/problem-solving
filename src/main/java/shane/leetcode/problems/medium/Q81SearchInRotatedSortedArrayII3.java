@@ -5,8 +5,7 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
- * Runtime Details -ms Beats 100.00%
- * Memory Details 42.68mb Beats 96.66%
+ * O(N)
  */
 public class Q81SearchInRotatedSortedArrayII3 {
 
