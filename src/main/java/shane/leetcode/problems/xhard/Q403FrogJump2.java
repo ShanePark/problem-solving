@@ -18,6 +18,8 @@ public class Q403FrogJump2 {
     @Test
     public void test() {
         assertThat(canCross(new int[]{0, 1, 3, 5, 6, 8, 12, 17})).isTrue();
+        assertThat(canCross(new int[]{0, 1, 2, 3, 4, 8, 9, 11})).isFalse();
+        assertThat(canCross(new int[]{0, 1, 3, 6, 10, 15, 16, 21})).isTrue();
     }
 
     @Test
@@ -27,28 +29,20 @@ public class Q403FrogJump2 {
 
     public boolean canCross(int[] stones) {
         Map<Integer, Set<Integer>> dp = new HashMap<>();
-        for (int i = 0; i < stones.length; i++) {
-            dp.put(i, new HashSet<>());
-        }
-        if (stones[1] != 1)
-            return false;
         dfs(0, 0, dp, stones);
-
-        return !dp.get(stones.length - 1).isEmpty();
+        return dp.containsKey(stones.length - 1);
     }
 
     private void dfs(int i, int lastJump, Map<Integer, Set<Integer>> dp, int[] stones) {
-        if (i == stones.length)
-            return;
-        Set<Integer> set = dp.get(i);
-        if (!set.add(lastJump)) {
+        Set<Integer> distances = dp.getOrDefault(i, new HashSet<>());
+        dp.put(i, distances);
+        if (!distances.add(lastJump)) {
             return;
         }
-        int cur = stones[i];
+
         for (int j = i + 1; j < stones.length; j++) {
-            int nextStone = stones[j];
-            int curJump = nextStone - cur;
-            if (curJump == lastJump - 1 || curJump == lastJump || curJump == lastJump + 1) {
+            int curJump = stones[j] - stones[i];
+            if (Math.abs(curJump - lastJump) <= 1) {
                 dfs(j, curJump, dp, stones);
                 continue;
             }
