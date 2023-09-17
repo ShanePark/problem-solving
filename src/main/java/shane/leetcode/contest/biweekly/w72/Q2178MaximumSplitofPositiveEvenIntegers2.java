@@ -1,4 +1,4 @@
-package shane.leetcode.contest.biweekly72;
+package shane.leetcode.contest.biweekly.w72;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -26,7 +26,7 @@ public class Q2178MaximumSplitofPositiveEvenIntegers2 {
         }
 
         List<Long> list = new ArrayList<>();
-        for(long h=2; finalSum>=h; h+=2) {
+        for (long h = 2; finalSum >= h; h += 2) {
             list.add(h);
             finalSum -= h;
         }
