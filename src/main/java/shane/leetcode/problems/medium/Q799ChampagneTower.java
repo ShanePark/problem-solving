@@ -42,9 +42,6 @@ public class Q799ChampagneTower {
         }
 
         public void pour(double poured, Map<Point, Champagne> map) {
-            System.out.println("poured = " + poured);
-            System.out.println("point = " + point);
-            System.out.println("this.amount = " + this.amount);
             if (this.amount + poured <= 1) {
                 this.amount += poured;
             } else {
