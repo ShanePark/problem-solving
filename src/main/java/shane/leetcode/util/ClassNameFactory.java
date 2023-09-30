@@ -3,20 +3,17 @@ package shane.leetcode.util;
 import java.awt.*;
 import java.awt.datatransfer.*;
 import java.io.IOException;
-import java.util.List;
-import java.util.*;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Scanner;
+import java.util.Set;
 
 public class ClassNameFactory {
 
     public final String LEETCODE_TITLE_REGEX = "[0-9]+\\..*";
-    private final Set<Character> INVALID_CHARACTERS;
-
-    public ClassNameFactory() {
-        List<Character> invalidCharacters = Arrays.asList(
-                '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '+', '=', '{', '}', '[', ']', '|', '\\', ':', ';', '"', '\'', '<', '>', ',', '.', '?', '/', ' '
-        );
-        this.INVALID_CHARACTERS = new HashSet<>(invalidCharacters);
-    }
+    protected final Set<Character> INVALID_CHARACTERS = new HashSet<>(Arrays.asList(
+            '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '+', '=', '{', '}', '[', ']', '|', '\\', ':', ';', '"', '\'', '<', '>', ',', '.', '?', '/', ' '
+    ));
 
     public static void main(String[] args) throws InterruptedException {
         ClassNameFactory classNameFactory = new ClassNameFactory();
@@ -45,7 +42,18 @@ public class ClassNameFactory {
         if (clipboardString != null) {
             className = classNameFactory.getClassName(clipboardString);
         } else {
-            className = classNameFactory.getClassName(args);
+            StringBuilder sb = new StringBuilder("Q");
+            for (String s : args) {
+                for (int i = 0; i < s.length(); i++) {
+                    char c = s.charAt(i);
+                    if (classNameFactory.INVALID_CHARACTERS.contains(c)) continue;
+                    if (i == 0 && Character.isLowerCase(c)) {
+                        c -= 'a' - 'A';
+                    }
+                    sb.append(c);
+                }
+            }
+            className = sb.toString();
         }
 
         System.out.println("Class name : " + className);
@@ -64,12 +72,15 @@ public class ClassNameFactory {
     }
 
     public String getClassName(String str) {
-        return getClassName(str.split(" "));
-    }
+        int firstDotIndex = str.indexOf(".");
+        String number = str.substring(0, firstDotIndex);
+        String title = str.substring(firstDotIndex + 1).trim();
 
-    public String getClassName(String[] args) {
-        StringBuilder sb = new StringBuilder("Q");
-        for (String s : args) {
+        StringBuilder sb = new StringBuilder("Q" + number);
+        if (Character.isDigit(title.charAt(0))) {
+            sb.append("_");
+        }
+        for (String s : title.split(" ")) {
             for (int i = 0; i < s.length(); i++) {
                 char c = s.charAt(i);
                 if (INVALID_CHARACTERS.contains(c)) continue;
@@ -81,4 +92,5 @@ public class ClassNameFactory {
         }
         return sb.toString();
     }
+
 }

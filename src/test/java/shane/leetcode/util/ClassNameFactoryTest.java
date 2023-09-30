@@ -23,7 +23,18 @@ public class ClassNameFactoryTest {
     void test() {
         final String[] args = "1315. Sum of Nodes with Even-Valued Grandparent".split(" ");
 
-        String className = classNameFactory.getClassName(args);
+        StringBuilder sb = new StringBuilder("Q");
+        for (String s : args) {
+            for (int i = 0; i < s.length(); i++) {
+                char c = s.charAt(i);
+                if (classNameFactory.INVALID_CHARACTERS.contains(c)) continue;
+                if (i == 0 && Character.isLowerCase(c)) {
+                    c -= 'a' - 'A';
+                }
+                sb.append(c);
+            }
+        }
+        String className = sb.toString();
         assertThat(className).isEqualTo("Q1315SumOfNodesWithEvenValuedGrandparent");
         System.out.println("Class name : " + className);
         System.out.println("class name has been copied to your Clipboard!");
@@ -34,14 +45,19 @@ public class ClassNameFactoryTest {
     }
 
     @Test
+    public void startsWithNumber() {
+        assertThat(classNameFactory.getClassName("456. 132 Pattern"))
+                .isEqualTo("Q456_132Pattern");
+    }
+
+    @Test
     public void forbiddenWords() {
-        assertThat(classNameFactory.getClassName("2124. Check if All A's Appears Before All B's".split(" ")))
+        assertThat(classNameFactory.getClassName("2124. Check if All A's Appears Before All B's"))
                 .isEqualTo("Q2124CheckIfAllAsAppearsBeforeAllBs");
-        assertThat(classNameFactory.getClassName("208. Implement Trie (Prefix Tree)".split(" ")))
+        assertThat(classNameFactory.getClassName("208. Implement Trie (Prefix Tree)"))
                 .isEqualTo("Q208ImplementTriePrefixTree");
         assertThat(classNameFactory.getClassName("1493. Longest Subarray of 1's After Deleting One Element"))
                 .isEqualTo("Q1493LongestSubarrayOf1sAfterDeletingOneElement");
-
     }
 
 }
