@@ -4,7 +4,11 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class Q191NumberOf1Bits {
+/**
+ * Runtime Details 0ms Beats 100.00%of users with Java
+ * Memory Details 39.84MB Beats 15.91%of users with Java
+ */
+public class Q191NumberOf1Bits2 {
 
     @Test
     public void test() {
@@ -14,15 +18,7 @@ public class Q191NumberOf1Bits {
     }
 
     public int hammingWeight(int n) {
-        int cnt = 0;
-        while (n != 0) {
-            cnt += (n & 1);
-            n >>>= 1;
-        }
-        return cnt;
-    }
-
-    public int hammingWeight1(int n) {
         return Integer.bitCount(n);
     }
+
 }
