@@ -2,6 +2,7 @@ package shane.leetcode.problems.xhard;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -24,7 +25,9 @@ public class Q446ArithmeticSlicesIISubsequence2 {
 
     @Test
     public void tle() {
-        assertThat(numberOfArithmeticSlices(new int[]{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}));
+        int[] arr = new int[30];
+        Arrays.fill(arr, 1);
+        assertThat(numberOfArithmeticSlices(arr)).isEqualTo(1073741358);
     }
 
     public int numberOfArithmeticSlices(int[] nums) {

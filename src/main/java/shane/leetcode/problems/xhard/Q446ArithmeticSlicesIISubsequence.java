@@ -19,7 +19,7 @@ public class Q446ArithmeticSlicesIISubsequence {
     // 383 ms
     @Test
     public void tle() {
-        assertThat(numberOfArithmeticSlices(new int[]{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}));
+        assertThat(numberOfArithmeticSlices(new int[]{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1})).isEqualTo(134217349);
     }
 
     int cnt = 0;
