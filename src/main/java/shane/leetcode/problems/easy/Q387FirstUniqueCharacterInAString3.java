@@ -10,7 +10,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 /**
  * Runtime 22 ms Beats 56.63% of users with Java
  */
-public class Q387FirstUniqueCharacterInAString2 {
+public class Q387FirstUniqueCharacterInAString3 {
 
     @Test
     public void test() {
