@@ -13,7 +13,7 @@ public class Q647PalindromicSubstrings2 {
     @Test
     public void test() {
         assertThat(countSubstrings("dnncbwoneinoplypwgbwktmvkoimcooyiwirgbxlcttgteqthcvyoueyftiwgwwxvxvg")).isEqualTo(77);
-        assertThat(countSubstrings("abba")).isEqualTo(5);
+        assertThat(countSubstrings("abba")).isEqualTo(6);
         assertThat(countSubstrings("abc")).isEqualTo(3);
         assertThat(countSubstrings("aaa")).isEqualTo(6);
 

@@ -4,44 +4,45 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+/**
+ * Runtime 13 ms Beats 28.53% of users with Java
+ */
 public class Q647PalindromicSubstrings3 {
 
     @Test
     public void test() {
-        assertThat(countSubstrings("dnncbwoneinoplypwgbwktmvkoimcooyiwirgbxlcttgteqthcvyoueyftiwgwwxvxvg")).isEqualTo(77);
-        assertThat(countSubstrings("abba")).isEqualTo(5);
+        assertThat(countSubstrings("hello")).isEqualTo(6);
         assertThat(countSubstrings("abc")).isEqualTo(3);
         assertThat(countSubstrings("aaa")).isEqualTo(6);
-
     }
 
     public int countSubstrings(String s) {
+        int LENGTH = s.length();
+        char[] arr = s.toCharArray();
+        Boolean[][] dp = new Boolean[LENGTH][LENGTH];
         int cnt = 0;
-        for (int i = 1; i < s.length(); i++) {
-            int length = 1;
-            // odd
-            while (i - length >= 0 && i + length < s.length()) {
-                if (s.charAt(i - length) == s.charAt(i + length)) {
+        for (int i = 0; i < LENGTH; i++) {
+            dp[i][i] = true;
+            for (int j = i; j < LENGTH; j++) {
+                if (isPalindrome(arr, i, j, dp)) {
                     cnt++;
-                } else {
-                    break;
                 }
-                length++;
-            }
-            // even
-            while (i - length >= 0 && i + length - 1 < s.length()) {
-                if (s.charAt(i - length) == s.charAt(i + length - 1)) {
-                    System.out.println("s.charAt(i-length) = " + s.charAt(i-length));
-                    System.out.println("s.charAt(i-length) = " + s.charAt(i+length-1));
-                    System.out.println("s.substring(i-length, i+length) = " + s.substring(i-length, i+length));
-                    cnt++;
-                } else {
-                    break;
-                }
-                length++;
             }
         }
-        return cnt + s.length();
-
+        return cnt;
     }
+
+    private boolean isPalindrome(char[] arr, int i, int j, Boolean[][] dp) {
+        if (dp[i][j] != null) {
+            return dp[i][j];
+        }
+        if (arr[i] != arr[j]) {
+            return dp[i][j] = false;
+        }
+        if (j - i <= 2) {
+            return dp[i][j] = true;
+        }
+        return dp[i][j] = isPalindrome(arr, i + 1, j - 1, dp);
+    }
+
 }
