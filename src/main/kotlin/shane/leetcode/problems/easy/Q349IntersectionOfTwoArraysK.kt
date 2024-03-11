@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test
  * Runtime: 455 ms, faster than 5.13% of Kotlin online submissions for Intersection of Two Arrays.
 Memory Usage: 42.1 MB, less than 20.51% of Kotlin online submissions for Intersection of Two Arrays.
  */
-class Q349IntersectionOfTwoArrays {
+class Q349IntersectionOfTwoArraysK {
 
     @Test
     fun test() {
