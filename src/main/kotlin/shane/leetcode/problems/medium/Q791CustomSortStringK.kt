@@ -8,7 +8,7 @@ import java.util.function.Consumer
  * Runtime: 258 ms, faster than 56.41% of Kotlin online submissions for Custom Sort String.
  * Memory Usage: 34.5 MB, less than 76.92% of Kotlin online submissions for Custom Sort String.
  */
-class Q791CustomSortString {
+class Q791CustomSortStringK {
 
     @Test
     fun test() {
