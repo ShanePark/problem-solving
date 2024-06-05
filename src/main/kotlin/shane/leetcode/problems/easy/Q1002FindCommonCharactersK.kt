@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test
 Memory Usage: 39.4 MB, less than 48.00% of Kotlin online submissions for Find Common Characters.
 
  */
-class Q1002FindCommonCharacters {
+class Q1002FindCommonCharactersK {
 
     @Test
     fun test() {
