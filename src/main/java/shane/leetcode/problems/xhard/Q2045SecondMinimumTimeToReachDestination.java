@@ -12,7 +12,7 @@ import static java.io.File.separator;
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
- * Runtime330msBeats5.33%
+ * Runtime106msBeats54.67%
  */
 public class Q2045SecondMinimumTimeToReachDestination {
 
@@ -42,37 +42,37 @@ public class Q2045SecondMinimumTimeToReachDestination {
             graph.get(edge[1]).add(edge[0]);
         }
 
-        Queue<int[]> pq = new PriorityQueue<>(Comparator.comparingInt(a -> a[1]));
+        PriorityQueue<int[]> pq = new PriorityQueue<>(Comparator.comparingInt(a -> a[1]));
         pq.offer(new int[]{1, 0}); // {current node, current time}
 
         int[] firstTime = new int[n + 1];
         int[] secondTime = new int[n + 1];
         Arrays.fill(firstTime, Integer.MAX_VALUE);
         Arrays.fill(secondTime, Integer.MAX_VALUE);
+        firstTime[1] = 0;
 
         while (!pq.isEmpty()) {
             int[] poll = pq.poll();
             int node = poll[0];
             int currentTime = poll[1];
 
-            if (firstTime[node] == currentTime || secondTime[node] <= currentTime) {
-                continue;
-            }
-
-            secondTime[node] = currentTime;
-            if (secondTime[node] < firstTime[node]) {
-                int temp = firstTime[node];
-                firstTime[node] = secondTime[node];
-                secondTime[node] = temp;
-            }
-
-            // Handle traffic signal
-            if ((currentTime / change) % 2 == 1) {
-                currentTime = (currentTime / change + 1) * change;
-            }
-
             for (int next : graph.get(node)) {
-                pq.offer(new int[]{next, currentTime + time});
+                // Handle traffic signal
+                if ((currentTime / change) % 2 == 1) {
+                    currentTime = ((currentTime + change) / change) * change;
+                }
+
+                int newTime = currentTime + time;
+                if (firstTime[next] == newTime || secondTime[next] <= newTime) {
+                    continue;
+                }
+                secondTime[next] = newTime;
+                if (secondTime[next] < firstTime[next]) {
+                    int temp = firstTime[next];
+                    firstTime[next] = secondTime[next];
+                    secondTime[next] = temp;
+                }
+                pq.offer(new int[]{next, newTime});
             }
         }
         return secondTime[n];
