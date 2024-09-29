@@ -58,6 +58,8 @@ public class ClassNameFactoryTest {
                 .isEqualTo("Q208ImplementTriePrefixTree");
         assertThat(classNameFactory.getClassName("1493. Longest Subarray of 1's After Deleting One Element"))
                 .isEqualTo("Q1493LongestSubarrayOf1sAfterDeletingOneElement");
+        assertThat(classNameFactory.getClassName("432. All O`one Data Structure"))
+                .isEqualTo("Q432AllOoneDataStructure");
     }
 
 }

@@ -12,7 +12,7 @@ public class ClassNameFactory {
 
     public final String LEETCODE_TITLE_REGEX = "[0-9]+\\..*";
     protected final Set<Character> INVALID_CHARACTERS = new HashSet<>(Arrays.asList(
-            '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '+', '=', '{', '}', '[', ']', '|', '\\', ':', ';', '"', '\'', '<', '>', ',', '.', '?', '/', ' '
+            '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '+', '=', '{', '}', '[', ']', '|', '\\', ':', ';', '"', '\'', '<', '>', ',', '.', '?', '/', ' ', '`'
     ));
 
     public static void main(String[] args) throws InterruptedException {
