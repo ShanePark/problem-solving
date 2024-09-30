@@ -6,7 +6,7 @@ import java.util.LinkedList;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class Q1381DesignAStackWithIncrementOperation {
+public class Q1381DesignAStackWithIncrementOperation2 {
     @Test
     public void test() {
         CustomStack c = new CustomStack(3);
@@ -26,8 +26,8 @@ public class Q1381DesignAStackWithIncrementOperation {
 
     class CustomStack {
 
-        int maxSize;
-        LinkedList<Integer> list = new LinkedList<>();
+        private final int maxSize;
+        private final LinkedList<Integer> list = new LinkedList<>();
 
         public CustomStack(int maxSize) {
             this.maxSize = maxSize;
@@ -39,18 +39,18 @@ public class Q1381DesignAStackWithIncrementOperation {
         }
 
         public int pop() {
-            if(list.size() == 0)
+            if (list.isEmpty())
                 return -1;
             return list.remove(list.size() - 1);
         }
 
         public void increment(int k, int val) {
-            for (int i = 0; i < Math.min(k, list.size()); i++) {
+            k = Math.min(k, list.size());
+            for (int i = 0; i < k; i++) {
                 list.set(i, list.get(i) + val);
             }
         }
     }
 
 }
-
 
