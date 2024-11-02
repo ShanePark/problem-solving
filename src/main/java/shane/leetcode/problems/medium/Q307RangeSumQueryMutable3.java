@@ -1,4 +1,4 @@
-package shane.leetcode.util;
+package shane.leetcode.problems.medium;
 
 import org.junit.jupiter.api.Test;
 
@@ -8,18 +8,20 @@ import static org.assertj.core.api.Assertions.assertThat;
  * TLE
  */
 @SuppressWarnings("ALL")
-public class Q307RangeSumQueryMutable2 {
+public class Q307RangeSumQueryMutable3 {
 
     @Test
     public void test() {
         NumArray n = new NumArray(new int[]{1, 3, 5});
+        assertThat(n.sumRange(1, 2)).isEqualTo(8);
         assertThat(n.sumRange(0, 2)).isEqualTo(9);
         n.update(1, 2);
         assertThat(n.sumRange(0, 2)).isEqualTo(8);
+        assertThat(n.sumRange(1, 2)).isEqualTo(7);
     }
 
     /**
-     * 63 ms
+     * 2 ms
      */
     @Test
     public void test2() {
@@ -34,7 +36,7 @@ public class Q307RangeSumQueryMutable2 {
 
     @Test
     public void test3() {
-        NumArray n = new NumArray(new int[]{7,2,7,2,0});
+        NumArray n = new NumArray(new int[]{7, 2, 7, 2, 0});
         n.update(4, 6);
         n.update(0, 2);
         n.update(0, 9);
@@ -50,6 +52,7 @@ public class Q307RangeSumQueryMutable2 {
     class NumArray {
 
         int[] sums;
+        int pivot = 0;
 
         public NumArray(int[] nums) {
             sums = new int[nums.length];
@@ -58,20 +61,29 @@ public class Q307RangeSumQueryMutable2 {
                 sum += nums[i];
                 sums[i] = sum;
             }
+
         }
 
         public void update(int index, int val) {
-            int original = sums[index] - (index == 0 ? 0 : sums[index - 1]);
+            int original = (index == 0) ? sums[index] + pivot : (sums[index] - sums[index - 1]);
             int diff = val - original;
-            for (int i = index; i < sums.length; i++) {
-                sums[i] += diff;
+            if (index < sums.length / 2) {
+                for (int i = 0; i < index; i++) {
+                    sums[i] -= diff;
+                }
+                pivot += diff;
+            } else {
+                for (int i = index; i < sums.length; i++) {
+                    sums[i] += diff;
+                }
             }
         }
 
         public int sumRange(int left, int right) {
             if (left == 0)
-                return sums[right];
+                return sums[right] + pivot;
             return sums[right] - sums[left - 1];
         }
     }
+
 }
