@@ -1,5 +1,8 @@
 #!/bin/bash
 
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+cd "$SCRIPT_DIR" || exit
+
 response=$(curl -s -X POST \
      -H "Content-Type: application/json" \
      -H "Referer: https://leetcode.com/problemset/all/" \

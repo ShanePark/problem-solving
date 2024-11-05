@@ -38,13 +38,12 @@ alias leet='bash $(pwd)/leet.sh'
 leet
 ```
 
-That's it. now you copy the problem title and execute it. it'll automatically make and put proper class name into your
-clipboard. You even don't need to copy the title. just execute it, it will find the title from leetcode inner API.
+That's it. It'll automatically make a proper class name and put into your clipboard.  
+Just paste it on your own IDE and start coding!
 
 > ![image-20220706091505271](images/leet.png)
 
-If you want it to be permanent, add the alias to your `.bashrc` or `.zshrc` file. But you need to change the path to
-absolute path.
+If you want it to be permanent, add the alias to your `.bashrc` or `.zshrc` file. But you need to change the path to absolute path.
 
 ## PSH
 
