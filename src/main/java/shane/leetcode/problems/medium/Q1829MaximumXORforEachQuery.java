@@ -2,14 +2,13 @@ package shane.leetcode.problems.medium;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.Arrays;
-
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
- * Runtime 8ms Beats9.21%
+ * TLE
  */
 public class Q1829MaximumXORforEachQuery {
+
 
     @Test
     public void test() {
@@ -19,12 +18,14 @@ public class Q1829MaximumXORforEachQuery {
     }
 
     public int[] getMaximumXor(int[] nums, int maximumBit) {
-        int flag = (int) Math.pow(2, maximumBit) - 1;
         int[] answer = new int[nums.length];
-        int allXor = Arrays.stream(nums).reduce((a, b) -> a ^ b).getAsInt();
+        final int MAX = (int) Math.pow(2, maximumBit) - 1;
         for (int i = 0; i < nums.length; i++) {
-            answer[i] = allXor ^ flag;
-            allXor ^= nums[nums.length - 1 - i];
+            int n = nums[0];
+            for (int j = 1; j < nums.length - i; j++) {
+                n ^= nums[j];
+            }
+            answer[i] = MAX ^ n;
         }
         return answer;
     }

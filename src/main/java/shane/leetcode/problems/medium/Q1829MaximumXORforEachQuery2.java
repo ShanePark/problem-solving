@@ -5,9 +5,9 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
- * TLE
+ * Runtime2msBeats100.00%
  */
-public class Q1829MaximumXORForEachQuery2 {
+public class Q1829MaximumXORforEachQuery2 {
 
 
     @Test
