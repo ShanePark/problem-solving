@@ -1,10 +1,14 @@
 package shane.leetcode.util;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.awt.*;
 import java.awt.datatransfer.Clipboard;
+import java.awt.datatransfer.DataFlavor;
 import java.awt.datatransfer.StringSelection;
+import java.awt.datatransfer.UnsupportedFlavorException;
+import java.io.IOException;
 import java.util.regex.Pattern;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -60,6 +64,24 @@ public class ClassNameFactoryTest {
                 .isEqualTo("Q1493LongestSubarrayOf1sAfterDeletingOneElement");
         assertThat(classNameFactory.getClassName("432. All O`one Data Structure"))
                 .isEqualTo("Q432AllOoneDataStructure");
+    }
+
+    @Test
+    @DisplayName("Test with args")
+    public void use_args_no_clipboard() throws InterruptedException, IOException, UnsupportedFlavorException {
+        ClassNameFactory.main(new String[]{"2415. Reverse Odd Levels of Binary Tree"});
+        String clipboardString = Toolkit.getDefaultToolkit().getSystemClipboard().getContents(null).getTransferData(DataFlavor.stringFlavor).toString();
+        assertThat(clipboardString).isEqualTo("Q2415ReverseOddLevelsOfBinaryTree");
+    }
+
+    @Test
+    @DisplayName("Test without args, only use clipboard")
+    public void use_clipboard() throws InterruptedException, IOException, UnsupportedFlavorException {
+        String q = "2415. Reverse Odd Levels of Binary Tree";
+        Toolkit.getDefaultToolkit().getSystemClipboard().setContents(new StringSelection(q), null);
+        ClassNameFactory.main(null);
+        String clipboardString = Toolkit.getDefaultToolkit().getSystemClipboard().getContents(null).getTransferData(DataFlavor.stringFlavor).toString();
+        assertThat(clipboardString).isEqualTo("Q2415ReverseOddLevelsOfBinaryTree");
     }
 
 }
