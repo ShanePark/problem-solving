@@ -33,7 +33,7 @@ public class Q802FindEventualSafeStates {
         }
 
         for (int i = 0; i < LENGTH; i++) {
-            Set<Integer> visited = new HashSet();
+            Set<Integer> visited = new HashSet<>();
             visited.add(i);
             isSafe(graph, i, isTerminalOrSafe, visited);
         }
