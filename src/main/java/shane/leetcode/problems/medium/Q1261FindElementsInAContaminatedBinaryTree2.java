@@ -3,11 +3,17 @@ package shane.leetcode.problems.medium;
 import io.github.shanepark.leetcode.TreeNode;
 import org.junit.jupiter.api.Test;
 
-import java.util.Stack;
+import java.util.HashSet;
+import java.util.Set;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class Q1261FindElementsInAContaminatedBinaryTree {
+/**
+ * Runtime
+ * 21ms
+ * Beats72.24%
+ */
+public class Q1261FindElementsInAContaminatedBinaryTree2 {
     @Test
     public void test() {
         TreeNode tree = TreeNode.of(-1, null, -1);
@@ -37,49 +43,25 @@ public class Q1261FindElementsInAContaminatedBinaryTree {
 
     private static class FindElements {
 
-        TreeNode root;
+        private final Set<Integer> set = new HashSet<>();
 
         public FindElements(TreeNode root) {
-            this.root = root;
-            root.val = 0;
-//        fix(root);
+            dfs(root, 0);
         }
 
-        private void fix(TreeNode node) {
-            if (node.left != null) {
-                node.left.val = node.val * 2 + 1;
-            }
-            if (node.right != null) {
-                node.right.val = node.val * 2 + 2;
-            }
+        private void dfs(TreeNode node, int i) {
+            if (node == null)
+                return;
+            set.add(i);
+            dfs(node.left, 2 * i + 1);
+            dfs(node.right, 2 * i + 2);
         }
 
         public boolean find(int target) {
-            return find(root, target);
+            return set.contains(target);
         }
-
-        private boolean find(TreeNode root, int target) {
-            TreeNode cur = root;
-            Stack<Integer> stack = new Stack<>();
-            while (target > 0) {
-                stack.push((target - 1) % 2);
-                target = (target - 1) / 2;
-            }
-
-            while (!stack.isEmpty() && cur != null) {
-                Integer pop = stack.pop();
-                if (pop == 0) {
-                    cur = cur.left;
-                } else {
-                    cur = cur.right;
-                }
-            }
-
-
-            return stack.isEmpty() && cur != null;
-        }
-
     }
+
 }
 
 
