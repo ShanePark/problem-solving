@@ -14,38 +14,20 @@ public class Q3494FindTheMinimumAmountOfTimeToBrewPotions {
     }
 
     public long minTime(int[] skill, int[] mana) {
-        long[] endTime = new long[skill.length];
-        long[] prefixSum = new long[skill.length + 1];
-
-        for (int i = 0; i < skill.length; i++) {
-            prefixSum[i + 1] = prefixSum[i] + skill[i];
-        }
-
-        endTime[0] = (long) skill[0] * mana[0];
-        for (int i = 1; i < skill.length; i++) {
-            endTime[i] = endTime[i - 1] + (long) skill[i] * mana[0];
-        }
-
-        for (int j = 1; j < mana.length; j++) {
-            long[] newEndTime = new long[skill.length];
-
-            long startTime = 0;
-            for (int i = 0; i < skill.length; i++) {
-                long arrival = startTime + prefixSum[i] * mana[j];
-                if (arrival < endTime[i]) {
-                    startTime = endTime[i] - prefixSum[i] * mana[j];
-                }
+        final int LENGTH = skill.length;
+        long[] holdingTimes = new long[LENGTH];
+        for (int k : mana) {
+            long endTime = 0;
+            for (int i = 0; i < LENGTH; i++) {
+                endTime = Math.max(endTime, holdingTimes[i]);
+                endTime += (long) skill[i] * k;
             }
-
-            newEndTime[0] = startTime + (long) skill[0] * mana[j];
-            for (int i = 1; i < skill.length; i++) {
-                newEndTime[i] = newEndTime[i - 1] + (long) skill[i] * mana[j];
+            holdingTimes[LENGTH - 1] = endTime;
+            for (int i = LENGTH - 2; i >= 0; i--) {
+                holdingTimes[i] = holdingTimes[i + 1] - (long) skill[i + 1] * k;
             }
-
-            endTime = newEndTime;
         }
-
-        return endTime[skill.length - 1];
+        return holdingTimes[LENGTH - 1];
     }
 
 }
