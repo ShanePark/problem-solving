@@ -2,16 +2,16 @@ package shane.leetcode.problems.medium;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.TreeSet;
+import java.util.HashSet;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
  * Runtime
- * 175
+ * 62
  * ms
  * Beats
- * 6.74%
+ * 80.90%
  */
 public class Q1625LexicographicallySmallestStringAfterApplyingOperations {
 
@@ -23,27 +23,30 @@ public class Q1625LexicographicallySmallestStringAfterApplyingOperations {
     }
 
     public String findLexSmallestString(String s, int a, int b) {
-        TreeSet<String> visited = new TreeSet<>();
-        dfs(visited, s, a, b);
-        return visited.first();
+        HashSet<String> visited = new HashSet<>();
+        String[] result = {s};
+        dfs(visited, s, a, b, result);
+        return result[0];
     }
 
-    private void dfs(TreeSet<String> visited, String s, int a, int b) {
+    private void dfs(HashSet<String> visited, String s, int a, int b, String[] result) {
         if (!visited.add(s))
             return;
+
+        if (s.compareTo(result[0]) < 0) {
+            result[0] = s;
+        }
+
         // do b
-        dfs(visited, s.substring(b) + s.substring(0, b), a, b);
+        dfs(visited, s.substring(b) + s.substring(0, b), a, b, result);
 
         // do a
-        StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < s.length(); i++) {
-            int n = s.charAt(i) - '0';
-            if (i % 2 == 1) {
-                n = (n + a) % 10;
-            }
-            sb.append(n);
+        char[] chars = s.toCharArray();
+        for (int i = 1; i < chars.length; i += 2) {
+            int n = (chars[i] - '0' + a) % 10;
+            chars[i] = (char) ('0' + n);
         }
-        dfs(visited, sb.toString(), a, b);
+        dfs(visited, new String(chars), a, b, result);
     }
 
 }
